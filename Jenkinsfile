@@ -1,4 +1,4 @@
-@Library('platform-ci@v1') _
+@Library('platform-ci@1.0.0') _
 
 ciPipeline(
     registry: 'harbor.gangstand.tech',
