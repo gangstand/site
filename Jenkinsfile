@@ -1,4 +1,4 @@
-@Library('platform-ci@1.0.0') _
+@Library('platform-ci@1.0.1') _
 
 ciPipeline(
     registry: 'harbor.gangstand.tech',
@@ -6,7 +6,7 @@ ciPipeline(
     project: 'gangstand',
 
     services: [
-        'jenkins-test': [
+        'site': [
             context: '.',
             dockerfile: 'Dockerfile'
         ]
