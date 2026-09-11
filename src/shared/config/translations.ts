@@ -16,6 +16,7 @@ export interface ProjectEntry {
 export interface Translation {
   skipToContent: string;
   projectsHeading: string;
+  pageTitle: string;
   name: string;
   bio: string;
   experienceHeading: string;
@@ -39,12 +40,14 @@ export interface Translation {
   themeToLight: string;
   languageToggleAria: string;
   avatarAlt: string;
+  avatarEasterEggAlt: string;
 }
 
 export const translations: Record<Lang, Translation> = {
   ru: {
     skipToContent: "Перейти к содержимому",
     projectsHeading: "Избранные проекты",
+    pageTitle: "Никита Кульпинов — Python Backend разработчик",
 
     name: "Никита Кульпинов",
     bio: "Python backend-разработчик с фокусом на DevOps и AI. Победитель более 20 хакатонов.",
@@ -122,12 +125,14 @@ export const translations: Record<Lang, Translation> = {
     themeToDark: "Переключить на тёмную тему",
     themeToLight: "Переключить на светлую тему",
     languageToggleAria: "Switch to English",
-    avatarAlt: "Анимированный ASCII-портрет",
+    avatarAlt: "Портрет Никиты Кульпинова",
+    avatarEasterEggAlt: "Пасхалка",
   },
 
   en: {
     skipToContent: "Skip to content",
     projectsHeading: "Featured projects",
+    pageTitle: "Nikita Kulpinov — Python Backend developer",
 
     name: "Nikita Kulpinov",
     bio: "Python backend developer focused on DevOps and AI. Winner of 20+ hackathons.",
@@ -206,6 +211,7 @@ export const translations: Record<Lang, Translation> = {
     themeToDark: "Switch to dark theme",
     themeToLight: "Switch to light theme",
     languageToggleAria: "Переключить на русский",
-    avatarAlt: "Animated ASCII portrait",
+    avatarAlt: "Portrait of Nikita Kulpinov",
+    avatarEasterEggAlt: "Easter egg",
   },
 };

@@ -6,10 +6,6 @@ import { ContactIcon } from "@/shared/ui/contact-icon";
 import { useTranslation } from "@/shared/lib/language";
 
 function legacyCopy(text: string) {
-  // A native <dialog> opened via showModal() makes the rest of the document
-  // inert, so an element appended to document.body can never receive focus
-  // while a dialog is open — the textarea must live inside the open dialog
-  // itself for select()/execCommand("copy") to have anything to act on.
   const container = document.querySelector<HTMLElement>("dialog[open]") ?? document.body;
   const textarea = document.createElement("textarea");
   textarea.value = text;
@@ -50,17 +46,10 @@ export function CopyEmail({ className, showAddress = false }: CopyEmailProps) {
     const text = textRef.current;
     if (!wrap || !text) return;
     wrap.style.width = `${text.getBoundingClientRect().width}px`;
-    // Depends on the rendered text itself (label), not just status — a
-    // language switch changes the text at the same status and must resize
-    // the wrapper too, or the underline below it keeps the old text's width.
   }, [label, showAddress]);
 
   async function copyEmail() {
     try {
-      // navigator.clipboard only exists in a secure context (HTTPS or
-      // localhost) — on a plain-HTTP LAN address (e.g. testing from a phone)
-      // it is undefined, so fall back to the legacy execCommand technique,
-      // which has no such restriction.
       if (navigator.clipboard?.writeText) {
         await navigator.clipboard.writeText(email);
       } else {

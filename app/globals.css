@@ -2,7 +2,6 @@
 
 @theme inline {
   --font-sans: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
-  --font-mono: "Courier New", monospace;
   --color-background: var(--background);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
@@ -23,7 +22,17 @@
   --button: #fdfdfc;
   --button-text: #111;
 }
-:root[data-theme="light"] {
+:root.dark-theme {
+  color-scheme: dark;
+  --background: #191919;
+  --primary: rgba(253, 253, 252, .9);
+  --secondary: rgba(253, 253, 252, .4);
+  --border: rgba(253, 253, 252, .1);
+  --border-strong: rgba(253, 253, 252, .2);
+  --button: #fdfdfc;
+  --button-text: #111;
+}
+:root.light-theme {
   color-scheme: light;
   --background: #fdfdfc;
   --primary: rgba(17, 17, 17, .9);
@@ -34,37 +43,50 @@
   --button-text: #fdfdfc;
 }
 
-/* Tailwind has no utility surface for pseudo-elements outside its own
-   variants (::selection, focus-visible ring color) or for keyframes and
-   the View Transitions pseudo-element tree — these stay as plain CSS. */
+.theme-avatar-dark { opacity: 1; }
+.theme-avatar-light { opacity: 0; }
+:root.light-theme .theme-avatar-dark { opacity: 0; }
+:root.light-theme .theme-avatar-light { opacity: 1; }
+
 @layer base {
-  /* temporarily disabled */
   a:focus-visible, button:focus-visible { outline: none; }
-  ::selection { background: #829676; color: #fff; }
+  ::selection { background: var(--primary); color: var(--background); }
+  img { user-select: none; -webkit-user-drag: none; }
 }
 
 .avatar-mask {
-  mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 48%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 48%, transparent 100%);
+  mask-image: radial-gradient(50% 65% at 50% 34%, #000 50%, #0000 100%);
+  -webkit-mask-image: radial-gradient(50% 65% at 50% 34%, #000 50%, #0000 100%);
 }
 
 @keyframes dialog-enter { from { opacity: 0; transform: translateY(8px) scale(.98); } to { opacity: 1; transform: none; } }
 
+:root {
+  --vt-x: 100%;
+  --vt-y: 0;
+  --vt-radius: 150%;
+  --theme-toggle-animation-timing-function: cubic-bezier(.5, .6, .2, 1);
+}
 ::view-transition-group(root) {
   animation-duration: 650ms;
-  animation-timing-function: cubic-bezier(.2, .7, .2, 1);
+  animation-timing-function: var(--theme-toggle-animation-timing-function, ease-in);
 }
 ::view-transition-new(root) {
-  animation: theme-reveal 650ms cubic-bezier(.2, .7, .2, 1) both;
-  clip-path: circle(var(--theme-radius, 0px) at var(--theme-x, 50%) var(--theme-y, 50%));
+  animation: vt-reveal 650ms var(--theme-toggle-animation-timing-function, ease-in) both, vt-pop 650ms var(--theme-toggle-animation-timing-function, ease-in) both;
+  clip-path: circle(var(--vt-radius, 0px) at var(--vt-x, 50%) var(--vt-y, 50%));
 }
 ::view-transition-old(root), ::view-transition-new(root) { background: var(--background); }
 
-@keyframes theme-reveal {
-  from { clip-path: circle(0px at var(--theme-x, 50%) var(--theme-y, 50%)); }
-  to { clip-path: circle(var(--theme-radius, 0px) at var(--theme-x, 50%) var(--theme-y, 50%)); }
+@keyframes vt-reveal {
+  from { clip-path: circle(0px at var(--vt-x, 50%) var(--vt-y, 50%)); }
+  to { clip-path: circle(var(--vt-radius, 0px) at var(--vt-x, 50%) var(--vt-y, 50%)); }
+}
+@keyframes vt-pop {
+  from { transform: scale(1); }
+  to { transform: scale(1); }
 }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
+  ::view-transition-old(root), ::view-transition-new(root), ::view-transition-group(root) { animation: none !important; }
 }

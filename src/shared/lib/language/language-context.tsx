@@ -1,7 +1,10 @@
 "use client";
 
-import { createContext, useContext, useLayoutEffect, useState, type ReactNode } from "react";
+import { createContext, useContext, useState, type ReactNode } from "react";
 import { translations, type Lang } from "@/shared/config/translations";
+import { setCookie } from "@/shared/lib/cookies";
+
+const LANG_COOKIE = "lang";
 
 interface LanguageContextValue {
   lang: Lang;
@@ -10,27 +13,14 @@ interface LanguageContextValue {
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Lang>("ru");
-
-  useLayoutEffect(() => {
-    // The inline bootstrap script in <head> already applies a saved language
-    // preference to <html> before hydration — read it back here, synchronously
-    // and before paint, so a returning English-preferring visitor never sees
-    // a flash of the Russian default (which the server always renders, since
-    // this is a static export with no per-request personalization).
-    if (document.documentElement.dataset.lang === "en") setLang("en");
-  }, []);
+export function LanguageProvider({ children, initialLang }: { children: ReactNode; initialLang: Lang }) {
+  const [lang, setLang] = useState<Lang>(initialLang);
 
   function toggleLanguage() {
     const next: Lang = lang === "ru" ? "en" : "ru";
-    document.documentElement.dataset.lang = next;
     document.documentElement.lang = next;
-    try {
-      localStorage.setItem("lang", next);
-    } catch {
-      // Language switching must still work when browser storage is unavailable.
-    }
+    document.title = translations[next].pageTitle;
+    setCookie(LANG_COOKIE, next);
     setLang(next);
   }
 
