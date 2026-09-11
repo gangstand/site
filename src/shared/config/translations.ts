@@ -73,39 +73,34 @@ export const translations: Record<Lang, Translation> = {
 
     projects: [
       {
-        name: "SwapDog",
-        domain: "swapdog.ru",
-        url: "https://swapdog.ru",
-        description:
-          "Автоматизирует обмен данными между iiko и операторами ЭДО: накладные и чеки загружаются в iiko без ручного ввода.",
-      },
-      {
         name: "TeamTasker",
         domain: "teamtasker.ru",
         url: "https://teamtasker.ru",
-        description:
-          "Объединяет управление задачами, командой и финансами — от личного планирования до сложных бизнес-процессов.",
+        description: "",
+      },
+      {
+        name: "SwapDog",
+        domain: "swapdog.ru",
+        url: "https://swapdog.ru",
+        description: "",
       },
       {
         name: "ЕСАУЛ",
         domain: "esaul.site",
         url: "https://esaul.site",
-        description:
-          "Автоматизирует работу линии технической поддержки и объединяет ключевые процессы в единой системе.",
+        description: "",
       },
       {
         name: "Синус",
         domain: "app.sine.su",
         url: "https://app.sine.su/",
-        description:
-          "Транскрибирует речь в текст и автоматически формирует краткое саммари с ключевыми тезисами.",
+        description: "",
       },
       {
         name: "SportBox",
         domain: "donwr.ru",
         url: "https://donwr.ru/",
-        description:
-          "Автоматизирует работу спортивной федерации: ведение реестров, заявок на соревнования и результатов.",
+        description: "",
       },
     ],
 
@@ -158,18 +153,17 @@ export const translations: Record<Lang, Translation> = {
 
     projects: [
       {
-        name: "SwapDog",
-        domain: "swapdog.ru",
-        url: "https://swapdog.ru",
-        description:
-          "Automates data exchange between iiko and EDI providers, importing invoices and receipts into iiko without manual entry.",
-      },
-      {
         name: "TeamTasker",
         domain: "teamtasker.ru",
         url: "https://teamtasker.ru",
         description:
           "Combines task, team, and financial management — from personal planning to complex business workflows.",
+      },
+      {
+        name: "SwapDog",
+        domain: "swapdog.ru",
+        url: "https://swapdog.ru",
+        description: "",
       },
       {
         name: "ESAUL",
