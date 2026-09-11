@@ -76,31 +76,31 @@ export const translations: Record<Lang, Translation> = {
         name: "TeamTasker",
         domain: "teamtasker.ru",
         url: "https://teamtasker.ru",
-        description: "",
+        description: "Управление задачами, командой и финансами в одном приложении.",
       },
       {
         name: "SwapDog",
         domain: "swapdog.ru",
         url: "https://swapdog.ru",
-        description: "",
+        description: "Автоматический обмен документами между iiko и ЭДО.",
       },
       {
         name: "ЕСАУЛ",
         domain: "esaul.site",
         url: "https://esaul.site",
-        description: "",
+        description: "Автоматизация технической поддержки и заявок.",
       },
       {
         name: "Синус",
         domain: "app.sine.su",
         url: "https://app.sine.su/",
-        description: "",
+        description: "Транскрибирует речь и создаёт краткие саммари.",
       },
       {
         name: "SportBox",
         domain: "donwr.ru",
         url: "https://donwr.ru/",
-        description: "",
+        description: "Автоматизация работы спортивной федерации.",
       },
     ],
 
@@ -156,35 +156,31 @@ export const translations: Record<Lang, Translation> = {
         name: "TeamTasker",
         domain: "teamtasker.ru",
         url: "https://teamtasker.ru",
-        description:
-          "Combines task, team, and financial management — from personal planning to complex business workflows.",
+        description: "Task, team, and finance management in one app.",
       },
       {
         name: "SwapDog",
         domain: "swapdog.ru",
         url: "https://swapdog.ru",
-        description: "",
+        description: "Automated document exchange between iiko and EDI.",
       },
       {
         name: "ESAUL",
         domain: "esaul.site",
         url: "https://esaul.site",
-        description:
-          "Automates technical support operations and brings key support workflows into a single system.",
+        description: "Automates technical support and ticket workflows.",
       },
       {
         name: "Sine",
         domain: "app.sine.su",
         url: "https://app.sine.su/",
-        description:
-          "Transcribes speech into text and automatically generates concise summaries with key takeaways.",
+        description: "Transcribes speech and generates concise summaries.",
       },
       {
         name: "SportBox",
         domain: "donwr.ru",
         url: "https://donwr.ru/",
-        description:
-          "Automates sports federation operations, including registries, competition entries, and results.",
+        description: "Automates sports federation operations.",
       },
     ],
 

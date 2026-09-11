@@ -35,6 +35,7 @@ export function Projects() {
                 {Thumbnail && <Thumbnail />}
               </div>
             </a>
+            <p className="text-xs font-medium text-secondary">{project.name}</p>
             {project.description && <p className="text-sm font-normal">{project.description}</p>}
           </article>
         );
