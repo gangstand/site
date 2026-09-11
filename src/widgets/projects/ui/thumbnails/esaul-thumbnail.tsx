@@ -7,7 +7,7 @@ export function EsaulThumbnail() {
     <div className="flex h-full w-full flex-col justify-center bg-[#f1f1f1] p-[1.667%] [container-type:inline-size]">
       <div className="rounded-[1.667cqw] p-[5%]" style={{ backgroundColor: "var(--color-white)" }}>
         <h3 className={`${font5by7.className} mb-[1.92%] text-[4.6cqw] uppercase leading-[1.16] text-[#171717]`}>
-          ЕСАУЛ — Ваша единая система автоматизации управления линией технической поддержки
+          Ваша единая система автоматизации управления линией технической поддержки
         </h3>
 
         <p className="mb-[10%] text-[2.6cqw] leading-[1.25] text-[#171717]" style={{ fontFamily: "Arial, sans-serif" }}>
