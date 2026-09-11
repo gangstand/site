@@ -73,6 +73,12 @@ export const translations: Record<Lang, Translation> = {
 
     projects: [
       {
+        name: "HomeLab",
+        domain: "homelab",
+        url: "https://gangstand.tech",
+        description: "Личная инфраструктура на гипервизоре.",
+      },
+      {
         name: "TeamTasker",
         domain: "teamtasker.ru",
         url: "https://teamtasker.ru",
@@ -94,7 +100,13 @@ export const translations: Record<Lang, Translation> = {
         name: "Синус",
         domain: "app.sine.su",
         url: "https://app.sine.su/",
-        description: "Транскрибирует речь и создаёт краткие саммари.",
+        description: "Транскрибация речи, создание краткого саммари и пересказа.",
+      },
+      {
+        name: "SwapRat",
+        domain: "swaprat.ru",
+        url: "https://swaprat.ru/",
+        description: "Система контроля и аудита в ресторане.",
       },
       {
         name: "SportBox",
@@ -153,6 +165,12 @@ export const translations: Record<Lang, Translation> = {
 
     projects: [
       {
+        name: "HomeLab",
+        domain: "homelab",
+        url: "https://gangstand.tech",
+        description: "Personal infrastructure on a hypervisor.",
+      },
+      {
         name: "TeamTasker",
         domain: "teamtasker.ru",
         url: "https://teamtasker.ru",
@@ -174,7 +192,13 @@ export const translations: Record<Lang, Translation> = {
         name: "Sine",
         domain: "app.sine.su",
         url: "https://app.sine.su/",
-        description: "Transcribes speech and generates concise summaries.",
+        description: "Speech transcription, concise summaries, and a recap.",
+      },
+      {
+        name: "SwapRat",
+        domain: "swaprat.ru",
+        url: "https://swaprat.ru/",
+        description: "Restaurant control and audit system.",
       },
       {
         name: "SportBox",
