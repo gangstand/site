@@ -40,7 +40,6 @@ export interface Translation {
   themeToLight: string;
   languageToggleAria: string;
   avatarAlt: string;
-  avatarEasterEggAlt: string;
 }
 
 export const translations: Record<Lang, Translation> = {
@@ -126,7 +125,6 @@ export const translations: Record<Lang, Translation> = {
     themeToLight: "Переключить на светлую тему",
     languageToggleAria: "Switch to English",
     avatarAlt: "Портрет Никиты Кульпинова",
-    avatarEasterEggAlt: "Пасхалка",
   },
 
   en: {
@@ -212,6 +210,5 @@ export const translations: Record<Lang, Translation> = {
     themeToLight: "Switch to light theme",
     languageToggleAria: "Переключить на русский",
     avatarAlt: "Portrait of Nikita Kulpinov",
-    avatarEasterEggAlt: "Easter egg",
   },
 };

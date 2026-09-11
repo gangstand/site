@@ -1,5 +1,6 @@
 "use client";
 
+import { flushSync } from "react-dom";
 import { useTheme } from "@/shared/lib/theme";
 import { useTranslation } from "@/shared/lib/language";
 
@@ -13,7 +14,9 @@ export function ThemeToggle() {
       return;
     }
     document.startViewTransition(() => {
-      toggleTheme();
+      flushSync(() => {
+        toggleTheme();
+      });
     });
   }
 

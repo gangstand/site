@@ -1,23 +1,20 @@
 "use client";
 
-import { createContext, use, useCallback, useRef, useState, type ReactNode } from "react";
+import { createContext, use, useCallback, useState, type ReactNode } from "react";
 import { setCookie } from "@/shared/lib/cookies";
 
 export type ThemeMode = "light" | "dark";
 
 const THEME_COOKIE = "theme";
-const EASTER_EGG_CLICK_COUNT = 10;
 
 interface ThemeContextValue {
   theme: ThemeMode;
   toggleTheme: () => void;
-  avatarEasterEgg: boolean;
 }
 
 const ThemeContext = createContext<ThemeContextValue>({
   theme: "dark",
   toggleTheme: () => {},
-  avatarEasterEgg: false,
 });
 
 export function ThemeProvider({ children, initialTheme }: { children: ReactNode; initialTheme: ThemeMode }) {
@@ -27,8 +24,6 @@ export function ThemeProvider({ children, initialTheme }: { children: ReactNode;
 
 function useThemeContextProvider(initialTheme: ThemeMode): ThemeContextValue {
   const [theme, setTheme] = useState<ThemeMode>(initialTheme);
-  const [avatarEasterEgg, setAvatarEasterEgg] = useState(false);
-  const clickCountRef = useRef(0);
 
   const toggleTheme = useCallback(() => {
     const root = document.documentElement;
@@ -42,19 +37,9 @@ function useThemeContextProvider(initialTheme: ThemeMode): ThemeContextValue {
 
     setCookie(THEME_COOKIE, nextTheme);
     setTheme(nextTheme);
-
-    if (nextTheme === "light") {
-      setAvatarEasterEgg(false);
-    }
-
-    clickCountRef.current += 1;
-    if (clickCountRef.current >= EASTER_EGG_CLICK_COUNT) {
-      clickCountRef.current = 0;
-      if (nextTheme === "dark") setAvatarEasterEgg(true);
-    }
   }, [theme]);
 
-  return { theme, toggleTheme, avatarEasterEgg };
+  return { theme, toggleTheme };
 }
 
 export function useTheme() {
