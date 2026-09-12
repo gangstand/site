@@ -2,6 +2,7 @@ import { memo } from "react";
 import { TechLogo } from "@/shared/ui/tech-logo";
 import { HOMELAB_SITE_BY_NODE, type HomelabStatus } from "@/shared/config/homelab-status";
 import type { HomelabZone } from "../model/layout";
+import { HOMELAB_MOBILE_QUERY } from "../model/view";
 import { SiteIndicator } from "./site-indicator";
 import styles from "./homelab.module.css";
 
@@ -75,10 +76,12 @@ export const NodeZone = memo(function NodeZone({
           aria-controls={networkExpanded ? "wireguard-network" : undefined}
           onPointerDown={(e) => e.stopPropagation()}
           onPointerEnter={(e) => {
-            if (e.pointerType !== "touch") onEnterNetwork(z.id);
+            if (e.pointerType !== "touch" && !window.matchMedia(HOMELAB_MOBILE_QUERY).matches) onEnterNetwork(z.id);
           }}
           onPointerLeave={onLeaveNetwork}
-          onFocus={() => onFocusNetwork(z.id)}
+          onFocus={() => {
+            if (!window.matchMedia(HOMELAB_MOBILE_QUERY).matches) onFocusNetwork(z.id);
+          }}
           onBlur={onBlurNetwork}
           onClick={(e) => {
             e.stopPropagation();

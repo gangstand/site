@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { bounds } from "./layout";
+import { HOMELAB_MOBILE_QUERY } from "./view";
 
 const HOMELAB_BOUNDS = { minX: bounds.x, minY: bounds.y, maxX: bounds.x + bounds.w, maxY: bounds.y + bounds.h };
 const CONTENT_W = HOMELAB_BOUNDS.maxX - HOMELAB_BOUNDS.minX;
@@ -88,7 +89,8 @@ export function useCanvasTransform() {
       if (width <= 0 || height <= 0) return;
       fitScaleRef.current = computeFitScale(width, height);
       if (!previousSize) {
-        updateTransform(centerAt(width, height, clampScale(DEFAULT_SCALE)));
+        const isMobile = window.matchMedia(HOMELAB_MOBILE_QUERY).matches;
+        updateTransform(centerAt(width, height, clampScale(isMobile ? fitScaleRef.current : DEFAULT_SCALE)));
       } else {
         const t = transformRef.current;
         const scale = clampScale(t.scale);

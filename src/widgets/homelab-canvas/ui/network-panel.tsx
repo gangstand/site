@@ -1,8 +1,17 @@
-import { memo } from "react";
+import { memo, useEffect, useRef, useSyncExternalStore } from "react";
 import { TechLogo } from "@/shared/ui/tech-logo";
 import { HOMELAB_WIREGUARD, HOMELAB_WIREGUARD_ADDRESSES } from "../model/nodes";
 import type { HomelabZone } from "../model/layout";
+import { HOMELAB_MOBILE_QUERY } from "../model/view";
 import styles from "./homelab.module.css";
+
+const getMobileSnapshot = () => window.matchMedia(HOMELAB_MOBILE_QUERY).matches;
+const getServerSnapshot = () => false;
+function subscribeMobile(onChange: () => void) {
+  const query = window.matchMedia(HOMELAB_MOBILE_QUERY);
+  query.addEventListener("change", onChange);
+  return () => query.removeEventListener("change", onChange);
+}
 
 interface NetworkPanelProps {
   zone: HomelabZone;
@@ -13,18 +22,32 @@ interface NetworkPanelProps {
 }
 
 export const NetworkPanel = memo(function NetworkPanel({ zone, clients, onClose, onEnter, onLeave }: NetworkPanelProps) {
-  return (
-    <aside id="wireguard-network" className={styles.networkPanel} aria-label="Приватная сеть WireGuard" onPointerEnter={() => onEnter(zone.id)} onPointerLeave={onLeave}>
-      <button type="button" className={styles.close} onClick={onClose} aria-label="Закрыть сведения о сети">
-        ×
-      </button>
-      <div className={styles.networkPanelHeader}>
-        <TechLogo tech="wireguard" size={28} />
-        <div>
-          <span>WIREGUARD</span>
-          <h2>{HOMELAB_WIREGUARD.name}</h2>
+  const isMobile = useSyncExternalStore(subscribeMobile, getMobileSnapshot, getServerSnapshot);
+  const dialogRef = useRef<HTMLDialogElement>(null);
+
+  useEffect(() => {
+    if (!isMobile) return;
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+    dialog.showModal();
+    return () => dialog.close();
+  }, [isMobile]);
+
+  const content = (
+    <>
+      <div className={styles.networkPanelTop}>
+        <button type="button" className={styles.close} onClick={onClose} aria-label="Закрыть сведения о сети">
+          ×
+        </button>
+        <div className={styles.networkPanelHeader}>
+          <TechLogo tech="wireguard" size={28} />
+          <div>
+            <span>WIREGUARD</span>
+            <h2 id="wireguard-title">{HOMELAB_WIREGUARD.name}</h2>
+          </div>
         </div>
       </div>
+      <div className={styles.networkPanelBody}>
       <div className={styles.networkRole}>
         <strong>{zone.name}</strong>
         <span>{zone.id === "edge" ? "HOST · главный хост" : "CLIENT · участник сети"}</span>
@@ -45,11 +68,38 @@ export const NetworkPanel = memo(function NetworkPanel({ zone, clients, onClose,
       <div className={styles.networkMembers}>
         {clients.map((client) => (
           <span key={client.id} className={client.id === zone.id ? styles.networkMemberActive : undefined}>
-            {client.logo && <TechLogo tech={client.logo} size={14} />} {client.name}
+            {client.logo && <TechLogo tech={client.logo} size={14} />}
+            <span>{client.name}</span>
             <code>{HOMELAB_WIREGUARD_ADDRESSES[client.id] ?? "IP не указан"}</code>
           </span>
         ))}
       </div>
+      </div>
+    </>
+  );
+
+  if (isMobile) {
+    return (
+      <dialog
+        ref={dialogRef}
+        id="wireguard-network"
+        className={`${styles.networkPanel} ${styles.networkSheet}`}
+        aria-labelledby="wireguard-title"
+        onCancel={(e) => { e.preventDefault(); onClose(); }}
+        onClick={(e) => {
+          if (e.target !== e.currentTarget) return;
+          const rect = e.currentTarget.getBoundingClientRect();
+          if (e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom) onClose();
+        }}
+      >
+        {content}
+      </dialog>
+    );
+  }
+
+  return (
+    <aside id="wireguard-network" className={styles.networkPanel} aria-labelledby="wireguard-title" onPointerEnter={() => onEnter(zone.id)} onPointerLeave={onLeave}>
+      {content}
     </aside>
   );
 });

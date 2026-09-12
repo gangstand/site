@@ -52,7 +52,7 @@
 @media(max-width:700px){.networkPanel{left:14px;bottom:76px;width:360px;max-width:calc(100% - 28px);max-height:calc(100% - 100px);padding:20px}}
 @media(prefers-reduced-motion:reduce){.wgBadge{transition:none}}
 
-.siteIndicator{position:absolute;top:0;left:0;transform:translate(-50%,-50%);z-index:2;width:16px;height:16px;border:3px solid var(--background);border-radius:50%;background:#7e8791;box-shadow:0 0 0 1px #7e879144;pointer-events:auto}
+.siteIndicator{position:absolute;top:0;left:0;transform:translate(-50%,-50%);z-index:2;width:16px;height:16px;border:3px solid var(--background);border-radius:50%;background:#7e8791;box-shadow:0 0 0 1px #7e879144;pointer-events:auto;cursor:pointer}
 .connectionTraffic{animation:connectionTraffic 1.8s linear infinite}
 .viewport[data-interacting=true] .connections path{animation-play-state:paused}
 .viewport[data-detail-view=true] .connections path{animation:none}
@@ -141,3 +141,37 @@
 :global(:root.light-theme) .hypervisor{border-color:#b9803f;background:#f2a15f0d}
 :global(:root.light-theme) .hypervisorTitle>span{color:#8a5a2d;border-color:#d9a066}
 :global(:root.light-theme) .vmCount{color:#7a5f47}
+
+@media(max-width:700px),(max-width:1000px) and (pointer:coarse){
+  .navigation{flex-wrap:wrap;gap:20px;padding:12px 14px}
+  .siteAvailability{width:100%;font-size:10px}
+  .tabs{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,.8fr) minmax(0,1.5fr) minmax(0,1.2fr) minmax(0,1.2fr);width:100%;gap:2px}
+  .tabs button{min-width:0;padding:8px 2px;font-size:clamp(9px,2.65vw,11px)}
+  .viewport{top:104px;bottom:80px}
+}
+
+@media(max-width:700px),(max-width:1000px) and (pointer:coarse){
+  .networkSheet{position:fixed;inset:auto 0 0;margin:0;width:100%;max-width:none;max-height:calc(100dvh - 16px);padding:0;border-radius:22px 22px 0 0;overflow:hidden;box-sizing:border-box;box-shadow:0 -12px 48px #0005;backdrop-filter:none}
+  .networkSheet[open]{display:flex;flex-direction:column}
+  .networkSheet::backdrop{background:#0009}
+  .networkSheet .networkPanelTop{position:relative;flex:none;padding:20px 64px 20px 20px;border-bottom:1px solid #78cbbb26}
+  .networkSheet .networkPanelHeader{padding:0;gap:14px}
+  .networkSheet h2{font-size:18px;line-height:1.35}
+  .networkSheet .networkPanelHeader span{font-size:10px;letter-spacing:1.6px}
+  .networkSheet .close{top:50%;right:12px;transform:translateY(-50%);width:44px;height:44px;font-size:28px;border:1px solid #78cbbb33;border-radius:12px}
+  .networkPanelBody{min-width:0}
+  .networkSheet .networkPanelBody{min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:0 20px calc(20px + env(safe-area-inset-bottom))}
+  .networkSheet .networkRole{margin-top:0;padding:16px 0;border-top:0;align-items:flex-start;flex-wrap:wrap;gap:6px 12px;font-size:16px}
+  .networkSheet .networkRole>span{font-size:11px;padding-top:3px}
+  .networkSheet .networkAddress{gap:8px;flex-wrap:wrap;font-size:12px}
+  .networkSheet .networkAddress code{font-size:15px}
+  .networkSheet p{font-size:13px;line-height:1.6}
+  .networkSheet .networkHostRow{padding:12px;gap:10px}
+  .networkSheet .networkHostRow>span{font-size:12px}
+  .networkSheet .networkHostRow small{font-size:10px}
+  .networkSheet h3{font-size:12px;margin:20px 0 12px}
+  .networkSheet .networkMembers{display:flex;flex-direction:column;gap:6px}
+  .networkSheet .networkMembers>span{display:grid;grid-template-columns:18px minmax(0,1fr) auto;align-items:center;gap:10px;min-height:44px;padding:10px 12px;font-size:13px;border-radius:10px}
+  .networkSheet .networkMembers>span>svg{margin:0;justify-self:center}
+  .networkSheet .networkMembers code{font-size:12px;white-space:nowrap;font-variant-numeric:tabular-nums}
+}
