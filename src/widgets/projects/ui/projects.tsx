@@ -20,12 +20,12 @@ export function Projects() {
       {t.projects.map((project) => {
         const thumbnail = PROJECT_THUMBNAILS[project.domain];
         const Thumbnail = thumbnail?.Component;
+        const isInternal = project.url.startsWith("/");
         return (
           <article key={project.url} className="flex flex-col gap-3">
             <a
               href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
+              {...(!isInternal && { target: "_blank", rel: "noopener noreferrer" })}
               className="block space-y-3 transition-opacity hover:opacity-80"
             >
               <div

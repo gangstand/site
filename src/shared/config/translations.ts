@@ -75,7 +75,7 @@ export const translations: Record<Lang, Translation> = {
       {
         name: "HomeLab",
         domain: "homelab",
-        url: "https://gangstand.tech",
+        url: "/homelab",
         description: "Личная инфраструктура на гипервизоре.",
       },
       {
@@ -167,7 +167,7 @@ export const translations: Record<Lang, Translation> = {
       {
         name: "HomeLab",
         domain: "homelab",
-        url: "https://gangstand.tech",
+        url: "/homelab",
         description: "Personal infrastructure on a hypervisor.",
       },
       {
