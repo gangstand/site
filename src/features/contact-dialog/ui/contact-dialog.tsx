@@ -3,6 +3,7 @@
 import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import { socialLinks } from "@/shared/config/contacts";
 import { ContactIcon } from "@/shared/ui/contact-icon";
+import { CloseButton } from "@/shared/ui/close-button";
 import { useTranslation } from "@/shared/lib/language";
 
 const contactRowClass =
@@ -55,7 +56,6 @@ export function ContactDialog({ emailAction }: ContactDialogProps) {
         aria-keyshortcuts="C"
       >
         {t.contactsButton}
-        <kbd className="absolute right-2 flex h-6 w-6 items-center justify-center rounded-lg border border-current border-b-[3px] font-sans text-[11px] opacity-30 max-lg:hidden" aria-hidden="true">C</kbd>
       </button>
       <dialog
         ref={dialogRef}
@@ -86,14 +86,11 @@ export function ContactDialog({ emailAction }: ContactDialogProps) {
             ))}
           </div>
         </div>
-        <button
-          className="absolute right-3 top-3 grid cursor-pointer place-items-center rounded-full bg-primary/5 p-1.5 text-primary/80 transition-colors hover:bg-primary/10"
-          type="button"
-          aria-label={t.closeDialog}
+        <CloseButton
+          className="absolute right-3 top-3"
+          label={t.closeDialog}
           onClick={() => dialogRef.current?.close()}
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6" /></svg>
-        </button>
+        />
       </dialog>
     </>
   );

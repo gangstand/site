@@ -42,6 +42,15 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
     });
   }, []);
 
+  const setTransformImmediate = useCallback((next: Transform) => {
+    if (frameRef.current !== null) {
+      cancelAnimationFrame(frameRef.current);
+      frameRef.current = null;
+    }
+    transformRef.current = next;
+    setTransform(next);
+  }, []);
+
   useEffect(() => () => {
     if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
     frameRef.current = null;
@@ -75,7 +84,7 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
       fitScaleRef.current = computeFitScale(width, height);
       if (!previousSize) {
         const isMobile = window.matchMedia(MOBILE_QUERY).matches;
-        updateTransform(centerAt(width, height, clampScale(isMobile || fitOnMount ? fitScaleRef.current : DEFAULT_SCALE)));
+        setTransformImmediate(centerAt(width, height, clampScale(isMobile || fitOnMount ? fitScaleRef.current : DEFAULT_SCALE)));
       } else {
         const t = transformRef.current;
         const scale = clampScale(t.scale);
@@ -88,7 +97,7 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
     });
     if (viewportRef.current) observer.observe(viewportRef.current);
     return () => observer.disconnect();
-  }, [centerAt, clampScale, updateTransform, fitOnMount, computeFitScale]);
+  }, [centerAt, clampScale, updateTransform, setTransformImmediate, fitOnMount, computeFitScale]);
 
   const zoomAround = useCallback((clientX: number, clientY: number, scaleFactor: number) => {
     const el = viewportRef.current;

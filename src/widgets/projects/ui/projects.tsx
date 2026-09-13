@@ -23,7 +23,11 @@ export function Projects() {
             onClick={() => setActiveId(project.id)}
             className="block w-full cursor-pointer overflow-hidden rounded-[12px] border border-primary/5 bg-primary/5 transition-opacity hover:opacity-80 focus-visible:ring-2 focus-visible:ring-primary"
           >
-            <img src={`/projects/${project.id}/thumbnail.webp`} alt="" className="h-auto w-full" />
+            {project.thumbnail === false ? (
+              <div className="h-[300px] w-full bg-primary/10 sm:h-[600px]" />
+            ) : (
+              <img src={`/projects/${project.id}/thumbnail.webp`} alt="" className="h-auto w-full" />
+            )}
           </button>
           {project.description[lang] && <p className="text-sm font-normal">{project.description[lang]}</p>}
         </article>

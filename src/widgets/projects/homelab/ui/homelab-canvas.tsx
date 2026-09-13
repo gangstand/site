@@ -6,7 +6,6 @@ import { connections } from "../model/connections";
 import { nodes as HOMELAB_NODES, zones as HOMELAB_ZONES, bounds } from "../model/layout";
 import { useSiteStatus } from "../model/use-site-status";
 import { useNodeSelection } from "../model/use-node-selection";
-import { useNetworkPanel } from "../model/use-network-panel";
 import type { View } from "../model/view";
 import { CanvasViewport } from "@/shared/ui/infinite-canvas";
 import { Toolbar } from "./toolbar";
@@ -14,7 +13,6 @@ import { HypervisorSection } from "./hypervisor-section";
 import { NodeZone } from "./node-zone";
 import { ConnectionsLayer } from "./connections-layer";
 import { NodeCard } from "./node-card";
-import { NetworkPanel } from "./network-panel";
 import styles from "./homelab.module.css";
 
 const NETWORK_CLIENTS = HOMELAB_ZONES.filter((z) => z.label === "VIRTUAL MACHINE");
@@ -26,7 +24,6 @@ export function HomelabCanvas({ embedded = false }: { embedded?: boolean } = {})
   const Shell = embedded ? "div" : "main";
   const statuses = useSiteStatus();
   const { selected, selectedConnection, setSelected, toggleSelected, selectConnection } = useNodeSelection();
-  const { activeNetworkId, setFocusedNetwork, enterNetwork, leaveNetwork, closeNetwork, toggleNetwork } = useNetworkPanel();
   const [view, setView] = useState<View>("all");
 
   const handleChangeView = useCallback(
@@ -37,10 +34,7 @@ export function HomelabCanvas({ embedded = false }: { embedded?: boolean } = {})
     [setSelected],
   );
 
-  const handleBlurNetwork = useCallback(() => setFocusedNetwork(null), [setFocusedNetwork]);
   const handleClearSelection = useCallback(() => setSelected(null), [setSelected]);
-
-  const networkZone = HOMELAB_ZONES.find((z) => z.id === activeNetworkId);
 
   const visible = useMemo(
     () => connections.filter((c) => view === "all" || (view === "traffic" ? c.kind === "flow" || c.kind === "proxy" || c.kind === "wireguard" : c.kind === view)),
@@ -64,8 +58,7 @@ export function HomelabCanvas({ embedded = false }: { embedded?: boolean } = {})
       className={styles.shell}
       onKeyDown={(e) => {
         if (e.key === "Escape") {
-          if (selected || selectedConnection || activeNetworkId) e.preventDefault();
-          closeNetwork();
+          if (selected || selectedConnection) e.preventDefault();
           setSelected(null);
         }
       }}
@@ -76,7 +69,6 @@ export function HomelabCanvas({ embedded = false }: { embedded?: boolean } = {})
         ariaLabel={lang === "ru" ? "Карта инфраструктуры. Escape — снять выделение" : "Infrastructure map. Escape to clear selection"}
         onClearSelection={handleClearSelection}
         fitOnMount={embedded}
-        className={styles.viewportOffset}
       >
         <HypervisorSection />
         {HOMELAB_ZONES.map((z) => (
@@ -86,14 +78,8 @@ export function HomelabCanvas({ embedded = false }: { embedded?: boolean } = {})
             isDestination={selectedRoute?.to === (z.id === "edge" ? "proxy" : z.id.replace("-vm", ""))}
             selectedVmId={selected}
             statuses={statuses}
-            networkExpanded={networkZone?.id === z.id}
             networkClientsCount={NETWORK_CLIENTS.length}
             onSelectNode={toggleSelected}
-            onEnterNetwork={enterNetwork}
-            onLeaveNetwork={leaveNetwork}
-            onFocusNetwork={setFocusedNetwork}
-            onBlurNetwork={handleBlurNetwork}
-            onToggleNetwork={toggleNetwork}
           />
         ))}
         <ConnectionsLayer visible={visible} selected={selected} selectedConnection={selectedConnection} onSelectConnection={selectConnection} />
@@ -101,7 +87,6 @@ export function HomelabCanvas({ embedded = false }: { embedded?: boolean } = {})
           <NodeCard key={node.id} node={node} statuses={statuses} selected={selected === node.id} dimmed={!related.has(node.id)} onSelect={toggleSelected} />
         ))}
       </CanvasViewport>
-      {networkZone && <NetworkPanel zone={networkZone} clients={NETWORK_CLIENTS} onClose={closeNetwork} onEnter={enterNetwork} onLeave={leaveNetwork} />}
     </Shell>
   );
 }

@@ -17,6 +17,7 @@ export interface ProjectDefinition {
   url: string;
   description: Record<Lang, string>;
   images: ProjectImage[];
+  thumbnail?: boolean;
   canvas?: { component: ComponentType; label: Record<Lang, string> };
 }
 

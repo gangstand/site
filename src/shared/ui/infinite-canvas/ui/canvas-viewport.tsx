@@ -4,6 +4,7 @@ import { useCallback, type ReactNode } from "react";
 import { useTranslation } from "@/shared/lib/language";
 import { canvasCopy } from "../model/copy";
 import { useCanvasTransform, type CanvasBounds } from "../model/use-canvas-transform";
+import { useFullscreen } from "../model/use-fullscreen";
 import { FooterControls, type CanvasControlLabels } from "./footer-controls";
 import styles from "./infinite-canvas.module.css";
 
@@ -28,6 +29,7 @@ export function CanvasViewport({ children, bounds, onClearSelection, fitOnMount 
   const { viewportRef, transform, isPanning, isInteracting, isDetailView, ready, moved, fitView, zoomButton, panBy, onPointerDown, onPointerMove, endPointer } = useCanvasTransform(bounds, fitOnMount);
   const zoomIn = useCallback(() => zoomButton(1.2), [zoomButton]);
   const zoomOut = useCallback(() => zoomButton(1 / 1.2), [zoomButton]);
+  const { isFullscreen, toggleFullscreen } = useFullscreen(() => viewportRef.current?.parentElement ?? null);
 
   return (
     <>
@@ -68,7 +70,16 @@ export function CanvasViewport({ children, bounds, onClearSelection, fitOnMount 
           {children}
         </div>
       </div>
-      <FooterControls scale={transform.scale} onZoomOut={zoomOut} onZoomIn={zoomIn} onFit={fitView} labels={controls ?? text.controls} />
+      <FooterControls
+        scale={transform.scale}
+        ready={ready}
+        onZoomOut={zoomOut}
+        onZoomIn={zoomIn}
+        onFit={fitView}
+        isFullscreen={isFullscreen}
+        onToggleFullscreen={toggleFullscreen}
+        labels={controls ?? text.controls}
+      />
     </>
   );
 }

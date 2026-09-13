@@ -5,11 +5,11 @@ export const canvasCopy: Record<Lang, { label: string; keyboard: string; control
   ru: {
     label: "Полотно",
     keyboard: "Стрелки — перемещение, плюс и минус — масштаб, 0 — показать всё.",
-    controls: { hint: "Перетаскивайте полотно", zoomHint: "· Ctrl + колесо — масштаб", zoomOut: "Уменьшить", zoomIn: "Увеличить", fit: "Всё полотно", fitLabel: "Показать всё полотно" },
+    controls: { zoomOut: "Уменьшить", zoomIn: "Увеличить", fit: "Всё полотно", fitLabel: "Показать всё полотно", fullscreenEnter: "На весь экран", fullscreenExit: "Выйти из полноэкранного режима" },
   },
   en: {
     label: "Canvas",
     keyboard: "Arrow keys to pan, plus and minus to zoom, 0 to fit all.",
-    controls: { hint: "Drag to pan", zoomHint: "· Ctrl + scroll to zoom", zoomOut: "Zoom out", zoomIn: "Zoom in", fit: "Fit all", fitLabel: "Fit all content" },
+    controls: { zoomOut: "Zoom out", zoomIn: "Zoom in", fit: "Fit all", fitLabel: "Fit all content", fullscreenEnter: "Enter fullscreen", fullscreenExit: "Exit fullscreen" },
   },
 };

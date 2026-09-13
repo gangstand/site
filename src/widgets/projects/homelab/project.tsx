@@ -1,13 +1,5 @@
-"use client";
-
-import dynamic from "next/dynamic";
 import type { ProjectDefinition } from "../model/project";
-import styles from "../ui/project-dialog.module.css";
-
-const HomelabCanvas = dynamic(
-  () => import("./ui/homelab-canvas").then((module) => module.HomelabCanvas),
-  { loading: () => <div className={styles.loading} role="status">Loading Homelab…</div> },
-);
+import { HomelabCanvas } from "./ui/homelab-canvas";
 
 function EmbeddedHomelab() {
   return <HomelabCanvas embedded />;
@@ -23,6 +15,7 @@ export const homelab: ProjectDefinition = {
     en: "Personal infrastructure on a hypervisor.",
   },
   images: [],
+  thumbnail: false,
   canvas: {
     component: EmbeddedHomelab,
     label: { ru: "Карта инфраструктуры", en: "Infrastructure map" },

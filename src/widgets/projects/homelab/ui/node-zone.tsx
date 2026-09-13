@@ -1,7 +1,6 @@
 import { memo } from "react";
 import { TechLogo } from "@/shared/ui/tech-logo";
 import { HOMELAB_SITE_BY_NODE, type HomelabStatus } from "@/shared/config/homelab-status";
-import { MOBILE_QUERY } from "@/shared/lib/media-query";
 import type { HomelabZone } from "../model/layout";
 import { SiteIndicator } from "./site-indicator";
 import styles from "./homelab.module.css";
@@ -11,14 +10,8 @@ interface NodeZoneProps {
   isDestination: boolean;
   selectedVmId: string | null;
   statuses: HomelabStatus;
-  networkExpanded: boolean;
   networkClientsCount: number;
   onSelectNode: (id: string) => void;
-  onEnterNetwork: (id: string) => void;
-  onLeaveNetwork: () => void;
-  onFocusNetwork: (id: string) => void;
-  onBlurNetwork: () => void;
-  onToggleNetwork: (id: string) => void;
 }
 
 export const NodeZone = memo(function NodeZone({
@@ -26,14 +19,8 @@ export const NodeZone = memo(function NodeZone({
   isDestination,
   selectedVmId,
   statuses,
-  networkExpanded,
   networkClientsCount,
   onSelectNode,
-  onEnterNetwork,
-  onLeaveNetwork,
-  onFocusNetwork,
-  onBlurNetwork,
-  onToggleNetwork,
 }: NodeZoneProps) {
   const isVm = z.label === "VIRTUAL MACHINE";
   const vmId = z.id.replace("-vm", "");
@@ -66,31 +53,6 @@ export const NodeZone = memo(function NodeZone({
         <h2>{z.name}</h2>
       </div>
       <p>{z.detail}</p>
-      {(z.id === "edge" || isVm) && (
-        <button
-          type="button"
-          className={styles.wgBadge}
-          data-canvas-control
-          aria-label={`WireGuard · ${z.name} · ${z.id === "edge" ? "главный хост" : "клиент"}. Показать приватную сеть`}
-          aria-expanded={networkExpanded}
-          aria-controls={networkExpanded ? "wireguard-network" : undefined}
-          onPointerDown={(e) => e.stopPropagation()}
-          onPointerEnter={(e) => {
-            if (e.pointerType !== "touch" && !window.matchMedia(MOBILE_QUERY).matches) onEnterNetwork(z.id);
-          }}
-          onPointerLeave={onLeaveNetwork}
-          onFocus={() => {
-            if (!window.matchMedia(MOBILE_QUERY).matches) onFocusNetwork(z.id);
-          }}
-          onBlur={onBlurNetwork}
-          onClick={(e) => {
-            e.stopPropagation();
-            onToggleNetwork(z.id);
-          }}
-        >
-          <TechLogo tech="wireguard" size={20} />
-        </button>
-      )}
       {z.id === "edge" && <span className={styles.hostCaption}>Центральный хост · {networkClientsCount} клиентов</span>}
     </section>
   );

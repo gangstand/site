@@ -113,23 +113,6 @@ export const HOMELAB_NODES: HomelabNode[] = [
   },
 ];
 
-export const HOMELAB_WIREGUARD = {
-  name: "Приватная сеть",
-  host: "Proxy",
-  description: "Внутренний трафик между Proxy и VM передаётся по зашифрованным туннелям WireGuard.",
-};
-
-export const HOMELAB_WIREGUARD_ADDRESSES: Record<string, string> = {
-  edge: "10.100.0.1",
-  docker: "10.100.0.2",
-  "harbor-vm": "10.100.0.3",
-  "jenkins-vm": "10.100.0.4",
-  "zabbix-vm": "10.100.0.5",
-  "postgres-vm": "10.100.0.6",
-  "rabbitmq-vm": "10.100.0.7",
-  "redis-vm": "10.100.0.8",
-};
-
 export const HOMELAB_CONNECTIONS: HomelabConnection[] = [
   { id: "vpn-docker", from: "proxy", to: "docker", kind: "vpn", label: "WireGuard · Proxy HOST ↔ Docker CLIENT" },
   { id: "vpn-jenkins", from: "proxy", to: "jenkins", kind: "vpn", label: "WireGuard · Proxy HOST ↔ Jenkins CLIENT" },
