@@ -25,7 +25,7 @@ const brandIcons = {
   },
 } as const;
 
-export type ContactIconName = keyof typeof brandIcons | "Email" | "Copied";
+type ContactIconName = keyof typeof brandIcons | "Email" | "Copied";
 
 interface ContactIconProps {
   name: ContactIconName;

@@ -1,24 +1,20 @@
 "use client";
 
 import { useTranslation } from "@/shared/lib/language";
-import { InfiniteCanvas } from "@/widgets/homelab-canvas";
-import type { ProjectImage } from "../model/project-images";
+import { InfiniteCanvas } from "@/shared/ui/infinite-canvas";
+import type { ProjectImage } from "../model/project";
 import styles from "./photo-canvas.module.css";
 
 const copy = {
   ru: {
     label: "Фотографии проекта",
-    keyboard: "Стрелки — перемещение, плюс и минус — масштаб, 0 — показать всё.",
     empty: "Фотографии скоро появятся",
     detail: "Здесь будут фотографии и скриншоты проекта",
-    controls: { hint: "Перетаскивайте полотно", zoomHint: "· Ctrl + колесо — масштаб", zoomOut: "Уменьшить", zoomIn: "Увеличить", fit: "Всё полотно", fitLabel: "Показать всё полотно" },
   },
   en: {
     label: "Project photos",
-    keyboard: "Arrow keys to pan, plus and minus to zoom, 0 to fit all.",
     empty: "Photos coming soon",
     detail: "Project photos and screenshots will appear here",
-    controls: { hint: "Drag to pan", zoomHint: "· Ctrl + scroll to zoom", zoomOut: "Zoom out", zoomIn: "Zoom in", fit: "Fit all", fitLabel: "Fit all content" },
   },
 };
 
@@ -31,7 +27,7 @@ export function PhotoCanvas({ images, projectName }: { images: ProjectImage[]; p
   const h = images.length ? Math.max(...images.map((image) => image.y + image.height)) - y : 220;
 
   return (
-    <InfiniteCanvas bounds={{ x, y, w, h }} ariaLabel={`${text.label}: ${projectName}. ${text.keyboard}`} controls={text.controls}>
+    <InfiniteCanvas bounds={{ x, y, w, h }} ariaLabel={`${text.label}: ${projectName}`}>
       {images.length ? images.map((image) => (
         <img key={image.src} src={image.src} alt={image.alt[lang]} width={image.width} height={image.height} draggable={false} decoding="async" className={styles.photo} style={{ left: image.x, top: image.y, width: image.width, height: image.height }} />
       )) : (

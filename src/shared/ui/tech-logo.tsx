@@ -1,14 +1,9 @@
 import {
-  siDebian,
   siDocker,
-  siErlang,
   siGrafana,
   siGithub,
   siHarbor,
   siJenkins,
-  siNextdotjs,
-  siNginx,
-  siPhp,
   siPortainer,
   siProxmox,
   siPostgresql,
@@ -28,33 +23,24 @@ export type TechKey =
   | "portainer"
   | "redis"
   | "redisinsight"
-  | "nextjs"
   | "harbor"
   | "postgresql"
-  | "nginx"
   | "jenkins"
-  | "php"
   | "rabbitmq"
-  | "erlang"
   | "wireguard"
-  | "debian"
   | "zabbix";
 
 interface LogoDef {
   viewBox: string;
   paths: { d: string; fill: string }[];
-  color: string;
 }
 
 function fromSimpleIcon(icon: SimpleIcon): LogoDef {
-  return { viewBox: "0 0 24 24", paths: [{ d: icon.path, fill: `#${icon.hex}` }], color: `#${icon.hex}` };
+  return { viewBox: "0 0 24 24", paths: [{ d: icon.path, fill: `#${icon.hex}` }] };
 }
 
-// Official Zabbix wordmark (Wikimedia Commons, "Zabbix logo square.svg"),
-// cropped to the red bar the logo actually occupies within its square canvas.
 const ZABBIX_LOGO: LogoDef = {
   viewBox: "0 147.86762 400.83 104.99",
-  color: "#D40000",
   paths: [
     { d: "m 0,147.86762 h 400.83 v 104.99 H 0 Z m 0,0", fill: "#D40000" },
     {
@@ -64,28 +50,20 @@ const ZABBIX_LOGO: LogoDef = {
   ],
 };
 
-export const LOGOS: Record<TechKey, LogoDef> = {
+const LOGOS: Record<TechKey, LogoDef> = {
   github: fromSimpleIcon(siGithub),
   proxmox: fromSimpleIcon(siProxmox),
   docker: fromSimpleIcon(siDocker),
   traefik: fromSimpleIcon(siTraefikproxy),
   grafana: fromSimpleIcon(siGrafana),
   portainer: fromSimpleIcon(siPortainer),
-  // Redis official mark in the original Redis red.
-  redis: { viewBox: "0 0 24 24", paths: [{ d: siRedis.path, fill: "#DC382D" }], color: "#DC382D" },
-  redisinsight: { viewBox: "0 0 24 24", paths: [{ d: siRedis.path, fill: "#DC382D" }], color: "#DC382D" },
-  // Next.js's mark is pure black — swap to the current text color so it
-  // stays visible on this page's dark theme (and still works in light mode).
-  nextjs: { viewBox: "0 0 24 24", paths: [{ d: siNextdotjs.path, fill: "var(--primary)" }], color: "var(--primary)" },
+  redis: { viewBox: "0 0 24 24", paths: [] },
+  redisinsight: { viewBox: "0 0 24 24", paths: [{ d: siRedis.path, fill: "#DC382D" }] },
   harbor: fromSimpleIcon(siHarbor),
   postgresql: fromSimpleIcon(siPostgresql),
-  nginx: fromSimpleIcon(siNginx),
   jenkins: fromSimpleIcon(siJenkins),
-  php: fromSimpleIcon(siPhp),
   rabbitmq: fromSimpleIcon(siRabbitmq),
-  erlang: fromSimpleIcon(siErlang),
   wireguard: fromSimpleIcon(siWireguard),
-  debian: fromSimpleIcon(siDebian),
   zabbix: ZABBIX_LOGO,
 };
 

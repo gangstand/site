@@ -5,5 +5,3 @@ export const socialLinks = [
   { label: "GitHub", handle: "gangstand", href: "https://github.com/gangstand" },
   { label: "GitLab", handle: "gangstand", href: "https://gitlab.com/gangstand" },
 ] as const;
-
-export type SocialLink = (typeof socialLinks)[number];

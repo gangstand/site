@@ -1,19 +1,12 @@
 export type Lang = "ru" | "en";
 
-export interface EducationEntry {
+interface EducationEntry {
   dateRange: string;
   institution: string;
   specialty: string;
 }
 
-export interface ProjectEntry {
-  name: string;
-  domain: string;
-  url: string;
-  description: string;
-}
-
-export interface Translation {
+interface Translation {
   skipToContent: string;
   projectsHeading: string;
   pageTitle: string;
@@ -25,7 +18,8 @@ export interface Translation {
   experienceAfter: string;
   educationHeading: string;
   education: [EducationEntry, EducationEntry];
-  projects: ProjectEntry[];
+  projectAbout: string;
+  projectPending: string;
   contactsButton: string;
   contactsHeading: string;
   closeDialog: string;
@@ -71,38 +65,8 @@ export const translations: Record<Lang, Translation> = {
       },
     ],
 
-    projects: [
-      {
-        name: "HomeLab",
-        domain: "homelab",
-        url: "/homelab",
-        description: "Личная инфраструктура на гипервизоре.",
-      },
-      {
-        name: "TeamTasker",
-        domain: "teamtasker.ru",
-        url: "https://teamtasker.ru",
-        description: "Управление задачами, командой и финансами в одном приложении.",
-      },
-      {
-        name: "SwapDog",
-        domain: "swapdog.ru",
-        url: "https://swapdog.ru",
-        description: "Автоматический обмен документами между iiko и ЭДО.",
-      },
-      {
-        name: "ЕСАУЛ",
-        domain: "esaul.site",
-        url: "https://esaul.site",
-        description: "Автоматизация технической поддержки и заявок.",
-      },
-      {
-        name: "SwapRat",
-        domain: "swaprat.ru",
-        url: "https://swaprat.ru/",
-        description: "Система контроля и аудита в ресторане.",
-      },
-    ],
+    projectAbout: "О проекте",
+    projectPending: "Текст в разработке",
 
     contactsButton: "Контакты",
     contactsHeading: "Контакты",
@@ -151,38 +115,8 @@ export const translations: Record<Lang, Translation> = {
       },
     ],
 
-    projects: [
-      {
-        name: "HomeLab",
-        domain: "homelab",
-        url: "/homelab",
-        description: "Personal infrastructure on a hypervisor.",
-      },
-      {
-        name: "TeamTasker",
-        domain: "teamtasker.ru",
-        url: "https://teamtasker.ru",
-        description: "Task, team, and finance management in one app.",
-      },
-      {
-        name: "SwapDog",
-        domain: "swapdog.ru",
-        url: "https://swapdog.ru",
-        description: "Automated document exchange between iiko and EDI.",
-      },
-      {
-        name: "ESAUL",
-        domain: "esaul.site",
-        url: "https://esaul.site",
-        description: "Automates technical support and ticket workflows.",
-      },
-      {
-        name: "SwapRat",
-        domain: "swaprat.ru",
-        url: "https://swaprat.ru/",
-        description: "Restaurant control and audit system.",
-      },
-    ],
+    projectAbout: "About the project",
+    projectPending: "Project write-up in progress",
 
     contactsButton: "Contacts",
     contactsHeading: "Contacts",

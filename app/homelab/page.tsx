@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { HomelabPage } from "@/views/homelab";
+import { HomelabCanvas } from "@/widgets/projects/homelab";
 
 export const metadata: Metadata = {
   title: "Homelab map",
@@ -7,5 +7,9 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <HomelabPage />;
+  return (
+    <div className="h-svh">
+      <HomelabCanvas />
+    </div>
+  );
 }

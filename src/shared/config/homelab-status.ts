@@ -28,7 +28,6 @@ export interface SiteStatus {
 
 export type HomelabStatus = Partial<Record<HomelabSiteId, SiteStatus>>;
 
-/** Only known sites and valid states/timestamps can reach status indicators. */
 export function parseHomelabStatus(value: unknown): HomelabStatus {
   if (!value || typeof value !== "object" || Array.isArray(value)) throw new Error("Invalid homelab status");
   const result: HomelabStatus = {};

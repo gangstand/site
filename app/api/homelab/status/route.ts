@@ -15,7 +15,6 @@ async function checkSite(url: string): Promise<SiteStatus> {
       signal: AbortSignal.timeout(5_000),
     });
     state = response.ok ? "up" : [401, 403].includes(response.status) ? "auth" : "down";
-    // Releasing the body must not turn an already received HTTP status into "down".
     await response.body?.cancel().catch(() => {});
   } catch {
     state = "down";
