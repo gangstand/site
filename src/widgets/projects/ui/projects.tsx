@@ -1,6 +1,8 @@
 "use client";
 
-import type { ComponentType } from "react";
+import { useState, type ComponentType } from "react";
+import { HomelabDialog } from "./homelab-dialog";
+import { WebsiteProjectDialog } from "./website-project-dialog";
 import { useTranslation } from "@/shared/lib/language";
 import { SwapdogThumbnail } from "./thumbnails/swapdog-thumbnail";
 import { TeamtaskerThumbnail } from "./thumbnails/teamtasker-thumbnail";
@@ -18,31 +20,33 @@ const PROJECT_THUMBNAILS: Record<string, { Component: ComponentType; autoHeight?
 
 export function Projects() {
   const { t } = useTranslation();
+  const [activeDomain, setActiveDomain] = useState<string | null>(null);
+  const activeProject = t.projects.find((project) => project.domain === activeDomain);
 
   return (
     <div className="flex flex-col gap-6">
       {t.projects.map((project) => {
         const thumbnail = PROJECT_THUMBNAILS[project.domain];
         const Thumbnail = thumbnail?.Component;
-        const isInternal = project.url.startsWith("/");
         return (
           <article key={project.url} className="flex flex-col gap-3">
-            <a
-              href={project.url}
-              {...(!isInternal && { target: "_blank", rel: "noopener noreferrer" })}
-              className="block space-y-3 transition-opacity hover:opacity-80"
-            >
-              <div
-                aria-hidden="true"
-                className={`relative w-full overflow-hidden rounded-[12px] border border-primary/5 bg-primary/5 [container-type:inline-size] ${thumbnail?.autoHeight ? "" : "aspect-square"}`}
+              <button
+                type="button"
+                aria-label={project.name}
+                aria-haspopup="dialog"
+                aria-expanded={activeDomain === project.domain}
+                onClick={() => setActiveDomain(project.domain)}
+                className="block w-full cursor-pointer overflow-hidden rounded-[12px] border border-primary/5 bg-primary/5 transition-opacity hover:opacity-80 focus-visible:ring-2 focus-visible:ring-primary"
               >
                 {Thumbnail && <Thumbnail />}
-              </div>
-            </a>
+              </button>
             {project.description && <p className="text-sm font-normal">{project.description}</p>}
           </article>
         );
       })}
+      {activeProject && (activeProject.domain === "homelab"
+        ? <HomelabDialog project={activeProject} onClose={() => setActiveDomain(null)} />
+        : <WebsiteProjectDialog key={activeProject.domain} project={activeProject} onClose={() => setActiveDomain(null)} />)}
     </div>
   );
 }

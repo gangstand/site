@@ -1,12 +1,9 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { bounds } from "./layout";
 import { HOMELAB_MOBILE_QUERY } from "./view";
 
-const HOMELAB_BOUNDS = { minX: bounds.x, minY: bounds.y, maxX: bounds.x + bounds.w, maxY: bounds.y + bounds.h };
-const CONTENT_W = HOMELAB_BOUNDS.maxX - HOMELAB_BOUNDS.minX;
-const CONTENT_H = HOMELAB_BOUNDS.maxY - HOMELAB_BOUNDS.minY;
+export interface CanvasBounds { x: number; y: number; w: number; h: number }
 const MIN_SCALE = 0.08;
 // How far past "the whole map fits the viewport" a user may zoom in. A fixed
 // absolute cap (e.g. 2.2x) let a small viewport (phones especially) zoom the
@@ -23,13 +20,12 @@ interface Transform {
   scale: number;
 }
 
-function computeFitScale(width: number, height: number) {
-  const padding = 24;
-  return Math.max(MIN_SCALE, Math.min((width - padding * 2) / CONTENT_W, (height - padding * 2) / CONTENT_H, 1));
-}
-
-/** Pan/zoom/pinch state for the infrastructure map, isolated so a drag frame only re-renders the viewport wrapper, not the node/connection tree. */
-export function useCanvasTransform() {
+/** Shared pan/zoom/pinch state: gesture frames only re-render the viewport wrapper. */
+export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: contentHeight }: CanvasBounds, fitOnMount = false) {
+  const computeFitScale = useCallback((width: number, height: number) => {
+    const padding = 24;
+    return Math.max(MIN_SCALE, Math.min((width - padding * 2) / contentWidth, (height - padding * 2) / contentHeight, 1));
+  }, [contentWidth, contentHeight]);
   const viewportRef = useRef<HTMLDivElement>(null);
   const transformRef = useRef<Transform>({ x: 0, y: 0, scale: 1 });
   const [transform, setTransform] = useState<Transform>({ x: 0, y: 0, scale: 1 });
@@ -67,10 +63,10 @@ export function useCanvasTransform() {
   }, []);
 
   const centerAt = useCallback((width: number, height: number, scale: number) => {
-    const x = (width - CONTENT_W * scale) / 2 - HOMELAB_BOUNDS.minX * scale;
-    const y = (height - CONTENT_H * scale) / 2 - HOMELAB_BOUNDS.minY * scale;
+    const x = (width - contentWidth * scale) / 2 - minX * scale;
+    const y = (height - contentHeight * scale) / 2 - minY * scale;
     return { x, y, scale };
-  }, []);
+  }, [contentWidth, contentHeight, minX, minY]);
 
   /** Zooms out to fit the whole map — used by the explicit "Вся карта" control, not the initial view. */
   const fitView = useCallback(() => {
@@ -80,7 +76,7 @@ export function useCanvasTransform() {
     fitScaleRef.current = computeFitScale(rect.width, rect.height);
     const next = centerAt(rect.width, rect.height, clampScale(fitScaleRef.current));
     updateTransform(next);
-  }, [centerAt, clampScale, updateTransform]);
+  }, [centerAt, clampScale, updateTransform, computeFitScale]);
 
   useEffect(() => {
     let previousSize: { width: number; height: number } | undefined;
@@ -90,7 +86,7 @@ export function useCanvasTransform() {
       fitScaleRef.current = computeFitScale(width, height);
       if (!previousSize) {
         const isMobile = window.matchMedia(HOMELAB_MOBILE_QUERY).matches;
-        updateTransform(centerAt(width, height, clampScale(isMobile ? fitScaleRef.current : DEFAULT_SCALE)));
+        updateTransform(centerAt(width, height, clampScale(isMobile || fitOnMount ? fitScaleRef.current : DEFAULT_SCALE)));
       } else {
         const t = transformRef.current;
         const scale = clampScale(t.scale);
@@ -103,7 +99,7 @@ export function useCanvasTransform() {
     });
     if (viewportRef.current) observer.observe(viewportRef.current);
     return () => observer.disconnect();
-  }, [centerAt, clampScale, updateTransform]);
+  }, [centerAt, clampScale, updateTransform, fitOnMount, computeFitScale]);
 
   const zoomAround = useCallback((clientX: number, clientY: number, scaleFactor: number) => {
     const el = viewportRef.current;

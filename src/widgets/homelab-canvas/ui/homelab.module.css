@@ -1,4 +1,5 @@
 .shell{--primary:#eeeef0;position:relative;display:flex;flex-direction:column;width:100%;height:100%;overflow:hidden;background:var(--background);color:#eeeef0;font-family:var(--font-geist-sans),sans-serif}
+.shell .contentViewport{top:0;bottom:80px}
 .header{height:94px;flex:none;display:flex;align-items:center;gap:18px;padding:0 32px;border-bottom:1px solid #ffffff0d;background:#151618}
 .home{font-size:30px;font-weight:650;text-decoration:none;letter-spacing:-3px;color:#eeeef0;width:40px}.home span{color:#bda7e7}
 .eyebrow{font-size:9px;font-weight:500;letter-spacing:2px;color:#929299}.heading h1{font-size:23px;font-weight:550;letter-spacing:-.7px;margin:5px 0 0}.heading h1>span{color:#66666d}.heading h1 .subtitle{color:#aaaab1;font-weight:400}

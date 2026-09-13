@@ -2,7 +2,7 @@
 
 import { useCallback, useMemo, useState } from "react";
 import { connections, byId } from "../model/connections";
-import { nodes as HOMELAB_NODES, zones as HOMELAB_ZONES } from "../model/layout";
+import { nodes as HOMELAB_NODES, zones as HOMELAB_ZONES, bounds } from "../model/layout";
 import { useSiteStatus } from "../model/use-site-status";
 import { useNodeSelection } from "../model/use-node-selection";
 import { useNetworkPanel } from "../model/use-network-panel";
@@ -22,7 +22,8 @@ const CARD_NODES = HOMELAB_NODES.filter((node) => !node.isVm);
 const ALL_NODE_IDS = HOMELAB_NODES.map((n) => n.id);
 const NO_INSPECTOR = new Set(["traefik-edge", "docker-traefik", "portainer", "grafana", "redisinsight", "redis", "github", "internet"]);
 
-export function HomelabCanvas() {
+export function HomelabCanvas({ embedded = false }: { embedded?: boolean } = {}) {
+  const Shell = embedded ? "div" : "main";
   const statuses = useSiteStatus();
   const { selected, selectedConnection, setSelected, toggleSelected, selectConnection } = useNodeSelection();
   const { activeNetworkId, setFocusedNetwork, enterNetwork, leaveNetwork, closeNetwork, toggleNetwork } = useNetworkPanel();
@@ -61,17 +62,18 @@ export function HomelabCanvas() {
   const relations = useMemo(() => (active ? visible.filter((c) => c.from === active.id || c.to === active.id) : []), [active, visible]);
 
   return (
-    <main
+    <Shell
       className={styles.shell}
       onKeyDown={(e) => {
         if (e.key === "Escape") {
+          if (selected || selectedConnection || activeNetworkId) e.preventDefault();
           closeNetwork();
           setSelected(null);
         }
       }}
     >
       <Toolbar statuses={statuses} view={view} onChangeView={handleChangeView} />
-      <CanvasViewport onClearSelection={handleCloseInspector}>
+      <CanvasViewport bounds={bounds} onClearSelection={handleCloseInspector} fitOnMount={embedded}>
         <HypervisorSection />
         {HOMELAB_ZONES.map((z) => (
           <NodeZone
@@ -99,6 +101,6 @@ export function HomelabCanvas() {
       {active && !selectedConnection && !active.isVm && !NO_INSPECTOR.has(active.id) && (
         <InspectorPanel node={active} view={view} relations={relations} statuses={statuses} onClose={handleCloseInspector} onSelectRelation={setSelected} />
       )}
-    </main>
+    </Shell>
   );
 }
