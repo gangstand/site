@@ -97,22 +97,10 @@ export const translations: Record<Lang, Translation> = {
         description: "Автоматизация технической поддержки и заявок.",
       },
       {
-        name: "Синус",
-        domain: "app.sine.su",
-        url: "https://app.sine.su/",
-        description: "Транскрибация речи, создание краткого саммари и пересказа.",
-      },
-      {
         name: "SwapRat",
         domain: "swaprat.ru",
         url: "https://swaprat.ru/",
         description: "Система контроля и аудита в ресторане.",
-      },
-      {
-        name: "SportBox",
-        domain: "donwr.ru",
-        url: "https://donwr.ru/",
-        description: "Автоматизация работы спортивной федерации.",
       },
     ],
 
@@ -189,22 +177,10 @@ export const translations: Record<Lang, Translation> = {
         description: "Automates technical support and ticket workflows.",
       },
       {
-        name: "Sine",
-        domain: "app.sine.su",
-        url: "https://app.sine.su/",
-        description: "Speech transcription, concise summaries, and a recap.",
-      },
-      {
         name: "SwapRat",
         domain: "swaprat.ru",
         url: "https://swaprat.ru/",
         description: "Restaurant control and audit system.",
-      },
-      {
-        name: "SportBox",
-        domain: "donwr.ru",
-        url: "https://donwr.ru/",
-        description: "Automates sports federation operations.",
       },
     ],
 

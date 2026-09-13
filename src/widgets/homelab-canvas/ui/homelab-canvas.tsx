@@ -26,7 +26,7 @@ export function HomelabCanvas() {
   const statuses = useSiteStatus();
   const { selected, selectedConnection, setSelected, toggleSelected, selectConnection } = useNodeSelection();
   const { activeNetworkId, setFocusedNetwork, enterNetwork, leaveNetwork, closeNetwork, toggleNetwork } = useNetworkPanel();
-  const [view, setView] = useState<View>("traffic");
+  const [view, setView] = useState<View>("all");
 
   const handleChangeView = useCallback(
     (next: View) => {

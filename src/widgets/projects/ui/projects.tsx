@@ -6,12 +6,14 @@ import { SwapdogThumbnail } from "./thumbnails/swapdog-thumbnail";
 import { TeamtaskerThumbnail } from "./thumbnails/teamtasker-thumbnail";
 import { EsaulThumbnail } from "./thumbnails/esaul-thumbnail";
 import { HomelabThumbnail } from "./thumbnails/homelab-thumbnail";
+import { SwapratThumbnail } from "./thumbnails/swaprat-thumbnail";
 
 const PROJECT_THUMBNAILS: Record<string, { Component: ComponentType; autoHeight?: boolean }> = {
   homelab: { Component: HomelabThumbnail, autoHeight: true },
   "swapdog.ru": { Component: SwapdogThumbnail, autoHeight: true },
   "teamtasker.ru": { Component: TeamtaskerThumbnail, autoHeight: true },
   "esaul.site": { Component: EsaulThumbnail, autoHeight: true },
+  "swaprat.ru": { Component: SwapratThumbnail, autoHeight: true },
 };
 
 export function Projects() {
@@ -37,7 +39,6 @@ export function Projects() {
                 {Thumbnail && <Thumbnail />}
               </div>
             </a>
-            <p className="text-xs font-medium text-secondary">{project.name}</p>
             {project.description && <p className="text-sm font-normal">{project.description}</p>}
           </article>
         );
