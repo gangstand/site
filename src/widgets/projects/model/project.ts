@@ -18,6 +18,7 @@ export interface ProjectDefinition {
   description: Record<Lang, string>;
   images: ProjectImage[];
   thumbnail?: boolean;
+  thumbnailSize?: { width: number; height: number };
   canvas?: { component: ComponentType; label: Record<Lang, string> };
 }
 

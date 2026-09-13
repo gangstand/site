@@ -10,4 +10,5 @@ export const esaul: ProjectDefinition = {
     en: "Automates technical support and ticket workflows.",
   },
   images: [],
+  thumbnailSize: { width: 994, height: 896 },
 };

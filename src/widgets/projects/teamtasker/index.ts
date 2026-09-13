@@ -10,4 +10,5 @@ export const teamtasker: ProjectDefinition = {
     en: "Task, team, and finance management in one app.",
   },
   images: [],
+  thumbnailSize: { width: 994, height: 787 },
 };

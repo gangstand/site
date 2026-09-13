@@ -10,4 +10,5 @@ export const swapdog: ProjectDefinition = {
     en: "Automated document exchange between iiko and EDI.",
   },
   images: [],
+  thumbnailSize: { width: 994, height: 885 },
 };

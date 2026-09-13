@@ -10,4 +10,5 @@ export const swaprat: ProjectDefinition = {
     en: "Restaurant control and audit system.",
   },
   images: [],
+  thumbnailSize: { width: 1000, height: 819 },
 };

@@ -24,9 +24,16 @@ export function Projects() {
             className="block w-full cursor-pointer overflow-hidden rounded-[12px] border border-primary/5 bg-primary/5 transition-opacity hover:opacity-80 focus-visible:ring-2 focus-visible:ring-primary"
           >
             {project.thumbnail === false ? (
-              <div className="h-[300px] w-full bg-primary/10 sm:h-[600px]" />
+              <div className="h-[300px] w-full bg-primary/10 sm:h-[500px]" />
             ) : (
-              <img src={`/projects/${project.id}/thumbnail.webp`} alt="" className="h-auto w-full" />
+              <img
+                src={`/projects/${project.id}/thumbnail.webp`}
+                alt=""
+                width={project.thumbnailSize?.width}
+                height={project.thumbnailSize?.height}
+                className="h-auto w-full bg-primary/10"
+                style={{ aspectRatio: project.thumbnailSize ? `${project.thumbnailSize.width} / ${project.thumbnailSize.height}` : "1 / 1" }}
+              />
             )}
           </button>
           {project.description[lang] && <p className="text-sm font-normal">{project.description[lang]}</p>}
