@@ -15,7 +15,6 @@
 .dialog[open] { display: flex; flex-direction: column; animation: dialog-enter 200ms ease-out; }
 .dialog::backdrop { background: #000a; backdrop-filter: blur(8px); }
 .header { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex: none; padding: 20px 24px; border-bottom: 1px solid var(--border); }
-.eyebrow { font-size: 11px; color: var(--secondary); }
 .header h2 { margin-top: 4px; font-size: 25px; font-weight: 550; letter-spacing: -.8px; }
 .headerActions { display: flex; align-items: center; gap: 10px; flex: none; }
 .close { display: grid; place-items: center; width: 44px; height: 44px; flex: none; border: 1px solid var(--border); border-radius: 12px; cursor: pointer; }

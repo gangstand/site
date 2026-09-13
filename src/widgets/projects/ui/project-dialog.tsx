@@ -6,7 +6,6 @@ import styles from "./project-dialog.module.css";
 
 interface ProjectDialogProps {
   title: string;
-  category: string;
   intro: string;
   detailsLabel: string;
   canvasLabel: string;
@@ -16,7 +15,7 @@ interface ProjectDialogProps {
   onClose: () => void;
 }
 
-export function ProjectDialog({ title, category, intro, detailsLabel, canvasLabel, children, canvas, headerAction, onClose }: ProjectDialogProps) {
+export function ProjectDialog({ title, intro, detailsLabel, canvasLabel, children, canvas, headerAction, onClose }: ProjectDialogProps) {
   const { t } = useTranslation();
   const ref = useRef<HTMLDialogElement>(null);
   const id = useId();
@@ -53,7 +52,6 @@ export function ProjectDialog({ title, category, intro, detailsLabel, canvasLabe
     >
       <header className={styles.header}>
         <div>
-          <p className={styles.eyebrow}>{category}</p>
           <h2 id={`${id}-title`}>{title}</h2>
         </div>
         <div className={styles.headerActions}>

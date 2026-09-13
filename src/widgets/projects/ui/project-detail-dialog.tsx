@@ -18,7 +18,6 @@ export function ProjectDetailDialog({ project, onClose }: { project: ProjectDefi
   return (
     <ProjectDialog
       title={name}
-      category={project.domain}
       intro={project.description[lang]}
       detailsLabel={t.projectAbout}
       canvasLabel={project.canvas?.label[lang] ?? `${text.photos}: ${name}`}

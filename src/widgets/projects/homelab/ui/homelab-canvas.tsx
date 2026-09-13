@@ -70,7 +70,7 @@ export function HomelabCanvas({ embedded = false }: { embedded?: boolean } = {})
         }
       }}
     >
-      <Toolbar statuses={statuses} view={view} onChangeView={handleChangeView} />
+      <Toolbar view={view} onChangeView={handleChangeView} />
       <CanvasViewport
         bounds={bounds}
         ariaLabel={lang === "ru" ? "Карта инфраструктуры. Escape — снять выделение" : "Infrastructure map. Escape to clear selection"}
