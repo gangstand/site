@@ -5,8 +5,10 @@ import { useTranslation } from "@/shared/lib/language";
 import { SwapdogThumbnail } from "./thumbnails/swapdog-thumbnail";
 import { TeamtaskerThumbnail } from "./thumbnails/teamtasker-thumbnail";
 import { EsaulThumbnail } from "./thumbnails/esaul-thumbnail";
+import { HomelabThumbnail } from "./thumbnails/homelab-thumbnail";
 
 const PROJECT_THUMBNAILS: Record<string, { Component: ComponentType; autoHeight?: boolean }> = {
+  homelab: { Component: HomelabThumbnail, autoHeight: true },
   "swapdog.ru": { Component: SwapdogThumbnail, autoHeight: true },
   "teamtasker.ru": { Component: TeamtaskerThumbnail, autoHeight: true },
   "esaul.site": { Component: EsaulThumbnail, autoHeight: true },
