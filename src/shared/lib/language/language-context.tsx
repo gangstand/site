@@ -1,10 +1,9 @@
 "use client";
 
 import { createContext, useContext, useState, type ReactNode } from "react";
-import { translations, type Lang } from "@/shared/config/translations";
+import { translations } from "@/shared/config";
 import { setCookie } from "@/shared/lib/cookies";
-
-const LANG_COOKIE = "lang";
+import { LANG_COOKIE, nextLang, type Lang } from "./locale";
 
 interface LanguageContextValue {
   lang: Lang;
@@ -17,7 +16,7 @@ export function LanguageProvider({ children, initialLang }: { children: ReactNod
   const [lang, setLang] = useState<Lang>(initialLang);
 
   function toggleLanguage() {
-    const next: Lang = lang === "ru" ? "en" : "ru";
+    const next = nextLang(lang);
     document.documentElement.lang = next;
     document.title = translations[next].pageTitle;
     setCookie(LANG_COOKIE, next);

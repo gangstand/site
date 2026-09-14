@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { email } from "@/shared/config/contacts";
+import { email } from "@/shared/config";
 import { ContactIcon } from "@/shared/ui/contact-icon";
 import { useTranslation } from "@/shared/lib/language";
 

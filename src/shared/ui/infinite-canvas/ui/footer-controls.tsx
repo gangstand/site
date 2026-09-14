@@ -1,14 +1,8 @@
 import { memo } from "react";
+import type { CanvasControlLabels } from "../model/copy";
 import styles from "./infinite-canvas.module.css";
 
-export interface CanvasControlLabels {
-  zoomOut: string;
-  zoomIn: string;
-  fit: string;
-  fitLabel: string;
-  fullscreenEnter: string;
-  fullscreenExit: string;
-}
+export type { CanvasControlLabels } from "../model/copy";
 
 interface FooterControlsProps {
   scale: number;

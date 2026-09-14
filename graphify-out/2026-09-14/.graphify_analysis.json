@@ -1,0 +1,468 @@
+{
+  "communities": {
+    "0": [
+      "src_shared_ui_tech_logo",
+      "src_shared_ui_tech_logo_fromsimpleicon",
+      "src_shared_ui_tech_logo_logodef",
+      "src_shared_ui_tech_logo_logos",
+      "src_shared_ui_tech_logo_techkey",
+      "src_shared_ui_tech_logo_techlogo",
+      "src_shared_ui_tech_logo_zabbix_logo",
+      "src_widgets_projects_homelab_model_connections",
+      "src_widgets_projects_homelab_model_connections_byid",
+      "src_widgets_projects_homelab_model_connections_connections",
+      "src_widgets_projects_homelab_model_layout",
+      "src_widgets_projects_homelab_model_layout_bounds",
+      "src_widgets_projects_homelab_model_layout_box",
+      "src_widgets_projects_homelab_model_layout_clearagainst",
+      "src_widgets_projects_homelab_model_layout_col",
+      "src_widgets_projects_homelab_model_layout_contains",
+      "src_widgets_projects_homelab_model_layout_docker_inner_col",
+      "src_widgets_projects_homelab_model_layout_hypervisor",
+      "src_widgets_projects_homelab_model_layout_monitoringanchors",
+      "src_widgets_projects_homelab_model_layout_nodes",
+      "src_widgets_projects_homelab_model_layout_obstacles",
+      "src_widgets_projects_homelab_model_layout_path",
+      "src_widgets_projects_homelab_model_layout_point",
+      "src_widgets_projects_homelab_model_layout_positions",
+      "src_widgets_projects_homelab_model_layout_route",
+      "src_widgets_projects_homelab_model_layout_vmzone",
+      "src_widgets_projects_homelab_model_layout_zonebyid",
+      "src_widgets_projects_homelab_model_layout_zones",
+      "src_widgets_projects_homelab_model_nodes",
+      "src_widgets_projects_homelab_model_nodes_connectionkind",
+      "src_widgets_projects_homelab_model_nodes_homelab_connections",
+      "src_widgets_projects_homelab_model_nodes_homelab_nodes",
+      "src_widgets_projects_homelab_model_nodes_homelabconnection",
+      "src_widgets_projects_homelab_model_nodes_homelabnode",
+      "src_widgets_projects_homelab_model_nodes_nodecategory",
+      "src_widgets_projects_homelab_ui_hypervisor_section",
+      "src_widgets_projects_homelab_ui_hypervisor_section_hypervisorsection"
+    ],
+    "1": [
+      "app_page",
+      "app_page_page",
+      "src_features_contact_dialog_index",
+      "src_features_contact_dialog_ui_contact_dialog",
+      "src_features_contact_dialog_ui_contact_dialog_contactdialog",
+      "src_features_contact_dialog_ui_contact_dialog_contactdialog_handlekeydown",
+      "src_features_contact_dialog_ui_contact_dialog_contactdialog_opendialog",
+      "src_features_contact_dialog_ui_contact_dialog_contactdialogprops",
+      "src_features_language_toggle_index",
+      "src_features_language_toggle_ui_language_toggle",
+      "src_features_language_toggle_ui_language_toggle_languagetoggle",
+      "src_shared_lib_language_index",
+      "src_shared_lib_language_language_context_usetranslation",
+      "src_shared_ui_close_button",
+      "src_shared_ui_close_button_closebutton",
+      "src_shared_ui_close_button_closebuttonprops",
+      "src_views_home_index",
+      "src_views_home_ui_home_page",
+      "src_views_home_ui_home_page_homepage",
+      "src_widgets_profile_index",
+      "src_widgets_profile_ui_profile",
+      "src_widgets_profile_ui_profile_profile",
+      "src_widgets_projects_index",
+      "src_widgets_projects_model_project_projectname",
+      "src_widgets_projects_model_projects_projects",
+      "src_widgets_projects_ui_photo_canvas",
+      "src_widgets_projects_ui_photo_canvas_copy",
+      "src_widgets_projects_ui_photo_canvas_photocanvas",
+      "src_widgets_projects_ui_project_detail_dialog",
+      "src_widgets_projects_ui_project_detail_dialog_projectdetaildialog",
+      "src_widgets_projects_ui_project_dialog",
+      "src_widgets_projects_ui_project_dialog_projectdialog",
+      "src_widgets_projects_ui_project_dialog_projectdialog_startresize",
+      "src_widgets_projects_ui_project_dialog_projectdialogprops",
+      "src_widgets_projects_ui_projects",
+      "src_widgets_projects_ui_projects_projects"
+    ],
+    "2": [
+      "app_layout",
+      "app_layout_generatemetadata",
+      "app_layout_getpreferences",
+      "app_layout_rootlayout",
+      "src_shared_config_translations",
+      "src_shared_config_translations_educationentry",
+      "src_shared_config_translations_lang",
+      "src_shared_config_translations_translation",
+      "src_shared_config_translations_translations",
+      "src_shared_lib_cookies",
+      "src_shared_lib_cookies_setcookie",
+      "src_shared_lib_language_language_context",
+      "src_shared_lib_language_language_context_languagecontext",
+      "src_shared_lib_language_language_context_languagecontextvalue",
+      "src_shared_lib_language_language_context_languageprovider",
+      "src_shared_lib_language_language_context_languageprovider_togglelanguage",
+      "src_widgets_projects_esaul_index",
+      "src_widgets_projects_esaul_index_esaul",
+      "src_widgets_projects_homelab_project",
+      "src_widgets_projects_homelab_project_embeddedhomelab",
+      "src_widgets_projects_homelab_project_homelab",
+      "src_widgets_projects_model_project",
+      "src_widgets_projects_model_project_projectdefinition",
+      "src_widgets_projects_model_project_projectimage",
+      "src_widgets_projects_model_projects",
+      "src_widgets_projects_swapdog_index",
+      "src_widgets_projects_swapdog_index_swapdog",
+      "src_widgets_projects_swaprat_index",
+      "src_widgets_projects_swaprat_index_swaprat",
+      "src_widgets_projects_teamtasker_index",
+      "src_widgets_projects_teamtasker_index_teamtasker"
+    ],
+    "3": [
+      "package",
+      "package_dependencies",
+      "package_dependencies_geist",
+      "package_dependencies_next",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "package_dependencies_simple_icons",
+      "package_devdependencies",
+      "package_devdependencies_tailwindcss",
+      "package_devdependencies_tailwindcss_postcss",
+      "package_devdependencies_types_node",
+      "package_devdependencies_types_react",
+      "package_devdependencies_types_react_dom",
+      "package_devdependencies_typescript",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_typecheck",
+      "package_version",
+      "ref_geist",
+      "ref_simple_icons",
+      "ref_tailwindcss",
+      "ref_tailwindcss_postcss",
+      "ref_types_node",
+      "ref_types_react",
+      "ref_types_react_dom",
+      "ref_typescript"
+    ],
+    "4": [
+      "app_api_homelab_status_route",
+      "app_api_homelab_status_route_checksite",
+      "app_api_homelab_status_route_get",
+      "app_api_homelab_status_route_runtime",
+      "src_shared_config_homelab_status",
+      "src_shared_config_homelab_status_homelab_site_by_node",
+      "src_shared_config_homelab_status_homelab_sites",
+      "src_shared_config_homelab_status_homelab_status_interval_ms",
+      "src_shared_config_homelab_status_homelabsiteid",
+      "src_shared_config_homelab_status_homelabstatus",
+      "src_shared_config_homelab_status_parsehomelabstatus",
+      "src_shared_config_homelab_status_site_status_labels",
+      "src_shared_config_homelab_status_sitestatus",
+      "src_widgets_projects_homelab_model_layout_homelabzone",
+      "src_widgets_projects_homelab_model_layout_layoutnode",
+      "src_widgets_projects_homelab_model_use_site_status",
+      "src_widgets_projects_homelab_model_use_site_status_usesitestatus",
+      "src_widgets_projects_homelab_ui_node_card",
+      "src_widgets_projects_homelab_ui_node_card_nodecard",
+      "src_widgets_projects_homelab_ui_node_card_nodecardprops",
+      "src_widgets_projects_homelab_ui_node_zone",
+      "src_widgets_projects_homelab_ui_node_zone_nodezone",
+      "src_widgets_projects_homelab_ui_node_zone_nodezoneprops",
+      "src_widgets_projects_homelab_ui_site_indicator",
+      "src_widgets_projects_homelab_ui_site_indicator_siteindicator",
+      "src_widgets_projects_homelab_ui_site_indicator_sitestatuslabel"
+    ],
+    "5": [
+      "ref_react",
+      "src_shared_lib_media_query",
+      "src_shared_lib_media_query_mobile_query",
+      "src_shared_ui_infinite_canvas_index",
+      "src_shared_ui_infinite_canvas_model_copy",
+      "src_shared_ui_infinite_canvas_model_copy_canvascopy",
+      "src_shared_ui_infinite_canvas_model_use_canvas_transform",
+      "src_shared_ui_infinite_canvas_model_use_canvas_transform_canvasbounds",
+      "src_shared_ui_infinite_canvas_model_use_canvas_transform_transform",
+      "src_shared_ui_infinite_canvas_model_use_canvas_transform_usecanvastransform",
+      "src_shared_ui_infinite_canvas_model_use_fullscreen",
+      "src_shared_ui_infinite_canvas_model_use_fullscreen_fullscreendocument",
+      "src_shared_ui_infinite_canvas_model_use_fullscreen_fullscreenelement",
+      "src_shared_ui_infinite_canvas_model_use_fullscreen_usefullscreen",
+      "src_shared_ui_infinite_canvas_ui_canvas_viewport",
+      "src_shared_ui_infinite_canvas_ui_canvas_viewport_canvasviewport",
+      "src_shared_ui_infinite_canvas_ui_canvas_viewport_canvasviewportprops",
+      "src_shared_ui_infinite_canvas_ui_canvas_viewport_key_deltas",
+      "src_shared_ui_infinite_canvas_ui_footer_controls",
+      "src_shared_ui_infinite_canvas_ui_footer_controls_canvascontrollabels",
+      "src_shared_ui_infinite_canvas_ui_footer_controls_footercontrols",
+      "src_shared_ui_infinite_canvas_ui_footer_controls_footercontrolsprops",
+      "src_shared_ui_infinite_canvas_ui_infinite_canvas",
+      "src_shared_ui_infinite_canvas_ui_infinite_canvas_infinitecanvas"
+    ],
+    "6": [
+      "ref_react_dom",
+      "src_features_theme_toggle_index",
+      "src_features_theme_toggle_ui_theme_toggle",
+      "src_features_theme_toggle_ui_theme_toggle_themetoggle",
+      "src_features_theme_toggle_ui_theme_toggle_themetoggle_handleclick",
+      "src_shared_lib_theme_index",
+      "src_shared_lib_theme_theme_context",
+      "src_shared_lib_theme_theme_context_themecontext",
+      "src_shared_lib_theme_theme_context_themecontextvalue",
+      "src_shared_lib_theme_theme_context_thememode",
+      "src_shared_lib_theme_theme_context_themeprovider",
+      "src_shared_lib_theme_theme_context_usetheme",
+      "src_shared_lib_theme_theme_context_usethemecontextprovider",
+      "src_widgets_projects_homelab_model_connections_homelabconnectionroute",
+      "src_widgets_projects_homelab_ui_connections_layer",
+      "src_widgets_projects_homelab_ui_connections_layer_connectionslayer",
+      "src_widgets_projects_homelab_ui_connections_layer_connectionslayerprops",
+      "src_widgets_projects_homelab_ui_connections_layer_dark_colors",
+      "src_widgets_projects_homelab_ui_connections_layer_light_colors"
+    ],
+    "7": [
+      "tsconfig",
+      "tsconfig_compileroptions",
+      "tsconfig_compileroptions_allowjs",
+      "tsconfig_compileroptions_esmoduleinterop",
+      "tsconfig_compileroptions_incremental",
+      "tsconfig_compileroptions_isolatedmodules",
+      "tsconfig_compileroptions_jsx",
+      "tsconfig_compileroptions_lib",
+      "tsconfig_compileroptions_module",
+      "tsconfig_compileroptions_moduleresolution",
+      "tsconfig_compileroptions_noemit",
+      "tsconfig_compileroptions_paths",
+      "tsconfig_compileroptions_plugins",
+      "tsconfig_compileroptions_resolvejsonmodule",
+      "tsconfig_compileroptions_skiplibcheck",
+      "tsconfig_compileroptions_strict",
+      "tsconfig_compileroptions_target",
+      "tsconfig_exclude",
+      "tsconfig_include"
+    ],
+    "8": [
+      "src_features_copy_email_index",
+      "src_features_copy_email_ui_copy_email",
+      "src_features_copy_email_ui_copy_email_copyemail",
+      "src_features_copy_email_ui_copy_email_copyemail_copyemail",
+      "src_features_copy_email_ui_copy_email_copyemailprops",
+      "src_features_copy_email_ui_copy_email_copystatus",
+      "src_features_copy_email_ui_copy_email_legacycopy",
+      "src_shared_config_contacts",
+      "src_shared_config_contacts_email",
+      "src_shared_config_contacts_sociallinks",
+      "src_shared_ui_contact_icon",
+      "src_shared_ui_contact_icon_brandicons",
+      "src_shared_ui_contact_icon_contacticon",
+      "src_shared_ui_contact_icon_contacticonname",
+      "src_shared_ui_contact_icon_contacticonprops",
+      "src_widgets_footer_index",
+      "src_widgets_footer_ui_footer",
+      "src_widgets_footer_ui_footer_footer"
+    ],
+    "9": [
+      "app_homelab_page",
+      "app_homelab_page_metadata",
+      "app_homelab_page_page",
+      "src_widgets_projects_homelab_index",
+      "src_widgets_projects_homelab_model_use_node_selection",
+      "src_widgets_projects_homelab_model_use_node_selection_usenodeselection",
+      "src_widgets_projects_homelab_model_view",
+      "src_widgets_projects_homelab_model_view_view",
+      "src_widgets_projects_homelab_model_view_views",
+      "src_widgets_projects_homelab_ui_homelab_canvas",
+      "src_widgets_projects_homelab_ui_homelab_canvas_all_node_ids",
+      "src_widgets_projects_homelab_ui_homelab_canvas_card_nodes",
+      "src_widgets_projects_homelab_ui_homelab_canvas_homelabcanvas",
+      "src_widgets_projects_homelab_ui_homelab_canvas_network_clients",
+      "src_widgets_projects_homelab_ui_toolbar",
+      "src_widgets_projects_homelab_ui_toolbar_toolbar",
+      "src_widgets_projects_homelab_ui_toolbar_toolbarprops"
+    ],
+    "10": [
+      "app_robots",
+      "app_robots_dynamic",
+      "app_robots_robots",
+      "app_sitemap",
+      "app_sitemap_dynamic",
+      "app_sitemap_sitemap",
+      "next_config",
+      "next_config_nextconfig",
+      "ref_next"
+    ],
+    "11": [
+      "app_opengraph_image",
+      "app_opengraph_image_alt",
+      "app_opengraph_image_contenttype",
+      "app_opengraph_image_dynamic",
+      "app_opengraph_image_opengraphimage",
+      "app_opengraph_image_size"
+    ],
+    "12": [
+      "next_env_d",
+      "next_env_d_rationale_6"
+    ],
+    "13": [
+      "postcss_config"
+    ]
+  },
+  "cohesion": {
+    "0": 0.08108108108108109,
+    "1": 0.12222222222222222,
+    "2": 0.12473118279569892,
+    "3": 0.06896551724137931,
+    "4": 0.16,
+    "5": 0.17391304347826086,
+    "6": 0.16374269005847952,
+    "7": 0.10526315789473684,
+    "8": 0.16339869281045752,
+    "9": 0.19117647058823528,
+    "10": 0.2222222222222222,
+    "11": 0.3333333333333333,
+    "12": 1.0,
+    "13": 1.0
+  },
+  "gods": [
+    {
+      "id": "src_shared_lib_language_language_context_usetranslation",
+      "label": "useTranslation()",
+      "degree": 26
+    },
+    {
+      "id": "ref_react",
+      "label": "react",
+      "degree": 22
+    },
+    {
+      "id": "tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 16
+    },
+    {
+      "id": "src_shared_config_translations_lang",
+      "label": "Lang",
+      "degree": 8
+    },
+    {
+      "id": "src_widgets_projects_model_project_projectdefinition",
+      "label": "ProjectDefinition",
+      "degree": 8
+    },
+    {
+      "id": "src_shared_config_homelab_status_homelabstatus",
+      "label": "HomelabStatus",
+      "degree": 8
+    },
+    {
+      "id": "src_shared_ui_infinite_canvas_ui_canvas_viewport_canvasviewport",
+      "label": "CanvasViewport()",
+      "degree": 7
+    },
+    {
+      "id": "src_widgets_projects_homelab_ui_homelab_canvas_homelabcanvas",
+      "label": "HomelabCanvas()",
+      "degree": 7
+    },
+    {
+      "id": "src_features_contact_dialog_ui_contact_dialog_contactdialog",
+      "label": "ContactDialog()",
+      "degree": 6
+    },
+    {
+      "id": "src_shared_lib_cookies_setcookie",
+      "label": "setCookie()",
+      "degree": 6
+    }
+  ],
+  "surprises": [
+    {
+      "source": "LanguageContextValue",
+      "target": "Lang",
+      "source_files": [
+        "src/shared/lib/language/language-context.tsx",
+        "src/shared/config/translations.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "peripheral node `LanguageContextValue` unexpectedly reaches hub `Lang`"
+    },
+    {
+      "source": "CopyEmail()",
+      "target": "useTranslation()",
+      "source_files": [
+        "src/features/copy-email/ui/copy-email.tsx",
+        "src/shared/lib/language/language-context.tsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "ThemeToggle()",
+      "target": "useTranslation()",
+      "source_files": [
+        "src/features/theme-toggle/ui/theme-toggle.tsx",
+        "src/shared/lib/language/language-context.tsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "CanvasViewport()",
+      "target": "useTranslation()",
+      "source_files": [
+        "src/shared/ui/infinite-canvas/ui/canvas-viewport.tsx",
+        "src/shared/lib/language/language-context.tsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "HomelabCanvas()",
+      "target": "useTranslation()",
+      "source_files": [
+        "src/widgets/projects/homelab/ui/homelab-canvas.tsx",
+        "src/shared/lib/language/language-context.tsx"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `react` connect `Infinite Canvas Viewport` to `Tech Logo System`, `Contact Dialog & Language Toggle`, `Root Layout & Translations`, `Project Dependencies`, `Homelab Status API`, `Theme Toggle & Context`, `Contact Info & Copy Email`, `Homelab Canvas Page`?",
+      "why": "High betweenness centrality (0.349) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `useTranslation()` connect `Contact Dialog & Language Toggle` to `Root Layout & Translations`, `Infinite Canvas Viewport`, `Theme Toggle & Context`, `Contact Info & Copy Email`, `Homelab Canvas Page`?",
+      "why": "High betweenness centrality (0.136) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `next` connect `SEO & Next Config` to `Homelab Canvas Page`, `Root Layout & Translations`, `Project Dependencies`?",
+      "why": "High betweenness centrality (0.063) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `LogoDef`, `Box`, `Point` to the rest of the system?",
+      "why": "88 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Tech Logo System` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.08108108108108109 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Contact Dialog & Language Toggle` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.12222222222222222 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Root Layout & Translations` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.12473118279569892 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

@@ -1,4 +1,6 @@
-export type Lang = "ru" | "en";
+import type { Lang } from "@/shared/lib/language";
+
+export type { Lang } from "@/shared/lib/language";
 
 interface EducationEntry {
   dateRange: string;

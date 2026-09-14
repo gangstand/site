@@ -1,46 +1,65 @@
 "use client";
 
-import { useCallback, type ReactNode } from "react";
-import { useTranslation } from "@/shared/lib/language";
-import { canvasCopy } from "../model/copy";
+import { useCallback, useEffect, useRef, type ReactNode, type Ref } from "react";
+import type { CanvasLabels } from "../model/copy";
 import { useCanvasTransform, type CanvasBounds } from "../model/use-canvas-transform";
 import { useFullscreen } from "../model/use-fullscreen";
-import { FooterControls, type CanvasControlLabels } from "./footer-controls";
+import { FooterControls } from "./footer-controls";
 import styles from "./infinite-canvas.module.css";
 
 const KEY_DELTAS: Record<string, [number, number]> = {
   ArrowLeft: [70, 0], ArrowRight: [-70, 0], ArrowUp: [0, 70], ArrowDown: [0, -70],
 };
 
-interface CanvasViewportProps {
+export interface CanvasInteractionState {
+  isPanning: boolean;
+  isInteracting: boolean;
+  isDetailView: boolean;
+}
+
+export interface CanvasViewportProps {
   children: ReactNode;
   bounds: CanvasBounds;
+  labels: CanvasLabels;
   onClearSelection?: () => void;
   fitOnMount?: boolean;
   ariaLabel?: string;
-  controls?: CanvasControlLabels;
-  contentOnly?: boolean;
   className?: string;
+  toolbar?: ReactNode;
+  overlay?: ReactNode;
+  fullscreenTargetRef?: Ref<HTMLDivElement>;
+  /** Use this instead of canvas data attributes when animations depend on panning or detail state. */
+  onInteractionChange?: (state: CanvasInteractionState) => void;
 }
 
-export function CanvasViewport({ children, bounds, onClearSelection, fitOnMount = false, ariaLabel, controls, contentOnly = false, className }: CanvasViewportProps) {
-  const { lang } = useTranslation();
-  const text = canvasCopy[lang];
+export function CanvasViewport({ children, bounds, labels, onClearSelection, fitOnMount = false, ariaLabel, className, toolbar, overlay, fullscreenTargetRef, onInteractionChange }: CanvasViewportProps) {
+  const frameRef = useRef<HTMLDivElement>(null);
   const { viewportRef, transform, isPanning, isInteracting, isDetailView, ready, moved, fitView, zoomButton, panBy, onPointerDown, onPointerMove, endPointer } = useCanvasTransform(bounds, fitOnMount);
   const zoomIn = useCallback(() => zoomButton(1.2), [zoomButton]);
   const zoomOut = useCallback(() => zoomButton(1 / 1.2), [zoomButton]);
-  const { isFullscreen, toggleFullscreen } = useFullscreen(() => viewportRef.current?.parentElement ?? null);
+  const { isFullscreen, toggleFullscreen } = useFullscreen(() => frameRef.current);
+
+  useEffect(() => {
+    onInteractionChange?.({ isPanning, isInteracting, isDetailView });
+  }, [isPanning, isInteracting, isDetailView, onInteractionChange]);
+
+  const setFullscreenTarget = useCallback((element: HTMLDivElement | null) => {
+    frameRef.current = element;
+    if (typeof fullscreenTargetRef === "function") {
+      fullscreenTargetRef(element);
+    } else if (fullscreenTargetRef) {
+      fullscreenTargetRef.current = element;
+    }
+  }, [fullscreenTargetRef]);
 
   return (
-    <>
+    <div ref={setFullscreenTarget} className={`${styles.shell} ${className ?? ""}`}>
+      {toolbar}
       <div
         ref={viewportRef}
-        className={`${styles.viewport} ${contentOnly ? styles.contentViewport : ""} ${className ?? ""}`}
+        className={styles.viewport}
         tabIndex={0}
-        aria-label={`${ariaLabel ?? text.label}. ${text.keyboard}`}
-        data-panning={isPanning}
-        data-interacting={isInteracting}
-        data-detail-view={isDetailView}
+        aria-label={`${ariaLabel ?? labels.label}. ${labels.keyboard}`}
         style={{ cursor: isPanning ? "grabbing" : "grab" }}
         onKeyDown={(e) => {
           if (e.target !== e.currentTarget || e.ctrlKey || e.metaKey || e.altKey) return;
@@ -69,6 +88,7 @@ export function CanvasViewport({ children, bounds, onClearSelection, fitOnMount 
         <div className={styles.world} style={{ opacity: ready ? 1 : 0, transform: `translate(${transform.x}px, ${transform.y}px) scale(${transform.scale})` }}>
           {children}
         </div>
+        {overlay}
       </div>
       <FooterControls
         scale={transform.scale}
@@ -78,8 +98,8 @@ export function CanvasViewport({ children, bounds, onClearSelection, fitOnMount 
         onFit={fitView}
         isFullscreen={isFullscreen}
         onToggleFullscreen={toggleFullscreen}
-        labels={controls ?? text.controls}
+        labels={labels.controls}
       />
-    </>
+    </div>
   );
 }

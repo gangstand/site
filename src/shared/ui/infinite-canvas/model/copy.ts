@@ -1,7 +1,21 @@
-import type { Lang } from "@/shared/config/translations";
-import type { CanvasControlLabels } from "../ui/footer-controls";
+import type { Lang } from "@/shared/lib/language";
 
-export const canvasCopy: Record<Lang, { label: string; keyboard: string; controls: CanvasControlLabels }> = {
+export interface CanvasControlLabels {
+  zoomOut: string;
+  zoomIn: string;
+  fit: string;
+  fitLabel: string;
+  fullscreenEnter: string;
+  fullscreenExit: string;
+}
+
+export interface CanvasLabels {
+  label: string;
+  keyboard: string;
+  controls: CanvasControlLabels;
+}
+
+export const canvasCopy: Record<Lang, CanvasLabels> = {
   ru: {
     label: "Полотно",
     keyboard: "Стрелки — перемещение, плюс и минус — масштаб, 0 — показать всё.",

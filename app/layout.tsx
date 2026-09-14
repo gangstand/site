@@ -2,15 +2,16 @@ import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
-import { LanguageProvider } from "@/shared/lib/language";
-import { ThemeProvider, type ThemeMode } from "@/shared/lib/theme";
-import { translations, type Lang } from "@/shared/config/translations";
+import { AppProviders } from "@/_app/providers";
+import type { ThemeMode } from "@/shared/lib/theme";
+import { translations } from "@/shared/config";
+import { parseLang, type Lang } from "@/shared/lib/language";
 
 const SITE_URL = "https://gangstand.tech";
 
 async function getPreferences(): Promise<{ lang: Lang; theme: ThemeMode }> {
   const store = await cookies();
-  const lang: Lang = store.get("lang")?.value === "en" ? "en" : "ru";
+  const lang: Lang = parseLang(store.get("lang")?.value);
   const theme: ThemeMode = store.get("theme")?.value === "light" ? "light" : "dark";
   return { lang, theme };
 }
@@ -57,9 +58,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
       className={`${theme === "light" ? "light-theme" : "dark-theme"} scroll-smooth scroll-pt-8 motion-reduce:scroll-auto`}
     >
       <body className={`${GeistSans.variable} bg-background text-primary font-sans text-sm leading-[1.4] antialiased`}>
-        <ThemeProvider initialTheme={theme}>
-          <LanguageProvider initialLang={lang}>{children}</LanguageProvider>
-        </ThemeProvider>
+        <AppProviders lang={lang} theme={theme}>{children}</AppProviders>
       </body>
     </html>
   );

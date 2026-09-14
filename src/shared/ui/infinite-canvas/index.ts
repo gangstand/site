@@ -1,2 +1,2 @@
-export { InfiniteCanvas } from "./ui/infinite-canvas";
-export { CanvasViewport } from "./ui/canvas-viewport";
+export { canvasCopy, type CanvasControlLabels, type CanvasLabels } from "./model/copy";
+export { CanvasViewport, type CanvasInteractionState, type CanvasViewportProps } from "./ui/canvas-viewport";
