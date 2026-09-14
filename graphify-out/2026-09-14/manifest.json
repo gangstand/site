@@ -36,9 +36,9 @@
     "semantic_hash": "d20afa0da9aa6a41f34c59f541a3a03c"
   },
   "next-env.d.ts": {
-    "mtime": 1789382713.231337,
-    "seen": 1789387494.9180264,
-    "ast_hash": "aa94238a90e7d04b7a47ecc3145ba6a0",
+    "mtime": 1789387952.3647451,
+    "seen": 1789387986.6154065,
+    "ast_hash": "8195d2c60ce847a459ae9d308d6a5724",
     "semantic_hash": ""
   },
   "next.config.ts": {
@@ -1134,21 +1134,21 @@
     "semantic_hash": ""
   },
   "src/features/explore-homelab/model/connections.ts": {
-    "mtime": 1789380242.622541,
-    "seen": 1789380744.8137436,
-    "ast_hash": "6af7caf7a183d0468b1c408727482650",
+    "mtime": 1789387922.463922,
+    "seen": 1789387986.6154382,
+    "ast_hash": "0997cbc4f026cf141aede9fa620e1de1",
     "semantic_hash": ""
   },
   "src/features/explore-homelab/model/layout.ts": {
-    "mtime": 1789380242.6235409,
-    "seen": 1789380744.8137448,
-    "ast_hash": "f6811a986f1669ef2729eb007fa9df65",
+    "mtime": 1789387924.0179129,
+    "seen": 1789387986.6154392,
+    "ast_hash": "1695d81da03a64f2ebacab0f6a2f2570",
     "semantic_hash": ""
   },
   "src/features/explore-homelab/model/nodes.ts": {
-    "mtime": 1789380242.6235409,
-    "seen": 1789380744.813746,
-    "ast_hash": "643468f25c288132918cfa8afd109794",
+    "mtime": 1789387906.3730187,
+    "seen": 1789387986.6154406,
+    "ast_hash": "51e7a0dcf54da8c7469c87e5d34a9d15",
     "semantic_hash": ""
   },
   "src/features/explore-homelab/model/router.ts": {
@@ -1637,34 +1637,58 @@
     "ast_hash": "647cb3a659304a536a25b64787e3db1f",
     "semantic_hash": ""
   },
-  "openspec/changes/make-proxy-zone-selectable/.openspec.yaml": {
+  "openspec/specs/homelab-map/spec.md": {
+    "mtime": 1789387590.8831682,
+    "seen": 1789387986.6156716,
+    "ast_hash": "5bc4b3f2e6e18f09d4bf157f8777e149",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/.openspec.yaml": {
     "mtime": 1789387216.055747,
-    "seen": 1789387494.9184623,
+    "seen": 1789387986.615646,
     "ast_hash": "331f99705d6292ffe772f964ade7dcb1",
     "semantic_hash": ""
   },
-  "openspec/changes/make-proxy-zone-selectable/proposal.md": {
+  "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/proposal.md": {
     "mtime": 1789387243.1404324,
-    "seen": 1789387494.9184635,
+    "seen": 1789387986.615647,
     "ast_hash": "265ea3de380ddb226e9f880b64289fcd",
     "semantic_hash": ""
   },
-  "openspec/changes/make-proxy-zone-selectable/specs/homelab-map/spec.md": {
+  "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md": {
     "mtime": 1789387265.8641765,
-    "seen": 1789387494.9184642,
+    "seen": 1789387986.6156478,
     "ast_hash": "a7ef77e66edebc20718c370f501c6650",
     "semantic_hash": ""
   },
-  "openspec/changes/make-proxy-zone-selectable/tasks.md": {
+  "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/tasks.md": {
     "mtime": 1789387490.062991,
-    "seen": 1789387494.9184651,
+    "seen": 1789387986.6156485,
     "ast_hash": "b75c9e6d4ae838ab031c0747693ab08c",
     "semantic_hash": ""
   },
-  "openspec/specs/homelab-map/spec.md": {
-    "mtime": 1789382805.4907355,
-    "seen": 1789387494.9184678,
-    "ast_hash": "f84d2dd8dc765a3316028ba72a780205",
+  "openspec/changes/remove-rabbitmq-ui-ingress/.openspec.yaml": {
+    "mtime": 1789387740.923078,
+    "seen": 1789387986.6156669,
+    "ast_hash": "331f99705d6292ffe772f964ade7dcb1",
+    "semantic_hash": ""
+  },
+  "openspec/changes/remove-rabbitmq-ui-ingress/proposal.md": {
+    "mtime": 1789387772.4978657,
+    "seen": 1789387986.6156678,
+    "ast_hash": "bc9e6caced8c4cd1ad82062533068f0b",
+    "semantic_hash": ""
+  },
+  "openspec/changes/remove-rabbitmq-ui-ingress/specs/homelab-map/spec.md": {
+    "mtime": 1789387790.3217483,
+    "seen": 1789387986.6156685,
+    "ast_hash": "05827d36e0905211aad223a2ec91b590",
+    "semantic_hash": ""
+  },
+  "openspec/changes/remove-rabbitmq-ui-ingress/tasks.md": {
+    "mtime": 1789387973.8496199,
+    "seen": 1789387986.6156693,
+    "ast_hash": "39163149cfc521209f837005fdcdae05",
     "semantic_hash": ""
   }
 }

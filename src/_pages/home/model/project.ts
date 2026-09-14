@@ -11,9 +11,10 @@ export interface ProjectImage {
 
 export type ProjectDestination = { kind: "external"; url: string };
 
-export type ProjectThumbnail =
-  | { kind: "image"; size: { width: number; height: number } }
-  | { kind: "placeholder" };
+export interface ProjectThumbnail {
+  width: number;
+  height: number;
+}
 
 export type ProjectDetail =
   | { kind: "photos" }

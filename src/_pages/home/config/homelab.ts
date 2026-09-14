@@ -8,7 +8,7 @@ export const homelab: ProjectDefinition = {
     en: "Personal infrastructure on a hypervisor.",
   },
   images: [],
-  thumbnail: { kind: "placeholder" },
+  thumbnail: { width: 994, height: 644 },
   detail: {
     kind: "homelab",
     label: { ru: "Карта инфраструктуры", en: "Infrastructure map" },

@@ -1,12 +1,12 @@
 # Graph Report - site  (2026-09-14)
 
 ## Corpus Check
-- 227 files · ~192,163 words
+- 230 files · ~193,487 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 13 file(s) not represented in the graph (top: (none) 8, .css 5)
 
 ## Summary
-- 1477 nodes · 1705 edges · 147 communities (101 shown, 14 thin omitted)
+- 1505 nodes · 1730 edges · 151 communities (105 shown, 14 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
@@ -87,7 +87,7 @@
 - How to keep entities clean
 - Decisions
 - Asset Handling
-- node-zone.tsx
+- tech-logo/index.tsx
 - homelab-canvas.tsx
 - What You Must Do When Invoked
 - 2026-09-14-refactor/tasks.md
@@ -96,17 +96,17 @@
 - Growth Walkthrough
 - 2026-09-14-refactor/proposal.md
 - Cross-Import Resolution Patterns
-- Requirement: Live reachability of the mapped sites
+- Requirement: Selectable zones on the map
 - connections-layer.tsx
 - copy-email.tsx
 - Authentication
 - State management: TanStack Query (React Query)
-- useTranslation
+- profile.tsx
 - Decisions
 - layout.tsx
 - How to keep entities clean
 - .claude/skills/openspec-explore/SKILL.md
-- react
+- useTranslation
 - explore.md
 - Asset Handling
 - Requirement: Live reachability of the mapped sites
@@ -122,15 +122,19 @@
 - graphify reference: add a URL and watch a folder
 - graphify reference: commit hook and native CLAUDE.md integration
 - graphify reference: incremental update and cluster-only
-- make-proxy-zone-selectable/proposal.md
+- vitest
 - graphify reference: GitHub clone and cross-repo merge
 - graphify reference: transcribe video and audio
 - .claude/CLAUDE.md
 - .claude/skills/graphify/references/extraction-spec.md
 - agents/triage-labels.md
 - 2026-09-14-remove-homelab-pages/design.md
-- make-proxy-zone-selectable/tasks.md
+- 2026-09-14-make-proxy-zone-selectable/proposal.md
 - 2026-09-14-remove-homelab-pages/tasks.md
+- remove-rabbitmq-ui-ingress/proposal.md
+- Requirement: Edge ingress is drawn only to publicly reachable zones
+- 2026-09-14-make-proxy-zone-selectable/tasks.md
+- remove-rabbitmq-ui-ingress/tasks.md
 
 ## God Nodes (most connected - your core abstractions)
 1. `useTranslation()` - 24 edges
@@ -149,8 +153,8 @@
   app/layout.tsx → src/shared/lib/language/locale.ts
 - `GET()` --calls--> `getHomelabStatus()`  [EXTRACTED]
   app/api/homelab/status/route.ts → src/_app/api-routes/homelab-status/index.ts
-- `LanguageContextValue` --references--> `Lang`  [EXTRACTED]
-  src/shared/lib/language/language-context.tsx → src/shared/lib/language/locale.ts
+- `HomePage()` --calls--> `useTranslation()`  [EXTRACTED]
+  src/_pages/home/index.tsx → src/shared/lib/language/language-context.tsx
 - `ProjectImage` --references--> `Lang`  [EXTRACTED]
   src/_pages/home/model/project.ts → src/shared/lib/language/locale.ts
 - `ProjectDefinition` --references--> `Lang`  [EXTRACTED]
@@ -159,7 +163,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (147 total, 14 thin omitted)
+## Communities (151 total, 14 thin omitted)
 
 ### Community 0 - "Next.js"
 Cohesion: 0.07
@@ -170,8 +174,8 @@ Cohesion: 0.07
 Nodes (29): 10. Conditional references, 1. Core philosophy & layer overview, 2. Decision framework, 3. Quick placement table, 4-1. Import only from lower layers, 4-2. Public API: every slice exports through index.ts, 4-3. No cross-imports between slices on the same layer, 4-4. Domain-based file naming (no desegmentation) (+21 more)
 
 ### Community 2 - "language/index.ts"
-Cohesion: 0.28
-Nodes (11): setCookie(), LanguageContext, LanguageContextValue, LanguageProvider(), toggleLanguage(), DEFAULT_LANG, LANG_COOKIE, LANGUAGES (+3 more)
+Cohesion: 0.30
+Nodes (11): LanguageContext, LanguageContextValue, LanguageProvider(), toggleLanguage(), DEFAULT_LANG, Lang, LANG_COOKIE, LANGUAGES (+3 more)
 
 ### Community 3 - "package.json"
 Cohesion: 0.04
@@ -302,8 +306,8 @@ Cohesion: 0.22
 Nodes (8): graphify reference: extra exports and benchmark, Step 6b - Wiki (only if --wiki flag), Step 7 - Neo4j export (only if --neo4j or --neo4j-push flag), Step 7a - FalkorDB export (only if --falkordb or --falkordb-push flag), Step 7b - SVG export (only if --svg flag), Step 7c - GraphML export (only if --graphml flag), Step 7d - MCP server (only if --mcp flag), Step 8 - Token reduction benchmark (only if total_words > 5000)
 
 ### Community 38 - "nodes.ts"
-Cohesion: 0.10
-Nodes (17): hypervisor, CardNode, ConnectionDeclaration, ConnectionKind, DisplayKind, EntityDeclaration, EntityIds, HomelabConnection (+9 more)
+Cohesion: 0.15
+Nodes (13): CardNode, ConnectionDeclaration, ConnectionKind, DisplayKind, EntityDeclaration, EntityIds, HOMELAB_CONNECTIONS, HOMELAB_ENTITIES (+5 more)
 
 ### Community 39 - "Process"
 Cohesion: 0.25
@@ -378,20 +382,20 @@ Cohesion: 0.12
 Nodes (16): Business-entity slice in entities, Code generation, Custom API client, Infinite scroll, Query factory pattern, QueryProvider in the app layer, Reading mutation state with useMutationState, Registering slices in app (+8 more)
 
 ### Community 85 - "api-routes/homelab-status/index.ts"
-Cohesion: 0.21
-Nodes (9): GET(), runtime, vitest, checkSite(), getHomelabStatus(), HOMELAB_PROBE_SITES, PROBE_CACHE_TTL_MS, HomelabStatusSnapshot (+1 more)
+Cohesion: 0.27
+Nodes (8): GET(), runtime, checkSite(), getHomelabStatus(), HOMELAB_PROBE_SITES, PROBE_CACHE_TTL_MS, HomelabStatusSnapshot, SiteStatus
 
 ### Community 86 - "Next.js"
 Cohesion: 0.07
 Nodes (29): App Router, Astro, Database access, Directory structure, Directory structure, Directory structure, Directory structure, Directory structure (+21 more)
 
 ### Community 87 - "layout.ts"
-Cohesion: 0.13
-Nodes (25): centerBottom(), centerLeft(), centerRight(), projectScene(), route(), scene, Box, columns (+17 more)
+Cohesion: 0.14
+Nodes (22): centerBottom(), centerLeft(), centerRight(), projectScene(), route(), scene, Box, columns (+14 more)
 
 ### Community 88 - "api/homelab-status/index.ts"
-Cohesion: 0.23
-Nodes (10): useSiteStatus(), SiteIndicator, siteStatusLabel(), SITE_STATUS_LABELS, SITE_URL_LABELS, HOMELAB_SITE_IDS, HomelabSiteId, parseHomelabStatus() (+2 more)
+Cohesion: 0.22
+Nodes (13): LayoutNode, ZoneNode, NodeCard, NodeCardProps, NodeZone, NodeZoneProps, SiteIndicator, siteStatusLabel() (+5 more)
 
 ### Community 89 - "Feature-Sliced Design (FSD) v2.1"
 Cohesion: 0.07
@@ -409,13 +413,13 @@ Nodes (12): 1. Use a canonical, declarative Homelab topology, 2. Treat routed co
 Cohesion: 0.18
 Nodes (10): Anti-patterns, Asset Handling, Decision tree, Global assets, Non-UI assets, Public folder, See also, Shared assets (+2 more)
 
-### Community 93 - "node-zone.tsx"
-Cohesion: 0.50
-Nodes (7): LayoutNode, NodeId, ZoneNode, NodeCardProps, NodeZoneProps, HomelabStatus, TechLogo()
+### Community 93 - "tech-logo/index.tsx"
+Cohesion: 0.22
+Nodes (7): hypervisor, HypervisorSection, LogoDef, LOGOS, TechKey, TechLogo(), ZABBIX_LOGO
 
 ### Community 94 - "homelab-canvas.tsx"
-Cohesion: 0.16
-Nodes (15): getLayoutNode(), getZoneLayoutNode(), cardNodes, ConnectionId, networkClientsCount, HomelabSelection, nextSelection(), useNodeSelection() (+7 more)
+Cohesion: 0.17
+Nodes (15): react, getLayoutNode(), getZoneLayoutNode(), cardNodes, ConnectionId, networkClientsCount, zoneNodes, HomelabSelection (+7 more)
 
 ### Community 95 - "What You Must Do When Invoked"
 Cohesion: 0.08
@@ -445,17 +449,17 @@ Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, What C
 Cohesion: 0.10
 Nodes (19): Anti-patterns, Basic composition (React), Cross-Import Resolution Patterns, Decision flow for AI agents, Entities layer: prefer boundary merge over @x, Features and widgets: four strategies, How @x works (when boundary merge is genuinely impossible), Render props (React) (+11 more)
 
-### Community 102 - "Requirement: Live reachability of the mapped sites"
-Cohesion: 0.17
-Nodes (11): homelab-map Specification, Purpose, Requirement: Live reachability of the mapped sites, Requirement: Single entry point through the home page, Requirements, Scenario: Background tab, Scenario: No outbound link for the HomeLab entry, Scenario: Opening the map from the project list (+3 more)
+### Community 102 - "Requirement: Selectable zones on the map"
+Cohesion: 0.10
+Nodes (20): homelab-map Specification, Purpose, Requirement: Live reachability of the mapped sites, Requirement: Selectable zones on the map, Requirement: Single entry point through the home page, Requirement: Zone hit areas describe the zone they select, Requirements, Scenario: Activating a card that sits inside a zone (+12 more)
 
 ### Community 103 - "connections-layer.tsx"
-Cohesion: 0.36
-Nodes (7): HomelabConnectionRoute, HomelabNode, ConnectionsLayer, ConnectionsLayerProps, DARK_COLORS, LIGHT_COLORS, useTheme()
+Cohesion: 0.33
+Nodes (8): HomelabConnectionRoute, HomelabNode, NodeId, ConnectionsLayer, ConnectionsLayerProps, DARK_COLORS, LIGHT_COLORS, useTheme()
 
 ### Community 104 - "copy-email.tsx"
-Cohesion: 0.16
-Nodes (13): CopyEmail(), copyEmail(), CopyEmailProps, CopyStatus, legacyCopy(), ContactDialogProps, Footer(), email (+5 more)
+Cohesion: 0.10
+Nodes (17): copyEmail(), CopyEmailProps, CopyStatus, legacyCopy(), ContactDialog(), ContactDialogProps, email, socialLinks (+9 more)
 
 ### Community 105 - "Authentication"
 Cohesion: 0.11
@@ -465,17 +469,17 @@ Nodes (18): API request handling, Auth data: `shared/auth/` or `shared/api/`, Au
 Cohesion: 0.12
 Nodes (16): Business-entity slice in entities, Code generation, Custom API client, Infinite scroll, Query factory pattern, QueryProvider in the app layer, Reading mutation state with useMutationState, Registering slices in app (+8 more)
 
-### Community 107 - "useTranslation"
-Cohesion: 0.25
-Nodes (6): HomePage(), ContactDialog(), LanguageToggle(), Profile(), ThemeToggle(), useTranslation()
+### Community 107 - "profile.tsx"
+Cohesion: 0.21
+Nodes (6): CopyEmail(), HomePage(), Footer(), LanguageToggle(), Profile(), ThemeToggle()
 
 ### Community 108 - "Decisions"
 Cohesion: 0.14
 Nodes (13): 1. Use `_app` and `_pages` for FSD layers, 2. Migrate route ownership before removing legacy layers, 3. Keep home-only composition in `_pages/home`, 4. Extract one focused `explore-homelab` feature, 5. Put the shared homelab transport contract in Shared API, 6. Enforce public APIs at established boundaries, 7. Preserve providers as Shared mechanisms composed by `_app`, 8. Add architecture checks after boundaries stabilize (+5 more)
 
 ### Community 109 - "layout.tsx"
-Cohesion: 0.19
-Nodes (13): generateMetadata(), getPreferences(), RootLayout(), AppProviders(), EducationEntry, Translation, translations, Lang (+5 more)
+Cohesion: 0.25
+Nodes (10): generateMetadata(), getPreferences(), RootLayout(), AppProviders(), setCookie(), ThemeContext, ThemeContextValue, ThemeMode (+2 more)
 
 ### Community 110 - "How to keep entities clean"
 Cohesion: 0.15
@@ -485,9 +489,9 @@ Nodes (12): 0. Consider having no entities layer, 1. Avoid preemptive slicing, 2
 Cohesion: 0.17
 Nodes (11): Check for context, Ending Discovery, Guardrails, Handling Different Entry Points, OpenSpec Awareness, Planning a Change, The Stance, What You Don't Have To Do (+3 more)
 
-### Community 112 - "react"
-Cohesion: 0.16
-Nodes (13): react, ProjectImage, projectView, copy, PhotoCanvas(), DetailRenderer, detailRenderers, ProjectDetailDialog() (+5 more)
+### Community 112 - "useTranslation"
+Cohesion: 0.23
+Nodes (11): ProjectImage, projectView, copy, PhotoCanvas(), DetailRenderer, detailRenderers, ProjectDetailDialog(), ProjectDialog() (+3 more)
 
 ### Community 113 - "explore.md"
 Cohesion: 0.18
@@ -549,41 +553,57 @@ Nodes (3): For git commit hook, For native CLAUDE.md integration, graphify refer
 Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
-### Community 128 - "make-proxy-zone-selectable/proposal.md"
-Cohesion: 0.29
-Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, What Changes, Why
+### Community 128 - "vitest"
+Cohesion: 0.32
+Nodes (5): vitest, useSiteStatus(), HOMELAB_SITE_IDS, parseHomelabStatus(), snapshot
 
 ### Community 144 - "2026-09-14-remove-homelab-pages/design.md"
 Cohesion: 0.33
 Nodes (5): Context, Decisions, Goals / Non-Goals, Migration Plan, Risks / Trade-offs
 
-### Community 145 - "make-proxy-zone-selectable/tasks.md"
-Cohesion: 0.40
-Nodes (4): 1. Make the zone hit area apply to every zone, 2. Carry the rename through the stylesheet, 3. Confirm nested cards still win the click, 4. Cover the behavior and validate
+### Community 145 - "2026-09-14-make-proxy-zone-selectable/proposal.md"
+Cohesion: 0.29
+Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, What Changes, Why
 
 ### Community 146 - "2026-09-14-remove-homelab-pages/tasks.md"
 Cohesion: 0.50
 Nodes (3): 1. Remove the route and its page slice, 2. Retire the internal destination, 3. Verify the surviving behavior
 
+### Community 147 - "remove-rabbitmq-ui-ingress/proposal.md"
+Cohesion: 0.29
+Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, What Changes, Why
+
+### Community 148 - "Requirement: Edge ingress is drawn only to publicly reachable zones"
+Cohesion: 0.29
+Nodes (6): ADDED Requirements, Requirement: Edge ingress is drawn only to publicly reachable zones, Scenario: Private-service zone has no HTTP ingress, Scenario: Publicly reachable zone keeps its HTTP ingress, Scenario: Selecting a private-service zone, Scenario: Selecting the edge reverse proxy
+
+### Community 149 - "2026-09-14-make-proxy-zone-selectable/tasks.md"
+Cohesion: 0.40
+Nodes (4): 1. Make the zone hit area apply to every zone, 2. Carry the rename through the stylesheet, 3. Confirm nested cards still win the click, 4. Cover the behavior and validate
+
+### Community 150 - "remove-rabbitmq-ui-ingress/tasks.md"
+Cohesion: 0.40
+Nodes (4): 1. Remove the connection, 2. Retire the dead routing path, 3. Update tests and verify behavior, 4. Keep project artifacts current
+
 ## Knowledge Gaps
-- **892 isolated node(s):** `block-dangerous-git.sh script`, `$schema`, `plugin`, `runtime`, `dynamic` (+887 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 999 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **912 isolated node(s):** `block-dangerous-git.sh script`, `$schema`, `plugin`, `runtime`, `dynamic` (+907 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1020 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **14 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `react` connect `react` to `language/index.ts`, `package.json`, `canvas-viewport.tsx`, `nodes.ts`, `connections-layer.tsx`, `copy-email.tsx`, `layout.tsx`, `api/homelab-status/index.ts`, `node-zone.tsx`, `homelab-canvas.tsx`?**
+- **Why does `react` connect `homelab-canvas.tsx` to `vitest`, `language/index.ts`, `package.json`, `canvas-viewport.tsx`, `connections-layer.tsx`, `copy-email.tsx`, `layout.tsx`, `useTranslation`, `api/homelab-status/index.ts`, `tech-logo/index.tsx`?**
   _High betweenness centrality (0.019) - this node is a cross-community bridge._
 - **Why does `next` connect `package.json` to `layout.tsx`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
-- **Why does `useTranslation()` connect `useTranslation` to `copy-email.tsx`, `language/index.ts`, `react`, `homelab-canvas.tsx`?**
-  _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **What connects `block-dangerous-git.sh script`, `$schema`, `plugin` to the rest of the system?**
-  _892 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _912 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Next.js` be split into smaller, more focused modules?**
   _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
 - **Should `Feature-Sliced Design (FSD) v2.1` be split into smaller, more focused modules?**
   _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
 - **Should `package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.044444444444444446 - nodes in this community are weakly interconnected._
+- **Should `Layer Structure Reference` be split into smaller, more focused modules?**
+  _Cohesion score 0.08695652173913043 - nodes in this community are weakly interconnected._

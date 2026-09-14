@@ -36,9 +36,9 @@
     "semantic_hash": "d20afa0da9aa6a41f34c59f541a3a03c"
   },
   "next-env.d.ts": {
-    "mtime": 1789387952.3647451,
-    "seen": 1789387986.6154065,
-    "ast_hash": "8195d2c60ce847a459ae9d308d6a5724",
+    "mtime": 1789389202.7298431,
+    "seen": 1789394937.1469376,
+    "ast_hash": "aa94238a90e7d04b7a47ecc3145ba6a0",
     "semantic_hash": ""
   },
   "next.config.ts": {
@@ -1020,15 +1020,15 @@
     "semantic_hash": ""
   },
   "src/_pages/home/config/esaul.ts": {
-    "mtime": 1789380337.031281,
-    "seen": 1789380744.813718,
-    "ast_hash": "5564c1c580de106ed0222a2f11af2eff",
+    "mtime": 1789390116.5978894,
+    "seen": 1789394937.1469436,
+    "ast_hash": "adf0dd2926758163d71b45a6affaaddd",
     "semantic_hash": ""
   },
   "src/_pages/home/config/homelab.ts": {
-    "mtime": 1789382441.8862953,
-    "seen": 1789382621.5716333,
-    "ast_hash": "cc0fb5dd51617a1ac840b3a204cf94bd",
+    "mtime": 1789394001.8644714,
+    "seen": 1789394937.1469445,
+    "ast_hash": "48e42053e9c5f9e7982f65b516ad0198",
     "semantic_hash": ""
   },
   "src/_pages/home/config/projects.ts": {
@@ -1038,21 +1038,21 @@
     "semantic_hash": ""
   },
   "src/_pages/home/config/swapdog.ts": {
-    "mtime": 1789380337.019281,
-    "seen": 1789380744.813721,
-    "ast_hash": "a968c527ebe0a89bed236fd31f3bd5e6",
+    "mtime": 1789390115.640888,
+    "seen": 1789394937.1469457,
+    "ast_hash": "4fa10cb3034c864c286c2d0053ecd531",
     "semantic_hash": ""
   },
   "src/_pages/home/config/swaprat.ts": {
-    "mtime": 1789380337.0332808,
-    "seen": 1789380744.813722,
-    "ast_hash": "5495a7c3249838c0ad10d4d018a8c8c3",
+    "mtime": 1789390117.513891,
+    "seen": 1789394937.1469467,
+    "ast_hash": "beb3b142f2f8d2cd7744dcb71d2b55cc",
     "semantic_hash": ""
   },
   "src/_pages/home/config/teamtasker.ts": {
-    "mtime": 1789380337.018281,
-    "seen": 1789380744.8137228,
-    "ast_hash": "d279b5c3817c980f90a6f0435dc723eb",
+    "mtime": 1789390114.7038865,
+    "seen": 1789394937.1469474,
+    "ast_hash": "a5b838b20ed68b7f33493b38156fd981",
     "semantic_hash": ""
   },
   "src/_pages/home/index.tsx": {
@@ -1062,15 +1062,15 @@
     "semantic_hash": ""
   },
   "src/_pages/home/model/project.test.ts": {
-    "mtime": 1789382474.5252273,
-    "seen": 1789382621.5716412,
-    "ast_hash": "1a87cc71f473e1d4fb14a452d6bad170",
+    "mtime": 1789390153.063946,
+    "seen": 1789394937.1469488,
+    "ast_hash": "3d5d56fe84ecf81e425c26091965e519",
     "semantic_hash": ""
   },
   "src/_pages/home/model/project.ts": {
-    "mtime": 1789382426.162328,
-    "seen": 1789382621.5716424,
-    "ast_hash": "6be6e9a02e456d1064e8b3990babd7e2",
+    "mtime": 1789390107.2578743,
+    "seen": 1789394937.1469493,
+    "ast_hash": "3c35433357b0821074221e281b3d1d91",
     "semantic_hash": ""
   },
   "src/_pages/home/ui/contact-dialog.tsx": {
@@ -1116,9 +1116,9 @@
     "semantic_hash": ""
   },
   "src/_pages/home/ui/projects.tsx": {
-    "mtime": 1789380337.1182806,
-    "seen": 1789380744.8137336,
-    "ast_hash": "7f4d84360d288b9faccb6f0c2eede8f8",
+    "mtime": 1789390127.8699074,
+    "seen": 1789394937.1469553,
+    "ast_hash": "930fc401ea20209fd8fc9d5cd27b404f",
     "semantic_hash": ""
   },
   "src/_pages/home/ui/theme-toggle.tsx": {
@@ -1638,9 +1638,9 @@
     "semantic_hash": ""
   },
   "openspec/specs/homelab-map/spec.md": {
-    "mtime": 1789387590.8831682,
-    "seen": 1789387986.6156716,
-    "ast_hash": "5bc4b3f2e6e18f09d4bf157f8777e149",
+    "mtime": 1789388356.2736075,
+    "seen": 1789394937.1471245,
+    "ast_hash": "52d319231f6d5c22d8fa517107a77aa0",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/.openspec.yaml": {
@@ -1667,28 +1667,64 @@
     "ast_hash": "b75c9e6d4ae838ab031c0747693ab08c",
     "semantic_hash": ""
   },
-  "openspec/changes/remove-rabbitmq-ui-ingress/.openspec.yaml": {
-    "mtime": 1789387740.923078,
-    "seen": 1789387986.6156669,
+  "openspec/changes/add-homelab-thumbnail/.openspec.yaml": {
+    "mtime": 1789388847.7679899,
+    "seen": 1789394937.1471047,
     "ast_hash": "331f99705d6292ffe772f964ade7dcb1",
     "semantic_hash": ""
   },
-  "openspec/changes/remove-rabbitmq-ui-ingress/proposal.md": {
+  "openspec/changes/add-homelab-thumbnail/design.md": {
+    "mtime": 1789394376.6126401,
+    "seen": 1789394937.1471057,
+    "ast_hash": "6f7d2ee5876e32e133ad171ad39fa23c",
+    "semantic_hash": ""
+  },
+  "openspec/changes/add-homelab-thumbnail/proposal.md": {
+    "mtime": 1789394421.5965402,
+    "seen": 1789394937.1471066,
+    "ast_hash": "3aeaeabb2d706a1aa5f053111724a364",
+    "semantic_hash": ""
+  },
+  "openspec/changes/add-homelab-thumbnail/specs/project-showcase/spec.md": {
+    "mtime": 1789394502.6983602,
+    "seen": 1789394937.1471071,
+    "ast_hash": "264f634d542c684daa1b17c2b8940dc8",
+    "semantic_hash": ""
+  },
+  "openspec/changes/add-homelab-thumbnail/tasks.md": {
+    "mtime": 1789394890.7294996,
+    "seen": 1789394937.1471076,
+    "ast_hash": "54324cd40fe018d8503f74a0eeac1b58",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-14-remove-rabbitmq-ui-ingress/.openspec.yaml": {
+    "mtime": 1789387740.923078,
+    "seen": 1789394937.147121,
+    "ast_hash": "331f99705d6292ffe772f964ade7dcb1",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-14-remove-rabbitmq-ui-ingress/proposal.md": {
     "mtime": 1789387772.4978657,
-    "seen": 1789387986.6156678,
+    "seen": 1789394937.1471217,
     "ast_hash": "bc9e6caced8c4cd1ad82062533068f0b",
     "semantic_hash": ""
   },
-  "openspec/changes/remove-rabbitmq-ui-ingress/specs/homelab-map/spec.md": {
+  "openspec/changes/archive/2026-09-14-remove-rabbitmq-ui-ingress/specs/homelab-map/spec.md": {
     "mtime": 1789387790.3217483,
-    "seen": 1789387986.6156685,
+    "seen": 1789394937.1471221,
     "ast_hash": "05827d36e0905211aad223a2ec91b590",
     "semantic_hash": ""
   },
-  "openspec/changes/remove-rabbitmq-ui-ingress/tasks.md": {
-    "mtime": 1789387973.8496199,
-    "seen": 1789387986.6156693,
-    "ast_hash": "39163149cfc521209f837005fdcdae05",
+  "openspec/changes/archive/2026-09-14-remove-rabbitmq-ui-ingress/tasks.md": {
+    "mtime": 1789387990.4815242,
+    "seen": 1789394937.1471226,
+    "ast_hash": "87a44dd82fffdfaadc76e63c2795ab56",
+    "semantic_hash": ""
+  },
+  "public/projects/homelab/thumbnail.webp": {
+    "mtime": 1789393936.8381772,
+    "seen": 1789394937.1471286,
+    "ast_hash": "4d06443fbfee0d7b30d284338183b432",
     "semantic_hash": ""
   }
 }

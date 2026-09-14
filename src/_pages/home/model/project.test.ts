@@ -15,14 +15,17 @@ describe("project registry", () => {
     }
   });
 
-  it("keeps placeholders, image dimensions, details, and destinations explicit", () => {
+  it("keeps image dimensions, details, and destinations explicit", () => {
     const homelab = projects[0];
-    expect(homelab.thumbnail).toEqual({ kind: "placeholder" });
     expect(homelab.destination).toBeUndefined();
     expect(homelab.detail.kind).toBe("homelab");
 
+    for (const project of projects) {
+      expect(project.thumbnail.width).toBeGreaterThan(0);
+      expect(project.thumbnail.height).toBeGreaterThan(0);
+    }
+
     for (const project of projects.slice(1)) {
-      expect(project.thumbnail.kind).toBe("image");
       expect(project.destination?.kind).toBe("external");
       expect(project.detail.kind).toBe("photos");
     }

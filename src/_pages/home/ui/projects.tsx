@@ -24,18 +24,14 @@ export function Projects() {
             onClick={() => setActiveId(project.id)}
             className="block w-full cursor-pointer overflow-hidden rounded-[12px] border border-primary/5 bg-primary/5 transition-opacity hover:opacity-80 focus-visible:ring-2 focus-visible:ring-primary"
           >
-            {project.thumbnail.kind === "placeholder" ? (
-              <div className="h-[300px] w-full bg-primary/10 sm:h-[500px]" />
-            ) : (
-              <img
-                src={`/projects/${project.id}/thumbnail.webp`}
-                alt=""
-                width={project.thumbnail.size.width}
-                height={project.thumbnail.size.height}
-                className="h-auto w-full bg-primary/10"
-                style={{ aspectRatio: `${project.thumbnail.size.width} / ${project.thumbnail.size.height}` }}
-              />
-            )}
+            <img
+              src={`/projects/${project.id}/thumbnail.webp`}
+              alt=""
+              width={project.thumbnail.width}
+              height={project.thumbnail.height}
+              className="h-auto w-full bg-primary/10"
+              style={{ aspectRatio: `${project.thumbnail.width} / ${project.thumbnail.height}` }}
+            />
           </button>
           {project.description && <p className="text-sm font-normal">{project.description}</p>}
         </article>
