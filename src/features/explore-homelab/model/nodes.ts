@@ -4,7 +4,7 @@ import type { TechKey } from "@/shared/ui/tech-logo";
 export type NodeCategory = "external" | "edge" | "compute" | "registry" | "ci" | "monitoring" | "database" | "broker" | "cache";
 export type DisplayKind = "card" | "zone" | "anchor";
 export type ConnectionKind = "flow" | "pipeline" | "monitoring" | "proxy" | "wireguard" | "vpn";
-export type RouteHint = "vpn-bottom" | "vpn-right" | "vertical" | "horizontal" | "edge-wireguard" | "edge-wireguard-right" | "proxy-down" | "pipeline-horizontal" | "pipeline-vertical" | "monitoring-left" | "monitoring-right" | "monitoring-bottom" | "orthogonal";
+export type RouteHint = "vpn-bottom" | "vpn-right" | "vertical" | "horizontal" | "edge-wireguard" | "proxy-down" | "pipeline-horizontal" | "pipeline-vertical" | "monitoring-left" | "monitoring-right" | "monitoring-bottom" | "orthogonal";
 
 type EntityDeclaration = {
   id: string;
@@ -66,7 +66,6 @@ export const HOMELAB_CONNECTIONS = defineConnections([
   { id: "wg-harbor", from: "traefik-edge", to: "harbor", label: "HTTP через WireGuard · Harbor", kind: "wireguard", routeHint: "edge-wireguard" },
   { id: "wg-jenkins", from: "traefik-edge", to: "jenkins", label: "HTTP через WireGuard · Jenkins", kind: "wireguard", routeHint: "edge-wireguard" },
   { id: "wg-zabbix", from: "traefik-edge", to: "zabbix", label: "HTTP через WireGuard · Zabbix UI", kind: "wireguard", routeHint: "edge-wireguard" },
-  { id: "wg-rabbitmq", from: "traefik-edge", to: "rabbitmq", label: "HTTP через WireGuard · RabbitMQ Management UI", kind: "wireguard", routeHint: "edge-wireguard-right" },
   { id: "p2", from: "docker-traefik", to: "grafana", kind: "proxy", routeHint: "proxy-down" },
   { id: "p3", from: "docker-traefik", to: "portainer", kind: "proxy", routeHint: "proxy-down" },
   { id: "p4", from: "docker-traefik", to: "redisinsight", kind: "proxy", routeHint: "proxy-down" },

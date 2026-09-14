@@ -24,7 +24,6 @@ export const layoutMetrics = {
   monitoringBusY: hypervisor.y + hypervisor.h + 45,
   monitoringRightX: hypervisor.x + hypervisor.w + 45,
   trafficBusY: hypervisor.y + hypervisor.h + 75,
-  trafficRightX: hypervisor.x + hypervisor.w + 20,
   vpnRightX: hypervisor.x + hypervisor.w + 75,
   vpnBusY: hypervisor.y + hypervisor.h + 105,
   dockerVpnX: columns[0] + VM_W + GUTTER / 2 - 12,

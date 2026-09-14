@@ -95,6 +95,45 @@
       "source_location": "L12"
     },
     {
+      "id": "src_shared_config_translations_educationentry",
+      "label": "EducationEntry",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 104,
+      "community_name": "copy-email.tsx",
+      "file_type": "code",
+      "norm_label": "educationentry",
+      "source_file": "src/shared/config/translations.ts",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_shared_config_translations_translation",
+      "label": "Translation",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 104,
+      "community_name": "copy-email.tsx",
+      "file_type": "code",
+      "norm_label": "translation",
+      "source_file": "src/shared/config/translations.ts",
+      "source_location": "L11"
+    },
+    {
+      "id": "src_shared_ui_close_button_index_closebuttonprops",
+      "label": "CloseButtonProps",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 104,
+      "community_name": "copy-email.tsx",
+      "file_type": "code",
+      "norm_label": "closebuttonprops",
+      "source_file": "src/shared/ui/close-button/index.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "src_shared_ui_contact_icon_index_contacticonname",
       "label": "ContactIconName",
       "_callable": true,
@@ -147,13 +186,39 @@
       "source_location": "L6"
     },
     {
+      "id": "src_pages_home_model_project_projectimage",
+      "label": "ProjectImage",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 112,
+      "community_name": "useTranslation",
+      "file_type": "code",
+      "norm_label": "projectimage",
+      "source_file": "src/_pages/home/model/project.ts",
+      "source_location": "L3"
+    },
+    {
+      "id": "src_pages_home_model_project_projectview",
+      "label": "projectView",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 112,
+      "community_name": "useTranslation",
+      "file_type": "code",
+      "norm_label": "projectview",
+      "source_file": "src/_pages/home/model/project.ts",
+      "source_location": "L38"
+    },
+    {
       "id": "src_pages_home_ui_project_detail_dialog_detailrenderer",
       "label": "DetailRenderer",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 112,
-      "community_name": "project-detail-dialog.tsx",
+      "community_name": "useTranslation",
       "file_type": "code",
       "norm_label": "detailrenderer",
       "source_file": "src/_pages/home/ui/project-detail-dialog.tsx",
@@ -166,50 +231,11 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 112,
-      "community_name": "project-detail-dialog.tsx",
+      "community_name": "useTranslation",
       "file_type": "code",
       "norm_label": "projectdialogprops",
       "source_file": "src/_pages/home/ui/project-dialog.tsx",
       "source_location": "L13"
-    },
-    {
-      "id": "src_shared_ui_close_button_index_closebuttonprops",
-      "label": "CloseButtonProps",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 112,
-      "community_name": "project-detail-dialog.tsx",
-      "file_type": "code",
-      "norm_label": "closebuttonprops",
-      "source_file": "src/shared/ui/close-button/index.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_shared_config_translations_educationentry",
-      "label": "EducationEntry",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "language/index.ts",
-      "file_type": "code",
-      "norm_label": "educationentry",
-      "source_file": "src/shared/config/translations.ts",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_shared_config_translations_translation",
-      "label": "Translation",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "language/index.ts",
-      "file_type": "code",
-      "norm_label": "translation",
-      "source_file": "src/shared/config/translations.ts",
-      "source_location": "L11"
     },
     {
       "id": "src_shared_lib_language_language_context_languagecontextvalue",
@@ -407,32 +433,6 @@
       "source_location": "L14"
     },
     {
-      "id": "src_pages_home_model_project_projectview",
-      "label": "projectView",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "project.ts",
-      "file_type": "code",
-      "norm_label": "projectview",
-      "source_file": "src/_pages/home/model/project.ts",
-      "source_location": "L38"
-    },
-    {
-      "id": "src_pages_home_model_project_projectimage",
-      "label": "ProjectImage",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "canvas-viewport.tsx",
-      "file_type": "code",
-      "norm_label": "projectimage",
-      "source_file": "src/_pages/home/model/project.ts",
-      "source_location": "L3"
-    },
-    {
       "id": "src_shared_ui_infinite_canvas_model_copy_canvascontrollabels",
       "label": "CanvasControlLabels",
       "_callable": true,
@@ -599,7 +599,7 @@
       "file_type": "code",
       "norm_label": "geometry",
       "source_file": "src/features/explore-homelab/model/layout.ts",
-      "source_location": "L33"
+      "source_location": "L32"
     },
     {
       "id": "src_features_explore_homelab_model_layout_point",
@@ -625,7 +625,7 @@
       "file_type": "code",
       "norm_label": "homelabconnection",
       "source_file": "src/features/explore-homelab/model/nodes.ts",
-      "source_location": "L87"
+      "source_location": "L86"
     },
     {
       "id": "src_features_explore_homelab_model_layout_layoutnode",
@@ -638,7 +638,7 @@
       "file_type": "code",
       "norm_label": "layoutnode",
       "source_file": "src/features/explore-homelab/model/layout.ts",
-      "source_location": "L56"
+      "source_location": "L55"
     },
     {
       "id": "src_features_explore_homelab_model_nodes_zonenode",
@@ -755,7 +755,7 @@
       "file_type": "code",
       "norm_label": "connectionid",
       "source_file": "src/features/explore-homelab/model/nodes.ts",
-      "source_location": "L86"
+      "source_location": "L85"
     },
     {
       "id": "src_features_explore_homelab_model_use_node_selection_homelabselection",
@@ -797,30 +797,6 @@
       "source_location": "L5"
     },
     {
-      "id": "src_features_explore_homelab_model_use_site_status_usesitestatus",
-      "label": "useSiteStatus()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "vitest",
-      "file_type": "code",
-      "norm_label": "usesitestatus()",
-      "source_file": "src/features/explore-homelab/model/use-site-status.ts",
-      "source_location": "L8"
-    },
-    {
-      "id": "src_shared_api_homelab_status_index_parsehomelabstatus",
-      "label": "parseHomelabStatus()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 102,
-      "community_name": "vitest",
-      "file_type": "code",
-      "norm_label": "parsehomelabstatus()",
-      "source_file": "src/shared/api/homelab-status/index.ts",
-      "source_location": "L23"
-    },
-    {
       "id": "src_shared_lib_theme_theme_context_usetheme",
       "label": "useTheme()",
       "_callable": true,
@@ -831,18 +807,6 @@
       "norm_label": "usetheme()",
       "source_file": "src/shared/lib/theme/theme-context.tsx",
       "source_location": "L45"
-    },
-    {
-      "id": "src_features_copy_email_ui_copy_email_copyemail",
-      "label": "CopyEmail()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 104,
-      "community_name": "copy-email.tsx",
-      "file_type": "code",
-      "norm_label": "copyemail()",
-      "source_file": "src/features/copy-email/ui/copy-email.tsx",
-      "source_location": "L29"
     },
     {
       "id": "src_features_copy_email_ui_copy_email_copyemail_copyemail",
@@ -869,16 +833,52 @@
       "source_location": "L8"
     },
     {
-      "id": "src_pages_home_ui_footer_footer",
-      "label": "Footer()",
+      "id": "src_pages_home_ui_contact_dialog_contactdialog",
+      "label": "ContactDialog()",
       "_callable": true,
       "_origin": "ast",
       "community": 104,
       "community_name": "copy-email.tsx",
       "file_type": "code",
-      "norm_label": "footer()",
-      "source_file": "src/_pages/home/ui/footer.tsx",
-      "source_location": "L7"
+      "norm_label": "contactdialog()",
+      "source_file": "src/_pages/home/ui/contact-dialog.tsx",
+      "source_location": "L16"
+    },
+    {
+      "id": "src_pages_home_ui_contact_dialog_contactdialog_handlekeydown",
+      "label": "handleKeyDown()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 104,
+      "community_name": "copy-email.tsx",
+      "file_type": "code",
+      "norm_label": "handlekeydown()",
+      "source_file": "src/_pages/home/ui/contact-dialog.tsx",
+      "source_location": "L29"
+    },
+    {
+      "id": "src_pages_home_ui_contact_dialog_contactdialog_opendialog",
+      "label": "openDialog()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 104,
+      "community_name": "copy-email.tsx",
+      "file_type": "code",
+      "norm_label": "opendialog()",
+      "source_file": "src/_pages/home/ui/contact-dialog.tsx",
+      "source_location": "L23"
+    },
+    {
+      "id": "src_shared_ui_close_button_index_closebutton",
+      "label": "CloseButton()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 104,
+      "community_name": "copy-email.tsx",
+      "file_type": "code",
+      "norm_label": "closebutton()",
+      "source_file": "src/shared/ui/close-button/index.tsx",
+      "source_location": "L8"
     },
     {
       "id": "src_shared_ui_contact_icon_index_contacticon",
@@ -898,11 +898,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 107,
-      "community_name": "useTranslation",
+      "community_name": "profile.tsx",
       "file_type": "code",
       "norm_label": "page()",
       "source_file": "app/page.tsx",
       "source_location": "L3"
+    },
+    {
+      "id": "src_features_copy_email_ui_copy_email_copyemail",
+      "label": "CopyEmail()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 107,
+      "community_name": "profile.tsx",
+      "file_type": "code",
+      "norm_label": "copyemail()",
+      "source_file": "src/features/copy-email/ui/copy-email.tsx",
+      "source_location": "L29"
     },
     {
       "id": "src_pages_home_index_homepage",
@@ -910,47 +922,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 107,
-      "community_name": "useTranslation",
+      "community_name": "profile.tsx",
       "file_type": "code",
       "norm_label": "homepage()",
       "source_file": "src/_pages/home/index.tsx",
       "source_location": "L8"
     },
     {
-      "id": "src_pages_home_ui_contact_dialog_contactdialog",
-      "label": "ContactDialog()",
+      "id": "src_pages_home_ui_footer_footer",
+      "label": "Footer()",
       "_callable": true,
       "_origin": "ast",
       "community": 107,
-      "community_name": "useTranslation",
+      "community_name": "profile.tsx",
       "file_type": "code",
-      "norm_label": "contactdialog()",
-      "source_file": "src/_pages/home/ui/contact-dialog.tsx",
-      "source_location": "L16"
-    },
-    {
-      "id": "src_pages_home_ui_contact_dialog_contactdialog_handlekeydown",
-      "label": "handleKeyDown()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 107,
-      "community_name": "useTranslation",
-      "file_type": "code",
-      "norm_label": "handlekeydown()",
-      "source_file": "src/_pages/home/ui/contact-dialog.tsx",
-      "source_location": "L29"
-    },
-    {
-      "id": "src_pages_home_ui_contact_dialog_contactdialog_opendialog",
-      "label": "openDialog()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 107,
-      "community_name": "useTranslation",
-      "file_type": "code",
-      "norm_label": "opendialog()",
-      "source_file": "src/_pages/home/ui/contact-dialog.tsx",
-      "source_location": "L23"
+      "norm_label": "footer()",
+      "source_file": "src/_pages/home/ui/footer.tsx",
+      "source_location": "L7"
     },
     {
       "id": "src_pages_home_ui_language_toggle_languagetoggle",
@@ -958,7 +946,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 107,
-      "community_name": "useTranslation",
+      "community_name": "profile.tsx",
       "file_type": "code",
       "norm_label": "languagetoggle()",
       "source_file": "src/_pages/home/ui/language-toggle.tsx",
@@ -970,7 +958,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 107,
-      "community_name": "useTranslation",
+      "community_name": "profile.tsx",
       "file_type": "code",
       "norm_label": "profile()",
       "source_file": "src/_pages/home/ui/profile.tsx",
@@ -982,7 +970,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 107,
-      "community_name": "useTranslation",
+      "community_name": "profile.tsx",
       "file_type": "code",
       "norm_label": "themetoggle()",
       "source_file": "src/_pages/home/ui/theme-toggle.tsx",
@@ -994,23 +982,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 107,
-      "community_name": "useTranslation",
+      "community_name": "profile.tsx",
       "file_type": "code",
       "norm_label": "handleclick()",
       "source_file": "src/_pages/home/ui/theme-toggle.tsx",
       "source_location": "L11"
-    },
-    {
-      "id": "src_shared_lib_language_language_context_usetranslation",
-      "label": "useTranslation()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 107,
-      "community_name": "useTranslation",
-      "file_type": "code",
-      "norm_label": "usetranslation()",
-      "source_file": "src/shared/lib/language/language-context.tsx",
-      "source_location": "L29"
     },
     {
       "id": "app_layout_generatemetadata",
@@ -1061,6 +1037,18 @@
       "source_location": "L7"
     },
     {
+      "id": "src_shared_lib_cookies_setcookie",
+      "label": "setCookie()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 109,
+      "community_name": "layout.tsx",
+      "file_type": "code",
+      "norm_label": "setcookie()",
+      "source_file": "src/shared/lib/cookies.ts",
+      "source_location": "L1"
+    },
+    {
       "id": "src_shared_lib_theme_theme_context_themeprovider",
       "label": "ThemeProvider()",
       "_callable": true,
@@ -1102,7 +1090,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 112,
-      "community_name": "project-detail-dialog.tsx",
+      "community_name": "useTranslation",
       "file_type": "code",
       "norm_label": "photocanvas()",
       "source_file": "src/_pages/home/ui/photo-canvas.tsx",
@@ -1114,7 +1102,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 112,
-      "community_name": "project-detail-dialog.tsx",
+      "community_name": "useTranslation",
       "file_type": "code",
       "norm_label": "projectdetaildialog()",
       "source_file": "src/_pages/home/ui/project-detail-dialog.tsx",
@@ -1126,7 +1114,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 112,
-      "community_name": "project-detail-dialog.tsx",
+      "community_name": "useTranslation",
       "file_type": "code",
       "norm_label": "projectdialog()",
       "source_file": "src/_pages/home/ui/project-dialog.tsx",
@@ -1138,35 +1126,59 @@
       "_callable": true,
       "_origin": "ast",
       "community": 112,
-      "community_name": "project-detail-dialog.tsx",
+      "community_name": "useTranslation",
       "file_type": "code",
       "norm_label": "startresize()",
       "source_file": "src/_pages/home/ui/project-dialog.tsx",
       "source_location": "L70"
     },
     {
-      "id": "src_shared_ui_close_button_index_closebutton",
-      "label": "CloseButton()",
+      "id": "src_pages_home_ui_projects_projects",
+      "label": "Projects()",
       "_callable": true,
       "_origin": "ast",
       "community": 112,
-      "community_name": "project-detail-dialog.tsx",
+      "community_name": "useTranslation",
       "file_type": "code",
-      "norm_label": "closebutton()",
-      "source_file": "src/shared/ui/close-button/index.tsx",
+      "norm_label": "projects()",
+      "source_file": "src/_pages/home/ui/projects.tsx",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_shared_lib_language_language_context_usetranslation",
+      "label": "useTranslation()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 112,
+      "community_name": "useTranslation",
+      "file_type": "code",
+      "norm_label": "usetranslation()",
+      "source_file": "src/shared/lib/language/language-context.tsx",
+      "source_location": "L29"
+    },
+    {
+      "id": "src_features_explore_homelab_model_use_site_status_usesitestatus",
+      "label": "useSiteStatus()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 128,
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": "usesitestatus()",
+      "source_file": "src/features/explore-homelab/model/use-site-status.ts",
       "source_location": "L8"
     },
     {
-      "id": "src_shared_lib_cookies_setcookie",
-      "label": "setCookie()",
+      "id": "src_shared_api_homelab_status_index_parsehomelabstatus",
+      "label": "parseHomelabStatus()",
       "_callable": true,
       "_origin": "ast",
-      "community": 2,
-      "community_name": "language/index.ts",
+      "community": 128,
+      "community_name": "vitest",
       "file_type": "code",
-      "norm_label": "setcookie()",
-      "source_file": "src/shared/lib/cookies.ts",
-      "source_location": "L1"
+      "norm_label": "parsehomelabstatus()",
+      "source_file": "src/shared/api/homelab-status/index.ts",
+      "source_location": "L23"
     },
     {
       "id": "src_shared_lib_language_language_context_languageprovider",
@@ -1263,18 +1275,6 @@
       "norm_label": "defineentities()",
       "source_file": "src/features/explore-homelab/model/nodes.ts",
       "source_location": "L23"
-    },
-    {
-      "id": "src_pages_home_ui_projects_projects",
-      "label": "Projects()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "project.ts",
-      "file_type": "code",
-      "norm_label": "projects()",
-      "source_file": "src/_pages/home/ui/projects.tsx",
-      "source_location": "L9"
     },
     {
       "id": "src_shared_ui_infinite_canvas_model_use_canvas_transform_usecanvastransform",
@@ -1406,7 +1406,7 @@
       "file_type": "code",
       "norm_label": "projectscene()",
       "source_file": "src/features/explore-homelab/model/connections.ts",
-      "source_location": "L54"
+      "source_location": "L50"
     },
     {
       "id": "src_features_explore_homelab_model_connections_route",
@@ -1538,7 +1538,7 @@
       "file_type": "code",
       "norm_label": "getlayoutnode()",
       "source_file": "src/features/explore-homelab/model/layout.ts",
-      "source_location": "L60"
+      "source_location": "L59"
     },
     {
       "id": "src_features_explore_homelab_model_layout_getzonelayoutnode",
@@ -1550,7 +1550,7 @@
       "file_type": "code",
       "norm_label": "getzonelayoutnode()",
       "source_file": "src/features/explore-homelab/model/layout.ts",
-      "source_location": "L66"
+      "source_location": "L65"
     },
     {
       "id": "src_features_explore_homelab_model_use_node_selection_nextselection",
@@ -3026,70 +3026,256 @@
       "source_location": "L23"
     },
     {
-      "id": "app_api_homelab_status_route_test",
-      "label": "route.test.ts",
+      "id": "openspec_specs_homelab_map_spec",
+      "label": "openspec/specs/homelab-map/spec.md",
       "_origin": "ast",
       "community": 102,
-      "community_name": "vitest",
-      "file_type": "code",
-      "norm_label": "route.test.ts",
-      "source_file": "app/api/homelab/status/route.test.ts",
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "openspec/specs/homelab-map/spec.md",
+      "source_file": "openspec/specs/homelab-map/spec.md",
       "source_location": "L1"
     },
     {
-      "id": "src_features_explore_homelab_model_use_site_status",
-      "label": "use-site-status.ts",
+      "id": "openspec_specs_homelab_map_spec_homelab_map_specification",
+      "label": "homelab-map Specification",
       "_origin": "ast",
       "community": 102,
-      "community_name": "vitest",
-      "file_type": "code",
-      "norm_label": "use-site-status.ts",
-      "source_file": "src/features/explore-homelab/model/use-site-status.ts",
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "homelab-map specification",
+      "source_file": "openspec/specs/homelab-map/spec.md",
       "source_location": "L1"
     },
     {
-      "id": "src_shared_api_homelab_status_index_homelab_site_ids",
-      "label": "HOMELAB_SITE_IDS",
+      "id": "openspec_specs_homelab_map_spec_purpose",
+      "label": "Purpose",
       "_origin": "ast",
       "community": 102,
-      "community_name": "vitest",
-      "file_type": "code",
-      "norm_label": "homelab_site_ids",
-      "source_file": "src/shared/api/homelab-status/index.ts",
-      "source_location": "L1"
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "purpose",
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L3"
     },
     {
-      "id": "src_shared_api_homelab_status_status_test",
-      "label": "status.test.ts",
+      "id": "openspec_specs_homelab_map_spec_requirement_live_reachability_of_the_mapped_sites",
+      "label": "Requirement: Live reachability of the mapped sites",
       "_origin": "ast",
       "community": 102,
-      "community_name": "vitest",
-      "file_type": "code",
-      "norm_label": "status.test.ts",
-      "source_file": "src/shared/api/homelab-status/status.test.ts",
-      "source_location": "L1"
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "requirement: live reachability of the mapped sites",
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L28"
     },
     {
-      "id": "src_shared_api_homelab_status_status_test_snapshot",
-      "label": "snapshot",
+      "id": "openspec_specs_homelab_map_spec_requirement_selectable_zones_on_the_map",
+      "label": "Requirement: Selectable zones on the map",
       "_origin": "ast",
       "community": 102,
-      "community_name": "vitest",
-      "file_type": "code",
-      "norm_label": "snapshot",
-      "source_file": "src/shared/api/homelab-status/status.test.ts",
-      "source_location": "L4"
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "requirement: selectable zones on the map",
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L47"
     },
     {
-      "id": "ref_vitest",
-      "label": "vitest",
+      "id": "openspec_specs_homelab_map_spec_requirement_single_entry_point_through_the_home_page",
+      "label": "Requirement: Single entry point through the home page",
       "_origin": "ast",
       "community": 102,
-      "community_name": "vitest",
-      "file_type": "concept",
-      "norm_label": "vitest",
-      "source_file": "package.json",
-      "source_location": "L27"
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "requirement: single entry point through the home page",
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "openspec_specs_homelab_map_spec_requirement_zone_hit_areas_describe_the_zone_they_select",
+      "label": "Requirement: Zone hit areas describe the zone they select",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "requirement: zone hit areas describe the zone they select",
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L76"
+    },
+    {
+      "id": "openspec_specs_homelab_map_spec_requirements",
+      "label": "Requirements",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "requirements",
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "openspec_specs_homelab_map_spec_scenario_activating_a_card_that_sits_inside_a_zone",
+      "label": "Scenario: Activating a card that sits inside a zone",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scenario: activating a card that sits inside a zone",
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L61"
+    },
+    {
+      "id": "openspec_specs_homelab_map_spec_scenario_background_tab",
+      "label": "Scenario: Background tab",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scenario: background tab",
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L42"
+    },
+    {
+      "id": "openspec_specs_homelab_map_spec_scenario_clearing_the_selection",
+      "label": "Scenario: Clearing the selection",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scenario: clearing the selection",
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L71"
+    },
+    {
+      "id": "openspec_specs_homelab_map_spec_scenario_deselecting_by_activating_again",
+      "label": "Scenario: Deselecting by activating again",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scenario: deselecting by activating again",
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L56"
+    },
+    {
+      "id": "openspec_specs_homelab_map_spec_scenario_no_outbound_link_for_the_homelab_entry",
+      "label": "Scenario: No outbound link for the HomeLab entry",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scenario: no outbound link for the homelab entry",
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L23"
+    },
+    {
+      "id": "openspec_specs_homelab_map_spec_scenario_opening_the_map_from_the_project_list",
+      "label": "Scenario: Opening the map from the project list",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scenario: opening the map from the project list",
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "openspec_specs_homelab_map_spec_scenario_reading_a_virtual_machine_zone_s_hit_area",
+      "label": "Scenario: Reading a virtual machine zone's hit area",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scenario: reading a virtual machine zone's hit area",
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L85"
+    },
+    {
+      "id": "openspec_specs_homelab_map_spec_scenario_reading_the_proxy_host_zone_s_hit_area",
+      "label": "Scenario: Reading the proxy host zone's hit area",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scenario: reading the proxy host zone's hit area",
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L80"
+    },
+    {
+      "id": "openspec_specs_homelab_map_spec_scenario_requesting_the_retired_homelab_url",
+      "label": "Scenario: Requesting the retired homelab URL",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scenario: requesting the retired homelab url",
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L18"
+    },
+    {
+      "id": "openspec_specs_homelab_map_spec_scenario_selecting_a_zone_while_something_else_is_selected",
+      "label": "Scenario: Selecting a zone while something else is selected",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scenario: selecting a zone while something else is selected",
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L66"
+    },
+    {
+      "id": "openspec_specs_homelab_map_spec_scenario_selecting_the_proxy_host_zone",
+      "label": "Scenario: Selecting the proxy host zone",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scenario: selecting the proxy host zone",
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L51"
+    },
+    {
+      "id": "openspec_specs_homelab_map_spec_scenario_status_source_unavailable_or_malformed",
+      "label": "Scenario: Status source unavailable or malformed",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scenario: status source unavailable or malformed",
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L37"
+    },
+    {
+      "id": "openspec_specs_homelab_map_spec_scenario_statuses_arrive",
+      "label": "Scenario: Statuses arrive",
+      "_origin": "ast",
+      "community": 102,
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scenario: statuses arrive",
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L32"
     },
     {
       "id": "src_features_explore_homelab_ui_connections_layer",
@@ -3136,17 +3322,6 @@
       "source_location": "L8"
     },
     {
-      "id": "src_features_copy_email_index",
-      "label": "copy-email/index.ts",
-      "_origin": "ast",
-      "community": 104,
-      "community_name": "copy-email.tsx",
-      "file_type": "code",
-      "norm_label": "copy-email/index.ts",
-      "source_file": "src/features/copy-email/index.ts",
-      "source_location": "L1"
-    },
-    {
       "id": "src_features_copy_email_ui_copy_email",
       "label": "copy-email.tsx",
       "_origin": "ast",
@@ -3166,17 +3341,6 @@
       "file_type": "code",
       "norm_label": "contact-dialog.tsx",
       "source_file": "src/_pages/home/ui/contact-dialog.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pages_home_ui_footer",
-      "label": "footer.tsx",
-      "_origin": "ast",
-      "community": 104,
-      "community_name": "copy-email.tsx",
-      "file_type": "code",
-      "norm_label": "footer.tsx",
-      "source_file": "src/_pages/home/ui/footer.tsx",
       "source_location": "L1"
     },
     {
@@ -3221,6 +3385,39 @@
       "file_type": "code",
       "norm_label": "config/index.ts",
       "source_file": "src/shared/config/index.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_shared_config_translations",
+      "label": "translations.ts",
+      "_origin": "ast",
+      "community": 104,
+      "community_name": "copy-email.tsx",
+      "file_type": "code",
+      "norm_label": "translations.ts",
+      "source_file": "src/shared/config/translations.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_shared_config_translations_translations",
+      "label": "translations",
+      "_origin": "ast",
+      "community": 104,
+      "community_name": "copy-email.tsx",
+      "file_type": "code",
+      "norm_label": "translations",
+      "source_file": "src/shared/config/translations.ts",
+      "source_location": "L41"
+    },
+    {
+      "id": "src_shared_ui_close_button_index",
+      "label": "close-button/index.tsx",
+      "_origin": "ast",
+      "community": 104,
+      "community_name": "copy-email.tsx",
+      "file_type": "code",
+      "norm_label": "close-button/index.tsx",
+      "source_file": "src/shared/ui/close-button/index.tsx",
       "source_location": "L1"
     },
     {
@@ -3682,10 +3879,21 @@
       "label": "page.tsx",
       "_origin": "ast",
       "community": 107,
-      "community_name": "useTranslation",
+      "community_name": "profile.tsx",
       "file_type": "code",
       "norm_label": "page.tsx",
       "source_file": "app/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_features_copy_email_index",
+      "label": "copy-email/index.ts",
+      "_origin": "ast",
+      "community": 107,
+      "community_name": "profile.tsx",
+      "file_type": "code",
+      "norm_label": "copy-email/index.ts",
+      "source_file": "src/features/copy-email/index.ts",
       "source_location": "L1"
     },
     {
@@ -3693,10 +3901,21 @@
       "label": "home/index.tsx",
       "_origin": "ast",
       "community": 107,
-      "community_name": "useTranslation",
+      "community_name": "profile.tsx",
       "file_type": "code",
       "norm_label": "home/index.tsx",
       "source_file": "src/_pages/home/index.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pages_home_ui_footer",
+      "label": "footer.tsx",
+      "_origin": "ast",
+      "community": 107,
+      "community_name": "profile.tsx",
+      "file_type": "code",
+      "norm_label": "footer.tsx",
+      "source_file": "src/_pages/home/ui/footer.tsx",
       "source_location": "L1"
     },
     {
@@ -3704,7 +3923,7 @@
       "label": "language-toggle.tsx",
       "_origin": "ast",
       "community": 107,
-      "community_name": "useTranslation",
+      "community_name": "profile.tsx",
       "file_type": "code",
       "norm_label": "language-toggle.tsx",
       "source_file": "src/_pages/home/ui/language-toggle.tsx",
@@ -3715,7 +3934,7 @@
       "label": "profile.tsx",
       "_origin": "ast",
       "community": 107,
-      "community_name": "useTranslation",
+      "community_name": "profile.tsx",
       "file_type": "code",
       "norm_label": "profile.tsx",
       "source_file": "src/_pages/home/ui/profile.tsx",
@@ -3726,7 +3945,7 @@
       "label": "theme-toggle.tsx",
       "_origin": "ast",
       "community": 107,
-      "community_name": "useTranslation",
+      "community_name": "profile.tsx",
       "file_type": "code",
       "norm_label": "theme-toggle.tsx",
       "source_file": "src/_pages/home/ui/theme-toggle.tsx",
@@ -3920,6 +4139,17 @@
       "file_type": "code",
       "norm_label": "providers/index.tsx",
       "source_file": "src/_app/providers/index.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_shared_lib_cookies",
+      "label": "cookies.ts",
+      "_origin": "ast",
+      "community": 109,
+      "community_name": "layout.tsx",
+      "file_type": "code",
+      "norm_label": "cookies.ts",
+      "source_file": "src/shared/lib/cookies.ts",
       "source_location": "L1"
     },
     {
@@ -4318,11 +4548,33 @@
       "source_location": "L138"
     },
     {
+      "id": "src_pages_home_ui_photo_canvas",
+      "label": "photo-canvas.tsx",
+      "_origin": "ast",
+      "community": 112,
+      "community_name": "useTranslation",
+      "file_type": "code",
+      "norm_label": "photo-canvas.tsx",
+      "source_file": "src/_pages/home/ui/photo-canvas.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_pages_home_ui_photo_canvas_copy",
+      "label": "copy",
+      "_origin": "ast",
+      "community": 112,
+      "community_name": "useTranslation",
+      "file_type": "code",
+      "norm_label": "copy",
+      "source_file": "src/_pages/home/ui/photo-canvas.tsx",
+      "source_location": "L8"
+    },
+    {
       "id": "src_pages_home_ui_project_detail_dialog",
       "label": "project-detail-dialog.tsx",
       "_origin": "ast",
       "community": 112,
-      "community_name": "project-detail-dialog.tsx",
+      "community_name": "useTranslation",
       "file_type": "code",
       "norm_label": "project-detail-dialog.tsx",
       "source_file": "src/_pages/home/ui/project-detail-dialog.tsx",
@@ -4333,7 +4585,7 @@
       "label": "detailRenderers",
       "_origin": "ast",
       "community": 112,
-      "community_name": "project-detail-dialog.tsx",
+      "community_name": "useTranslation",
       "file_type": "code",
       "norm_label": "detailrenderers",
       "source_file": "src/_pages/home/ui/project-detail-dialog.tsx",
@@ -4344,21 +4596,21 @@
       "label": "project-dialog.tsx",
       "_origin": "ast",
       "community": 112,
-      "community_name": "project-detail-dialog.tsx",
+      "community_name": "useTranslation",
       "file_type": "code",
       "norm_label": "project-dialog.tsx",
       "source_file": "src/_pages/home/ui/project-dialog.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_shared_ui_close_button_index",
-      "label": "close-button/index.tsx",
+      "id": "src_pages_home_ui_projects",
+      "label": "projects.tsx",
       "_origin": "ast",
       "community": 112,
-      "community_name": "project-detail-dialog.tsx",
+      "community_name": "useTranslation",
       "file_type": "code",
-      "norm_label": "close-button/index.tsx",
-      "source_file": "src/shared/ui/close-button/index.tsx",
+      "norm_label": "projects.tsx",
+      "source_file": "src/_pages/home/ui/projects.tsx",
       "source_location": "L1"
     },
     {
@@ -4633,19 +4885,19 @@
       "source_location": "L148"
     },
     {
-      "id": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec",
-      "label": "spec.md",
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec",
+      "label": "2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
       "_origin": "ast",
       "community": 115,
       "community_name": "Requirement: Live reachability of the mapped sites",
       "file_type": "document",
       "node_kind": "page",
-      "norm_label": "spec.md",
-      "source_file": "openspec/changes/remove-homelab-pages/specs/homelab-map/spec.md",
+      "norm_label": "2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
       "source_location": "L1"
     },
     {
-      "id": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_added_requirements",
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_added_requirements",
       "label": "ADDED Requirements",
       "_origin": "ast",
       "community": 115,
@@ -4653,11 +4905,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "added requirements",
-      "source_file": "openspec/changes/remove-homelab-pages/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
       "source_location": "L5"
     },
     {
-      "id": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_purpose",
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_purpose",
       "label": "Purpose",
       "_origin": "ast",
       "community": 115,
@@ -4665,11 +4917,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "purpose",
-      "source_file": "openspec/changes/remove-homelab-pages/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
       "source_location": "L1"
     },
     {
-      "id": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_requirement_live_reachability_of_the_mapped_sites",
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_requirement_live_reachability_of_the_mapped_sites",
       "label": "Requirement: Live reachability of the mapped sites",
       "_origin": "ast",
       "community": 115,
@@ -4677,11 +4929,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "requirement: live reachability of the mapped sites",
-      "source_file": "openspec/changes/remove-homelab-pages/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
       "source_location": "L26"
     },
     {
-      "id": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_requirement_single_entry_point_through_the_home_page",
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_requirement_single_entry_point_through_the_home_page",
       "label": "Requirement: Single entry point through the home page",
       "_origin": "ast",
       "community": 115,
@@ -4689,11 +4941,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "requirement: single entry point through the home page",
-      "source_file": "openspec/changes/remove-homelab-pages/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
       "source_location": "L7"
     },
     {
-      "id": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_scenario_background_tab",
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_scenario_background_tab",
       "label": "Scenario: Background tab",
       "_origin": "ast",
       "community": 115,
@@ -4701,11 +4953,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "scenario: background tab",
-      "source_file": "openspec/changes/remove-homelab-pages/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
       "source_location": "L40"
     },
     {
-      "id": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_scenario_no_outbound_link_for_the_homelab_entry",
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_scenario_no_outbound_link_for_the_homelab_entry",
       "label": "Scenario: No outbound link for the HomeLab entry",
       "_origin": "ast",
       "community": 115,
@@ -4713,11 +4965,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "scenario: no outbound link for the homelab entry",
-      "source_file": "openspec/changes/remove-homelab-pages/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
       "source_location": "L21"
     },
     {
-      "id": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_scenario_opening_the_map_from_the_project_list",
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_scenario_opening_the_map_from_the_project_list",
       "label": "Scenario: Opening the map from the project list",
       "_origin": "ast",
       "community": 115,
@@ -4725,11 +4977,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "scenario: opening the map from the project list",
-      "source_file": "openspec/changes/remove-homelab-pages/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
       "source_location": "L11"
     },
     {
-      "id": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_scenario_requesting_the_retired_homelab_url",
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_scenario_requesting_the_retired_homelab_url",
       "label": "Scenario: Requesting the retired homelab URL",
       "_origin": "ast",
       "community": 115,
@@ -4737,11 +4989,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "scenario: requesting the retired homelab url",
-      "source_file": "openspec/changes/remove-homelab-pages/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
       "source_location": "L16"
     },
     {
-      "id": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_scenario_status_source_unavailable_or_malformed",
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_scenario_status_source_unavailable_or_malformed",
       "label": "Scenario: Status source unavailable or malformed",
       "_origin": "ast",
       "community": 115,
@@ -4749,11 +5001,11 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "scenario: status source unavailable or malformed",
-      "source_file": "openspec/changes/remove-homelab-pages/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
       "source_location": "L35"
     },
     {
-      "id": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_scenario_statuses_arrive",
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_scenario_statuses_arrive",
       "label": "Scenario: Statuses arrive",
       "_origin": "ast",
       "community": 115,
@@ -4761,7 +5013,7 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "scenario: statuses arrive",
-      "source_file": "openspec/changes/remove-homelab-pages/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
       "source_location": "L30"
     },
     {
@@ -5255,88 +5507,136 @@
       "source_location": "L1"
     },
     {
-      "id": "openspec_changes_remove_homelab_pages_proposal",
-      "label": "remove-homelab-pages/proposal.md",
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec",
+      "label": "2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
       "_origin": "ast",
       "community": 121,
-      "community_name": "remove-homelab-pages/proposal.md",
+      "community_name": "Requirement: Selectable zones on the map",
       "file_type": "document",
       "node_kind": "page",
-      "norm_label": "remove-homelab-pages/proposal.md",
-      "source_file": "openspec/changes/remove-homelab-pages/proposal.md",
+      "norm_label": "2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
       "source_location": "L1"
     },
     {
-      "id": "openspec_changes_remove_homelab_pages_proposal_capabilities",
-      "label": "Capabilities",
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_added_requirements",
+      "label": "ADDED Requirements",
       "_origin": "ast",
       "community": 121,
-      "community_name": "remove-homelab-pages/proposal.md",
+      "community_name": "Requirement: Selectable zones on the map",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "capabilities",
-      "source_file": "openspec/changes/remove-homelab-pages/proposal.md",
+      "norm_label": "added requirements",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_requirement_selectable_zones_on_the_map",
+      "label": "Requirement: Selectable zones on the map",
+      "_origin": "ast",
+      "community": 121,
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "requirement: selectable zones on the map",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
+      "source_location": "L3"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_requirement_zone_hit_areas_describe_the_zone_they_select",
+      "label": "Requirement: Zone hit areas describe the zone they select",
+      "_origin": "ast",
+      "community": 121,
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "requirement: zone hit areas describe the zone they select",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
+      "source_location": "L32"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_scenario_activating_a_card_that_sits_inside_a_zone",
+      "label": "Scenario: Activating a card that sits inside a zone",
+      "_origin": "ast",
+      "community": 121,
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scenario: activating a card that sits inside a zone",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
+      "source_location": "L17"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_scenario_clearing_the_selection",
+      "label": "Scenario: Clearing the selection",
+      "_origin": "ast",
+      "community": 121,
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scenario: clearing the selection",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
+      "source_location": "L27"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_scenario_deselecting_by_activating_again",
+      "label": "Scenario: Deselecting by activating again",
+      "_origin": "ast",
+      "community": 121,
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scenario: deselecting by activating again",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
       "source_location": "L12"
     },
     {
-      "id": "openspec_changes_remove_homelab_pages_proposal_impact",
-      "label": "Impact",
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_scenario_reading_a_virtual_machine_zone_s_hit_area",
+      "label": "Scenario: Reading a virtual machine zone's hit area",
       "_origin": "ast",
       "community": 121,
-      "community_name": "remove-homelab-pages/proposal.md",
+      "community_name": "Requirement: Selectable zones on the map",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "impact",
-      "source_file": "openspec/changes/remove-homelab-pages/proposal.md",
+      "norm_label": "scenario: reading a virtual machine zone's hit area",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
+      "source_location": "L41"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_scenario_reading_the_proxy_host_zone_s_hit_area",
+      "label": "Scenario: Reading the proxy host zone's hit area",
+      "_origin": "ast",
+      "community": 121,
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scenario: reading the proxy host zone's hit area",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
+      "source_location": "L36"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_scenario_selecting_a_zone_while_something_else_is_selected",
+      "label": "Scenario: Selecting a zone while something else is selected",
+      "_origin": "ast",
+      "community": 121,
+      "community_name": "Requirement: Selectable zones on the map",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scenario: selecting a zone while something else is selected",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
       "source_location": "L22"
     },
     {
-      "id": "openspec_changes_remove_homelab_pages_proposal_modified_capabilities",
-      "label": "Modified Capabilities",
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_scenario_selecting_the_proxy_host_zone",
+      "label": "Scenario: Selecting the proxy host zone",
       "_origin": "ast",
       "community": 121,
-      "community_name": "remove-homelab-pages/proposal.md",
+      "community_name": "Requirement: Selectable zones on the map",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "modified capabilities",
-      "source_file": "openspec/changes/remove-homelab-pages/proposal.md",
-      "source_location": "L18"
-    },
-    {
-      "id": "openspec_changes_remove_homelab_pages_proposal_new_capabilities",
-      "label": "New Capabilities",
-      "_origin": "ast",
-      "community": 121,
-      "community_name": "remove-homelab-pages/proposal.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "new capabilities",
-      "source_file": "openspec/changes/remove-homelab-pages/proposal.md",
-      "source_location": "L14"
-    },
-    {
-      "id": "openspec_changes_remove_homelab_pages_proposal_what_changes",
-      "label": "What Changes",
-      "_origin": "ast",
-      "community": 121,
-      "community_name": "remove-homelab-pages/proposal.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "what changes",
-      "source_file": "openspec/changes/remove-homelab-pages/proposal.md",
-      "source_location": "L5"
-    },
-    {
-      "id": "openspec_changes_remove_homelab_pages_proposal_why",
-      "label": "Why",
-      "_origin": "ast",
-      "community": 121,
-      "community_name": "remove-homelab-pages/proposal.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "why",
-      "source_file": "openspec/changes/remove-homelab-pages/proposal.md",
-      "source_location": "L1"
+      "norm_label": "scenario: selecting the proxy host zone",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
+      "source_location": "L7"
     },
     {
       "id": "claude_skills_graphify_references_query",
@@ -5483,76 +5783,88 @@
       "source_location": "L41"
     },
     {
-      "id": "openspec_changes_remove_homelab_pages_design",
-      "label": "remove-homelab-pages/design.md",
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_proposal",
+      "label": "2026-09-14-remove-homelab-pages/proposal.md",
       "_origin": "ast",
       "community": 124,
-      "community_name": "remove-homelab-pages/design.md",
+      "community_name": "2026-09-14-remove-homelab-pages/proposal.md",
       "file_type": "document",
       "node_kind": "page",
-      "norm_label": "remove-homelab-pages/design.md",
-      "source_file": "openspec/changes/remove-homelab-pages/design.md",
+      "norm_label": "2026-09-14-remove-homelab-pages/proposal.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/proposal.md",
       "source_location": "L1"
     },
     {
-      "id": "openspec_changes_remove_homelab_pages_design_context",
-      "label": "Context",
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_proposal_capabilities",
+      "label": "Capabilities",
       "_origin": "ast",
       "community": 124,
-      "community_name": "remove-homelab-pages/design.md",
+      "community_name": "2026-09-14-remove-homelab-pages/proposal.md",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "context",
-      "source_file": "openspec/changes/remove-homelab-pages/design.md",
+      "norm_label": "capabilities",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/proposal.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_proposal_impact",
+      "label": "Impact",
+      "_origin": "ast",
+      "community": 124,
+      "community_name": "2026-09-14-remove-homelab-pages/proposal.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "impact",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/proposal.md",
+      "source_location": "L22"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_proposal_modified_capabilities",
+      "label": "Modified Capabilities",
+      "_origin": "ast",
+      "community": 124,
+      "community_name": "2026-09-14-remove-homelab-pages/proposal.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "modified capabilities",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/proposal.md",
+      "source_location": "L18"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_proposal_new_capabilities",
+      "label": "New Capabilities",
+      "_origin": "ast",
+      "community": 124,
+      "community_name": "2026-09-14-remove-homelab-pages/proposal.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "new capabilities",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/proposal.md",
+      "source_location": "L14"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_proposal_what_changes",
+      "label": "What Changes",
+      "_origin": "ast",
+      "community": 124,
+      "community_name": "2026-09-14-remove-homelab-pages/proposal.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "what changes",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/proposal.md",
+      "source_location": "L5"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_proposal_why",
+      "label": "Why",
+      "_origin": "ast",
+      "community": 124,
+      "community_name": "2026-09-14-remove-homelab-pages/proposal.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "why",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/proposal.md",
       "source_location": "L1"
-    },
-    {
-      "id": "openspec_changes_remove_homelab_pages_design_decisions",
-      "label": "Decisions",
-      "_origin": "ast",
-      "community": 124,
-      "community_name": "remove-homelab-pages/design.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "decisions",
-      "source_file": "openspec/changes/remove-homelab-pages/design.md",
-      "source_location": "L23"
-    },
-    {
-      "id": "openspec_changes_remove_homelab_pages_design_goals_non_goals",
-      "label": "Goals / Non-Goals",
-      "_origin": "ast",
-      "community": 124,
-      "community_name": "remove-homelab-pages/design.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "goals / non-goals",
-      "source_file": "openspec/changes/remove-homelab-pages/design.md",
-      "source_location": "L10"
-    },
-    {
-      "id": "openspec_changes_remove_homelab_pages_design_migration_plan",
-      "label": "Migration Plan",
-      "_origin": "ast",
-      "community": 124,
-      "community_name": "remove-homelab-pages/design.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "migration plan",
-      "source_file": "openspec/changes/remove-homelab-pages/design.md",
-      "source_location": "L41"
-    },
-    {
-      "id": "openspec_changes_remove_homelab_pages_design_risks_trade_offs",
-      "label": "Risks / Trade-offs",
-      "_origin": "ast",
-      "community": 124,
-      "community_name": "remove-homelab-pages/design.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "risks / trade-offs",
-      "source_file": "openspec/changes/remove-homelab-pages/design.md",
-      "source_location": "L35"
     },
     {
       "id": "claude_skills_graphify_references_add_watch",
@@ -5699,52 +6011,70 @@
       "source_location": "L1"
     },
     {
-      "id": "openspec_changes_remove_homelab_pages_tasks",
-      "label": "remove-homelab-pages/tasks.md",
+      "id": "app_api_homelab_status_route_test",
+      "label": "route.test.ts",
       "_origin": "ast",
       "community": 128,
-      "community_name": "remove-homelab-pages/tasks.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "remove-homelab-pages/tasks.md",
-      "source_file": "openspec/changes/remove-homelab-pages/tasks.md",
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": "route.test.ts",
+      "source_file": "app/api/homelab/status/route.test.ts",
       "source_location": "L1"
     },
     {
-      "id": "openspec_changes_remove_homelab_pages_tasks_1_remove_the_route_and_its_page_slice",
-      "label": "1. Remove the route and its page slice",
+      "id": "src_features_explore_homelab_model_use_site_status",
+      "label": "use-site-status.ts",
       "_origin": "ast",
       "community": 128,
-      "community_name": "remove-homelab-pages/tasks.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "1. remove the route and its page slice",
-      "source_file": "openspec/changes/remove-homelab-pages/tasks.md",
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": "use-site-status.ts",
+      "source_file": "src/features/explore-homelab/model/use-site-status.ts",
       "source_location": "L1"
     },
     {
-      "id": "openspec_changes_remove_homelab_pages_tasks_2_retire_the_internal_destination",
-      "label": "2. Retire the internal destination",
+      "id": "src_shared_api_homelab_status_index_homelab_site_ids",
+      "label": "HOMELAB_SITE_IDS",
       "_origin": "ast",
       "community": 128,
-      "community_name": "remove-homelab-pages/tasks.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2. retire the internal destination",
-      "source_file": "openspec/changes/remove-homelab-pages/tasks.md",
-      "source_location": "L6"
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": "homelab_site_ids",
+      "source_file": "src/shared/api/homelab-status/index.ts",
+      "source_location": "L1"
     },
     {
-      "id": "openspec_changes_remove_homelab_pages_tasks_3_verify_the_surviving_behavior",
-      "label": "3. Verify the surviving behavior",
+      "id": "src_shared_api_homelab_status_status_test",
+      "label": "status.test.ts",
       "_origin": "ast",
       "community": 128,
-      "community_name": "remove-homelab-pages/tasks.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3. verify the surviving behavior",
-      "source_file": "openspec/changes/remove-homelab-pages/tasks.md",
-      "source_location": "L13"
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": "status.test.ts",
+      "source_file": "src/shared/api/homelab-status/status.test.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_shared_api_homelab_status_status_test_snapshot",
+      "label": "snapshot",
+      "_origin": "ast",
+      "community": 128,
+      "community_name": "vitest",
+      "file_type": "code",
+      "norm_label": "snapshot",
+      "source_file": "src/shared/api/homelab-status/status.test.ts",
+      "source_location": "L4"
+    },
+    {
+      "id": "ref_vitest",
+      "label": "vitest",
+      "_origin": "ast",
+      "community": 128,
+      "community_name": "vitest",
+      "file_type": "concept",
+      "norm_label": "vitest",
+      "source_file": "package.json",
+      "source_location": "L27"
     },
     {
       "id": "claude_skills_graphify_references_github_and_merge",
@@ -6446,6 +6776,438 @@
       "source_location": "L1"
     },
     {
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_design",
+      "label": "2026-09-14-remove-homelab-pages/design.md",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "2026-09-14-remove-homelab-pages/design.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-09-14-remove-homelab-pages/design.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/design.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_design_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "2026-09-14-remove-homelab-pages/design.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/design.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_design_decisions",
+      "label": "Decisions",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "2026-09-14-remove-homelab-pages/design.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "decisions",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/design.md",
+      "source_location": "L23"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_design_goals_non_goals",
+      "label": "Goals / Non-Goals",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "2026-09-14-remove-homelab-pages/design.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "goals / non-goals",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/design.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_design_migration_plan",
+      "label": "Migration Plan",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "2026-09-14-remove-homelab-pages/design.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "migration plan",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/design.md",
+      "source_location": "L41"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_design_risks_trade_offs",
+      "label": "Risks / Trade-offs",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "2026-09-14-remove-homelab-pages/design.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "risks / trade-offs",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/design.md",
+      "source_location": "L35"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_proposal",
+      "label": "2026-09-14-make-proxy-zone-selectable/proposal.md",
+      "_origin": "ast",
+      "community": 145,
+      "community_name": "2026-09-14-make-proxy-zone-selectable/proposal.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-09-14-make-proxy-zone-selectable/proposal.md",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/proposal.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_proposal_capabilities",
+      "label": "Capabilities",
+      "_origin": "ast",
+      "community": 145,
+      "community_name": "2026-09-14-make-proxy-zone-selectable/proposal.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "capabilities",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/proposal.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_proposal_impact",
+      "label": "Impact",
+      "_origin": "ast",
+      "community": 145,
+      "community_name": "2026-09-14-make-proxy-zone-selectable/proposal.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "impact",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/proposal.md",
+      "source_location": "L21"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_proposal_modified_capabilities",
+      "label": "Modified Capabilities",
+      "_origin": "ast",
+      "community": 145,
+      "community_name": "2026-09-14-make-proxy-zone-selectable/proposal.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "modified capabilities",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/proposal.md",
+      "source_location": "L18"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_proposal_new_capabilities",
+      "label": "New Capabilities",
+      "_origin": "ast",
+      "community": 145,
+      "community_name": "2026-09-14-make-proxy-zone-selectable/proposal.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "new capabilities",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/proposal.md",
+      "source_location": "L15"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_proposal_what_changes",
+      "label": "What Changes",
+      "_origin": "ast",
+      "community": 145,
+      "community_name": "2026-09-14-make-proxy-zone-selectable/proposal.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "what changes",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/proposal.md",
+      "source_location": "L5"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_proposal_why",
+      "label": "Why",
+      "_origin": "ast",
+      "community": 145,
+      "community_name": "2026-09-14-make-proxy-zone-selectable/proposal.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "why",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/proposal.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_tasks",
+      "label": "2026-09-14-remove-homelab-pages/tasks.md",
+      "_origin": "ast",
+      "community": 146,
+      "community_name": "2026-09-14-remove-homelab-pages/tasks.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-09-14-remove-homelab-pages/tasks.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/tasks.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_tasks_1_remove_the_route_and_its_page_slice",
+      "label": "1. Remove the route and its page slice",
+      "_origin": "ast",
+      "community": 146,
+      "community_name": "2026-09-14-remove-homelab-pages/tasks.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. remove the route and its page slice",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/tasks.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_tasks_2_retire_the_internal_destination",
+      "label": "2. Retire the internal destination",
+      "_origin": "ast",
+      "community": 146,
+      "community_name": "2026-09-14-remove-homelab-pages/tasks.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. retire the internal destination",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/tasks.md",
+      "source_location": "L6"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_remove_homelab_pages_tasks_3_verify_the_surviving_behavior",
+      "label": "3. Verify the surviving behavior",
+      "_origin": "ast",
+      "community": 146,
+      "community_name": "2026-09-14-remove-homelab-pages/tasks.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. verify the surviving behavior",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/tasks.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "openspec_changes_remove_rabbitmq_ui_ingress_proposal",
+      "label": "remove-rabbitmq-ui-ingress/proposal.md",
+      "_origin": "ast",
+      "community": 147,
+      "community_name": "remove-rabbitmq-ui-ingress/proposal.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "remove-rabbitmq-ui-ingress/proposal.md",
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/proposal.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "openspec_changes_remove_rabbitmq_ui_ingress_proposal_capabilities",
+      "label": "Capabilities",
+      "_origin": "ast",
+      "community": 147,
+      "community_name": "remove-rabbitmq-ui-ingress/proposal.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "capabilities",
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/proposal.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "openspec_changes_remove_rabbitmq_ui_ingress_proposal_impact",
+      "label": "Impact",
+      "_origin": "ast",
+      "community": 147,
+      "community_name": "remove-rabbitmq-ui-ingress/proposal.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "impact",
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/proposal.md",
+      "source_location": "L23"
+    },
+    {
+      "id": "openspec_changes_remove_rabbitmq_ui_ingress_proposal_modified_capabilities",
+      "label": "Modified Capabilities",
+      "_origin": "ast",
+      "community": 147,
+      "community_name": "remove-rabbitmq-ui-ingress/proposal.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "modified capabilities",
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/proposal.md",
+      "source_location": "L19"
+    },
+    {
+      "id": "openspec_changes_remove_rabbitmq_ui_ingress_proposal_new_capabilities",
+      "label": "New Capabilities",
+      "_origin": "ast",
+      "community": 147,
+      "community_name": "remove-rabbitmq-ui-ingress/proposal.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "new capabilities",
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/proposal.md",
+      "source_location": "L15"
+    },
+    {
+      "id": "openspec_changes_remove_rabbitmq_ui_ingress_proposal_what_changes",
+      "label": "What Changes",
+      "_origin": "ast",
+      "community": 147,
+      "community_name": "remove-rabbitmq-ui-ingress/proposal.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "what changes",
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/proposal.md",
+      "source_location": "L5"
+    },
+    {
+      "id": "openspec_changes_remove_rabbitmq_ui_ingress_proposal_why",
+      "label": "Why",
+      "_origin": "ast",
+      "community": 147,
+      "community_name": "remove-rabbitmq-ui-ingress/proposal.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "why",
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/proposal.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "openspec_changes_remove_rabbitmq_ui_ingress_specs_homelab_map_spec",
+      "label": "remove-rabbitmq-ui-ingress/specs/homelab-map/spec.md",
+      "_origin": "ast",
+      "community": 148,
+      "community_name": "Requirement: Edge ingress is drawn only to publicly reachable zones",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "remove-rabbitmq-ui-ingress/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/specs/homelab-map/spec.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "openspec_changes_remove_rabbitmq_ui_ingress_specs_homelab_map_spec_added_requirements",
+      "label": "ADDED Requirements",
+      "_origin": "ast",
+      "community": 148,
+      "community_name": "Requirement: Edge ingress is drawn only to publicly reachable zones",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "added requirements",
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/specs/homelab-map/spec.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "openspec_changes_remove_rabbitmq_ui_ingress_specs_homelab_map_spec_requirement_edge_ingress_is_drawn_only_to_publicly_reachable_zones",
+      "label": "Requirement: Edge ingress is drawn only to publicly reachable zones",
+      "_origin": "ast",
+      "community": 148,
+      "community_name": "Requirement: Edge ingress is drawn only to publicly reachable zones",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "requirement: edge ingress is drawn only to publicly reachable zones",
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/specs/homelab-map/spec.md",
+      "source_location": "L3"
+    },
+    {
+      "id": "openspec_changes_remove_rabbitmq_ui_ingress_specs_homelab_map_spec_scenario_private_service_zone_has_no_http_ingress",
+      "label": "Scenario: Private-service zone has no HTTP ingress",
+      "_origin": "ast",
+      "community": 148,
+      "community_name": "Requirement: Edge ingress is drawn only to publicly reachable zones",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scenario: private-service zone has no http ingress",
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/specs/homelab-map/spec.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "openspec_changes_remove_rabbitmq_ui_ingress_specs_homelab_map_spec_scenario_publicly_reachable_zone_keeps_its_http_ingress",
+      "label": "Scenario: Publicly reachable zone keeps its HTTP ingress",
+      "_origin": "ast",
+      "community": 148,
+      "community_name": "Requirement: Edge ingress is drawn only to publicly reachable zones",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scenario: publicly reachable zone keeps its http ingress",
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/specs/homelab-map/spec.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "openspec_changes_remove_rabbitmq_ui_ingress_specs_homelab_map_spec_scenario_selecting_a_private_service_zone",
+      "label": "Scenario: Selecting a private-service zone",
+      "_origin": "ast",
+      "community": 148,
+      "community_name": "Requirement: Edge ingress is drawn only to publicly reachable zones",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scenario: selecting a private-service zone",
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/specs/homelab-map/spec.md",
+      "source_location": "L17"
+    },
+    {
+      "id": "openspec_changes_remove_rabbitmq_ui_ingress_specs_homelab_map_spec_scenario_selecting_the_edge_reverse_proxy",
+      "label": "Scenario: Selecting the edge reverse proxy",
+      "_origin": "ast",
+      "community": 148,
+      "community_name": "Requirement: Edge ingress is drawn only to publicly reachable zones",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scenario: selecting the edge reverse proxy",
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/specs/homelab-map/spec.md",
+      "source_location": "L22"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_tasks",
+      "label": "2026-09-14-make-proxy-zone-selectable/tasks.md",
+      "_origin": "ast",
+      "community": 149,
+      "community_name": "2026-09-14-make-proxy-zone-selectable/tasks.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-09-14-make-proxy-zone-selectable/tasks.md",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/tasks.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_tasks_1_make_the_zone_hit_area_apply_to_every_zone",
+      "label": "1. Make the zone hit area apply to every zone",
+      "_origin": "ast",
+      "community": 149,
+      "community_name": "2026-09-14-make-proxy-zone-selectable/tasks.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. make the zone hit area apply to every zone",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/tasks.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_tasks_2_carry_the_rename_through_the_stylesheet",
+      "label": "2. Carry the rename through the stylesheet",
+      "_origin": "ast",
+      "community": 149,
+      "community_name": "2026-09-14-make-proxy-zone-selectable/tasks.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. carry the rename through the stylesheet",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/tasks.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_tasks_3_confirm_nested_cards_still_win_the_click",
+      "label": "3. Confirm nested cards still win the click",
+      "_origin": "ast",
+      "community": 149,
+      "community_name": "2026-09-14-make-proxy-zone-selectable/tasks.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. confirm nested cards still win the click",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/tasks.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_tasks_4_cover_the_behavior_and_validate",
+      "label": "4. Cover the behavior and validate",
+      "_origin": "ast",
+      "community": 149,
+      "community_name": "2026-09-14-make-proxy-zone-selectable/tasks.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. cover the behavior and validate",
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/tasks.md",
+      "source_location": "L17"
+    },
+    {
       "id": "agents_skills_prototype_skill",
       "label": "prototype/SKILL.md",
       "_origin": "ast",
@@ -6784,6 +7546,66 @@
       "norm_label": "when this is the right shape",
       "source_file": ".agents/skills/prototype/UI.md",
       "source_location": "L7"
+    },
+    {
+      "id": "openspec_changes_remove_rabbitmq_ui_ingress_tasks",
+      "label": "remove-rabbitmq-ui-ingress/tasks.md",
+      "_origin": "ast",
+      "community": 150,
+      "community_name": "remove-rabbitmq-ui-ingress/tasks.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "remove-rabbitmq-ui-ingress/tasks.md",
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/tasks.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "openspec_changes_remove_rabbitmq_ui_ingress_tasks_1_remove_the_connection",
+      "label": "1. Remove the connection",
+      "_origin": "ast",
+      "community": 150,
+      "community_name": "remove-rabbitmq-ui-ingress/tasks.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. remove the connection",
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/tasks.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "openspec_changes_remove_rabbitmq_ui_ingress_tasks_2_retire_the_dead_routing_path",
+      "label": "2. Retire the dead routing path",
+      "_origin": "ast",
+      "community": 150,
+      "community_name": "remove-rabbitmq-ui-ingress/tasks.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. retire the dead routing path",
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/tasks.md",
+      "source_location": "L6"
+    },
+    {
+      "id": "openspec_changes_remove_rabbitmq_ui_ingress_tasks_3_update_tests_and_verify_behavior",
+      "label": "3. Update tests and verify behavior",
+      "_origin": "ast",
+      "community": 150,
+      "community_name": "remove-rabbitmq-ui-ingress/tasks.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. update tests and verify behavior",
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/tasks.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "openspec_changes_remove_rabbitmq_ui_ingress_tasks_4_keep_project_artifacts_current",
+      "label": "4. Keep project artifacts current",
+      "_origin": "ast",
+      "community": 150,
+      "community_name": "remove-rabbitmq-ui-ingress/tasks.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. keep project artifacts current",
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/tasks.md",
+      "source_location": "L19"
     },
     {
       "id": "opencode_skills_graphify_skill",
@@ -7893,39 +8715,6 @@
       "norm_label": "process",
       "source_file": ".agents/skills/improve-codebase-architecture/SKILL.md",
       "source_location": "L16"
-    },
-    {
-      "id": "src_shared_config_translations",
-      "label": "translations.ts",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "language/index.ts",
-      "file_type": "code",
-      "norm_label": "translations.ts",
-      "source_file": "src/shared/config/translations.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_shared_config_translations_translations",
-      "label": "translations",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "language/index.ts",
-      "file_type": "code",
-      "norm_label": "translations",
-      "source_file": "src/shared/config/translations.ts",
-      "source_location": "L41"
-    },
-    {
-      "id": "src_shared_lib_cookies",
-      "label": "cookies.ts",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "language/index.ts",
-      "file_type": "code",
-      "norm_label": "cookies.ts",
-      "source_file": "src/shared/lib/cookies.ts",
-      "source_location": "L1"
     },
     {
       "id": "src_shared_lib_language_index",
@@ -11458,7 +12247,7 @@
       "file_type": "code",
       "norm_label": "nodebyid",
       "source_file": "src/features/explore-homelab/model/nodes.ts",
-      "source_location": "L90"
+      "source_location": "L89"
     },
     {
       "id": "src_features_explore_homelab_model_nodes_statusbynode",
@@ -11469,7 +12258,7 @@
       "file_type": "code",
       "norm_label": "statusbynode",
       "source_file": "src/features/explore-homelab/model/nodes.ts",
-      "source_location": "L95"
+      "source_location": "L94"
     },
     {
       "id": "src_features_explore_homelab_model_nodes_vmcount",
@@ -11480,7 +12269,7 @@
       "file_type": "code",
       "norm_label": "vmcount",
       "source_file": "src/features/explore-homelab/model/nodes.ts",
-      "source_location": "L93"
+      "source_location": "L92"
     },
     {
       "id": "src_features_explore_homelab_model_scene_test",
@@ -12049,17 +12838,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_pages_home_ui_projects",
-      "label": "projects.tsx",
-      "_origin": "ast",
-      "community": 43,
-      "community_name": "project.ts",
-      "file_type": "code",
-      "norm_label": "projects.tsx",
-      "source_file": "src/_pages/home/ui/projects.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "agents_skills_writing_beats_skill",
       "label": "writing-beats/SKILL.md",
       "_origin": "ast",
@@ -12446,28 +13224,6 @@
       "norm_label": "structure",
       "source_file": ".agents/skills/teach/GLOSSARY-FORMAT.md",
       "source_location": "L5"
-    },
-    {
-      "id": "src_pages_home_ui_photo_canvas",
-      "label": "photo-canvas.tsx",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "canvas-viewport.tsx",
-      "file_type": "code",
-      "norm_label": "photo-canvas.tsx",
-      "source_file": "src/_pages/home/ui/photo-canvas.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_pages_home_ui_photo_canvas_copy",
-      "label": "copy",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "canvas-viewport.tsx",
-      "file_type": "code",
-      "norm_label": "copy",
-      "source_file": "src/_pages/home/ui/photo-canvas.tsx",
-      "source_location": "L8"
     },
     {
       "id": "src_shared_lib_media_query",
@@ -15058,7 +15814,7 @@
       "file_type": "code",
       "norm_label": "scene",
       "source_file": "src/features/explore-homelab/model/connections.ts",
-      "source_location": "L67"
+      "source_location": "L63"
     },
     {
       "id": "src_features_explore_homelab_model_layout",
@@ -15102,7 +15858,7 @@
       "file_type": "code",
       "norm_label": "entityids",
       "source_file": "src/features/explore-homelab/model/layout.ts",
-      "source_location": "L52"
+      "source_location": "L51"
     },
     {
       "id": "src_features_explore_homelab_model_layout_layoutmetrics",
@@ -15124,7 +15880,7 @@
       "file_type": "code",
       "norm_label": "layoutnodebyid",
       "source_file": "src/features/explore-homelab/model/layout.ts",
-      "source_location": "L58"
+      "source_location": "L57"
     },
     {
       "id": "src_features_explore_homelab_model_layout_layoutnodes",
@@ -15135,7 +15891,7 @@
       "file_type": "code",
       "norm_label": "layoutnodes",
       "source_file": "src/features/explore-homelab/model/layout.ts",
-      "source_location": "L57"
+      "source_location": "L56"
     },
     {
       "id": "src_features_explore_homelab_model_router",
@@ -16427,7 +17183,7 @@
       "file_type": "code",
       "norm_label": "cardnodes",
       "source_file": "src/features/explore-homelab/model/nodes.ts",
-      "source_location": "L91"
+      "source_location": "L90"
     },
     {
       "id": "src_features_explore_homelab_model_nodes_networkclientscount",
@@ -16438,7 +17194,7 @@
       "file_type": "code",
       "norm_label": "networkclientscount",
       "source_file": "src/features/explore-homelab/model/nodes.ts",
-      "source_location": "L94"
+      "source_location": "L93"
     },
     {
       "id": "src_features_explore_homelab_model_nodes_zonenodes",
@@ -16449,7 +17205,7 @@
       "file_type": "code",
       "norm_label": "zonenodes",
       "source_file": "src/features/explore-homelab/model/nodes.ts",
-      "source_location": "L92"
+      "source_location": "L91"
     },
     {
       "id": "src_features_explore_homelab_model_use_node_selection",
@@ -17946,7 +18702,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/features/explore-homelab/model/connections.ts",
-      "source_location": "L56",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -17958,7 +18714,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/features/explore-homelab/model/connections.ts",
-      "source_location": "L57",
+      "source_location": "L53",
       "weight": 1.0
     },
     {
@@ -17994,7 +18750,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/features/explore-homelab/model/connections.ts",
-      "source_location": "L33",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -18006,7 +18762,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/features/explore-homelab/model/connections.ts",
-      "source_location": "L50",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -18018,7 +18774,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/features/explore-homelab/model/layout.ts",
-      "source_location": "L67",
+      "source_location": "L66",
       "weight": 1.0
     },
     {
@@ -32748,6 +33504,226 @@
       "weight": 1.0
     },
     {
+      "source": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_proposal",
+      "target": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_proposal_why",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/proposal.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_proposal",
+      "target": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_proposal_capabilities",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/proposal.md",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_proposal",
+      "target": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_proposal_impact",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/proposal.md",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_proposal",
+      "target": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_proposal_what_changes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/proposal.md",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_proposal_capabilities",
+      "target": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_proposal_new_capabilities",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/proposal.md",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_proposal_capabilities",
+      "target": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_proposal_modified_capabilities",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/proposal.md",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec",
+      "target": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_added_requirements",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_added_requirements",
+      "target": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_requirement_selectable_zones_on_the_map",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_added_requirements",
+      "target": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_requirement_zone_hit_areas_describe_the_zone_they_select",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_requirement_selectable_zones_on_the_map",
+      "target": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_scenario_deselecting_by_activating_again",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_requirement_selectable_zones_on_the_map",
+      "target": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_scenario_activating_a_card_that_sits_inside_a_zone",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_requirement_selectable_zones_on_the_map",
+      "target": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_scenario_selecting_a_zone_while_something_else_is_selected",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_requirement_selectable_zones_on_the_map",
+      "target": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_scenario_clearing_the_selection",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_requirement_selectable_zones_on_the_map",
+      "target": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_scenario_selecting_the_proxy_host_zone",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_requirement_zone_hit_areas_describe_the_zone_they_select",
+      "target": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_scenario_reading_the_proxy_host_zone_s_hit_area",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_requirement_zone_hit_areas_describe_the_zone_they_select",
+      "target": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_specs_homelab_map_spec_scenario_reading_a_virtual_machine_zone_s_hit_area",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_tasks",
+      "target": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_tasks_1_make_the_zone_hit_area_apply_to_every_zone",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/tasks.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_tasks",
+      "target": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_tasks_3_confirm_nested_cards_still_win_the_click",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/tasks.md",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_tasks",
+      "target": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_tasks_4_cover_the_behavior_and_validate",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/tasks.md",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_tasks",
+      "target": "openspec_changes_archive_2026_09_14_make_proxy_zone_selectable_tasks_2_carry_the_rename_through_the_stylesheet",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/tasks.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
       "source": "openspec_changes_archive_2026_09_14_migrate_frontend_to_fsd_design",
       "target": "openspec_changes_archive_2026_09_14_migrate_frontend_to_fsd_design_context",
       "relation": "contains",
@@ -33331,267 +34307,663 @@
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_design",
-      "target": "openspec_changes_remove_homelab_pages_design_context",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_design",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_design_context",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/design.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/design.md",
       "source_location": "L1",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_design",
-      "target": "openspec_changes_remove_homelab_pages_design_goals_non_goals",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_design",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_design_goals_non_goals",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/design.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/design.md",
       "source_location": "L10",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_design",
-      "target": "openspec_changes_remove_homelab_pages_design_decisions",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_design",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_design_decisions",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/design.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/design.md",
       "source_location": "L23",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_design",
-      "target": "openspec_changes_remove_homelab_pages_design_risks_trade_offs",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_design",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_design_risks_trade_offs",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/design.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/design.md",
       "source_location": "L35",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_design",
-      "target": "openspec_changes_remove_homelab_pages_design_migration_plan",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_design",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_design_migration_plan",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/design.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/design.md",
       "source_location": "L41",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_proposal",
-      "target": "openspec_changes_remove_homelab_pages_proposal_why",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_proposal",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_proposal_why",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/proposal.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/proposal.md",
       "source_location": "L1",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_proposal",
-      "target": "openspec_changes_remove_homelab_pages_proposal_capabilities",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_proposal",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_proposal_capabilities",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/proposal.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/proposal.md",
       "source_location": "L12",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_proposal",
-      "target": "openspec_changes_remove_homelab_pages_proposal_impact",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_proposal",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_proposal_impact",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/proposal.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/proposal.md",
       "source_location": "L22",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_proposal",
-      "target": "openspec_changes_remove_homelab_pages_proposal_what_changes",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_proposal",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_proposal_what_changes",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/proposal.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/proposal.md",
       "source_location": "L5",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_proposal_capabilities",
-      "target": "openspec_changes_remove_homelab_pages_proposal_new_capabilities",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_proposal_capabilities",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_proposal_new_capabilities",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/proposal.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/proposal.md",
       "source_location": "L14",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_proposal_capabilities",
-      "target": "openspec_changes_remove_homelab_pages_proposal_modified_capabilities",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_proposal_capabilities",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_proposal_modified_capabilities",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/proposal.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/proposal.md",
       "source_location": "L18",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec",
-      "target": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_purpose",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_purpose",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
       "source_location": "L1",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec",
-      "target": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_added_requirements",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_added_requirements",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
       "source_location": "L5",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_added_requirements",
-      "target": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_requirement_live_reachability_of_the_mapped_sites",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_added_requirements",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_requirement_live_reachability_of_the_mapped_sites",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
       "source_location": "L26",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_added_requirements",
-      "target": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_requirement_single_entry_point_through_the_home_page",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_added_requirements",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_requirement_single_entry_point_through_the_home_page",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
       "source_location": "L7",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_requirement_live_reachability_of_the_mapped_sites",
-      "target": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_scenario_statuses_arrive",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_requirement_live_reachability_of_the_mapped_sites",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_scenario_statuses_arrive",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
       "source_location": "L30",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_requirement_live_reachability_of_the_mapped_sites",
-      "target": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_scenario_status_source_unavailable_or_malformed",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_requirement_live_reachability_of_the_mapped_sites",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_scenario_status_source_unavailable_or_malformed",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
       "source_location": "L35",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_requirement_live_reachability_of_the_mapped_sites",
-      "target": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_scenario_background_tab",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_requirement_live_reachability_of_the_mapped_sites",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_scenario_background_tab",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
       "source_location": "L40",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_requirement_single_entry_point_through_the_home_page",
-      "target": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_scenario_opening_the_map_from_the_project_list",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_requirement_single_entry_point_through_the_home_page",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_scenario_opening_the_map_from_the_project_list",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
       "source_location": "L11",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_requirement_single_entry_point_through_the_home_page",
-      "target": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_scenario_requesting_the_retired_homelab_url",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_requirement_single_entry_point_through_the_home_page",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_scenario_requesting_the_retired_homelab_url",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
       "source_location": "L16",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_requirement_single_entry_point_through_the_home_page",
-      "target": "openspec_changes_remove_homelab_pages_specs_homelab_map_spec_scenario_no_outbound_link_for_the_homelab_entry",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_requirement_single_entry_point_through_the_home_page",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_specs_homelab_map_spec_scenario_no_outbound_link_for_the_homelab_entry",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/specs/homelab-map/spec.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md",
       "source_location": "L21",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_tasks",
-      "target": "openspec_changes_remove_homelab_pages_tasks_1_remove_the_route_and_its_page_slice",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_tasks",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_tasks_1_remove_the_route_and_its_page_slice",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/tasks.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/tasks.md",
       "source_location": "L1",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_tasks",
-      "target": "openspec_changes_remove_homelab_pages_tasks_3_verify_the_surviving_behavior",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_tasks",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_tasks_3_verify_the_surviving_behavior",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/tasks.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/tasks.md",
       "source_location": "L13",
       "weight": 1.0
     },
     {
-      "source": "openspec_changes_remove_homelab_pages_tasks",
-      "target": "openspec_changes_remove_homelab_pages_tasks_2_retire_the_internal_destination",
+      "source": "openspec_changes_archive_2026_09_14_remove_homelab_pages_tasks",
+      "target": "openspec_changes_archive_2026_09_14_remove_homelab_pages_tasks_2_retire_the_internal_destination",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "openspec/changes/remove-homelab-pages/tasks.md",
+      "source_file": "openspec/changes/archive/2026-09-14-remove-homelab-pages/tasks.md",
       "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_remove_rabbitmq_ui_ingress_proposal",
+      "target": "openspec_changes_remove_rabbitmq_ui_ingress_proposal_why",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/proposal.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_remove_rabbitmq_ui_ingress_proposal",
+      "target": "openspec_changes_remove_rabbitmq_ui_ingress_proposal_capabilities",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/proposal.md",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_remove_rabbitmq_ui_ingress_proposal",
+      "target": "openspec_changes_remove_rabbitmq_ui_ingress_proposal_impact",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/proposal.md",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_remove_rabbitmq_ui_ingress_proposal",
+      "target": "openspec_changes_remove_rabbitmq_ui_ingress_proposal_what_changes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/proposal.md",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_remove_rabbitmq_ui_ingress_proposal_capabilities",
+      "target": "openspec_changes_remove_rabbitmq_ui_ingress_proposal_new_capabilities",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/proposal.md",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_remove_rabbitmq_ui_ingress_proposal_capabilities",
+      "target": "openspec_changes_remove_rabbitmq_ui_ingress_proposal_modified_capabilities",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/proposal.md",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_remove_rabbitmq_ui_ingress_specs_homelab_map_spec",
+      "target": "openspec_changes_remove_rabbitmq_ui_ingress_specs_homelab_map_spec_added_requirements",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/specs/homelab-map/spec.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_remove_rabbitmq_ui_ingress_specs_homelab_map_spec_added_requirements",
+      "target": "openspec_changes_remove_rabbitmq_ui_ingress_specs_homelab_map_spec_requirement_edge_ingress_is_drawn_only_to_publicly_reachable_zones",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/specs/homelab-map/spec.md",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_remove_rabbitmq_ui_ingress_specs_homelab_map_spec_requirement_edge_ingress_is_drawn_only_to_publicly_reachable_zones",
+      "target": "openspec_changes_remove_rabbitmq_ui_ingress_specs_homelab_map_spec_scenario_publicly_reachable_zone_keeps_its_http_ingress",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/specs/homelab-map/spec.md",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_remove_rabbitmq_ui_ingress_specs_homelab_map_spec_requirement_edge_ingress_is_drawn_only_to_publicly_reachable_zones",
+      "target": "openspec_changes_remove_rabbitmq_ui_ingress_specs_homelab_map_spec_scenario_selecting_a_private_service_zone",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/specs/homelab-map/spec.md",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_remove_rabbitmq_ui_ingress_specs_homelab_map_spec_requirement_edge_ingress_is_drawn_only_to_publicly_reachable_zones",
+      "target": "openspec_changes_remove_rabbitmq_ui_ingress_specs_homelab_map_spec_scenario_selecting_the_edge_reverse_proxy",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/specs/homelab-map/spec.md",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_remove_rabbitmq_ui_ingress_specs_homelab_map_spec_requirement_edge_ingress_is_drawn_only_to_publicly_reachable_zones",
+      "target": "openspec_changes_remove_rabbitmq_ui_ingress_specs_homelab_map_spec_scenario_private_service_zone_has_no_http_ingress",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/specs/homelab-map/spec.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_remove_rabbitmq_ui_ingress_tasks",
+      "target": "openspec_changes_remove_rabbitmq_ui_ingress_tasks_1_remove_the_connection",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/tasks.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_remove_rabbitmq_ui_ingress_tasks",
+      "target": "openspec_changes_remove_rabbitmq_ui_ingress_tasks_3_update_tests_and_verify_behavior",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/tasks.md",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_remove_rabbitmq_ui_ingress_tasks",
+      "target": "openspec_changes_remove_rabbitmq_ui_ingress_tasks_4_keep_project_artifacts_current",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/tasks.md",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_changes_remove_rabbitmq_ui_ingress_tasks",
+      "target": "openspec_changes_remove_rabbitmq_ui_ingress_tasks_2_retire_the_dead_routing_path",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/remove-rabbitmq-ui-ingress/tasks.md",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_specs_homelab_map_spec",
+      "target": "openspec_specs_homelab_map_spec_homelab_map_specification",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_specs_homelab_map_spec_homelab_map_specification",
+      "target": "openspec_specs_homelab_map_spec_purpose",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_specs_homelab_map_spec_homelab_map_specification",
+      "target": "openspec_specs_homelab_map_spec_requirements",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_specs_homelab_map_spec_requirement_live_reachability_of_the_mapped_sites",
+      "target": "openspec_specs_homelab_map_spec_scenario_statuses_arrive",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_specs_homelab_map_spec_requirement_live_reachability_of_the_mapped_sites",
+      "target": "openspec_specs_homelab_map_spec_scenario_status_source_unavailable_or_malformed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_specs_homelab_map_spec_requirement_live_reachability_of_the_mapped_sites",
+      "target": "openspec_specs_homelab_map_spec_scenario_background_tab",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_specs_homelab_map_spec_requirement_selectable_zones_on_the_map",
+      "target": "openspec_specs_homelab_map_spec_scenario_selecting_the_proxy_host_zone",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_specs_homelab_map_spec_requirement_selectable_zones_on_the_map",
+      "target": "openspec_specs_homelab_map_spec_scenario_deselecting_by_activating_again",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_specs_homelab_map_spec_requirement_selectable_zones_on_the_map",
+      "target": "openspec_specs_homelab_map_spec_scenario_activating_a_card_that_sits_inside_a_zone",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_specs_homelab_map_spec_requirement_selectable_zones_on_the_map",
+      "target": "openspec_specs_homelab_map_spec_scenario_selecting_a_zone_while_something_else_is_selected",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_specs_homelab_map_spec_requirement_selectable_zones_on_the_map",
+      "target": "openspec_specs_homelab_map_spec_scenario_clearing_the_selection",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_specs_homelab_map_spec_requirement_single_entry_point_through_the_home_page",
+      "target": "openspec_specs_homelab_map_spec_scenario_opening_the_map_from_the_project_list",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_specs_homelab_map_spec_requirement_single_entry_point_through_the_home_page",
+      "target": "openspec_specs_homelab_map_spec_scenario_requesting_the_retired_homelab_url",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_specs_homelab_map_spec_requirement_single_entry_point_through_the_home_page",
+      "target": "openspec_specs_homelab_map_spec_scenario_no_outbound_link_for_the_homelab_entry",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_specs_homelab_map_spec_requirement_zone_hit_areas_describe_the_zone_they_select",
+      "target": "openspec_specs_homelab_map_spec_scenario_reading_the_proxy_host_zone_s_hit_area",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_specs_homelab_map_spec_requirement_zone_hit_areas_describe_the_zone_they_select",
+      "target": "openspec_specs_homelab_map_spec_scenario_reading_a_virtual_machine_zone_s_hit_area",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_specs_homelab_map_spec_requirements",
+      "target": "openspec_specs_homelab_map_spec_requirement_live_reachability_of_the_mapped_sites",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_specs_homelab_map_spec_requirements",
+      "target": "openspec_specs_homelab_map_spec_requirement_selectable_zones_on_the_map",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_specs_homelab_map_spec_requirements",
+      "target": "openspec_specs_homelab_map_spec_requirement_zone_hit_areas_describe_the_zone_they_select",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "openspec_specs_homelab_map_spec_requirements",
+      "target": "openspec_specs_homelab_map_spec_requirement_single_entry_point_through_the_home_page",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/specs/homelab-map/spec.md",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -34031,7 +35403,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/explore-homelab/model/connections.ts",
-      "source_location": "L54",
+      "source_location": "L50",
       "weight": 1.0
     },
     {
@@ -34042,7 +35414,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/explore-homelab/model/connections.ts",
-      "source_location": "L67",
+      "source_location": "L63",
       "weight": 1.0
     },
     {
@@ -34141,7 +35513,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/explore-homelab/model/layout.ts",
-      "source_location": "L33",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -34163,7 +35535,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/explore-homelab/model/layout.ts",
-      "source_location": "L52",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -34174,7 +35546,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/explore-homelab/model/layout.ts",
-      "source_location": "L56",
+      "source_location": "L55",
       "weight": 1.0
     },
     {
@@ -34185,7 +35557,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/explore-homelab/model/layout.ts",
-      "source_location": "L57",
+      "source_location": "L56",
       "weight": 1.0
     },
     {
@@ -34196,7 +35568,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/explore-homelab/model/layout.ts",
-      "source_location": "L58",
+      "source_location": "L57",
       "weight": 1.0
     },
     {
@@ -34207,7 +35579,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/explore-homelab/model/layout.ts",
-      "source_location": "L60",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
@@ -34218,7 +35590,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/explore-homelab/model/layout.ts",
-      "source_location": "L66",
+      "source_location": "L65",
       "weight": 1.0
     },
     {
@@ -34383,7 +35755,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/explore-homelab/model/nodes.ts",
-      "source_location": "L86",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -34394,7 +35766,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/explore-homelab/model/nodes.ts",
-      "source_location": "L87",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "src_features_explore_homelab_model_nodes",
+      "target": "src_features_explore_homelab_model_nodes_nodebyid",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/explore-homelab/model/nodes.ts",
+      "source_location": "L89",
       "weight": 1.0
     },
     {
@@ -34410,7 +35793,7 @@
     },
     {
       "source": "src_features_explore_homelab_model_nodes",
-      "target": "src_features_explore_homelab_model_nodes_nodebyid",
+      "target": "src_features_explore_homelab_model_nodes_cardnodes",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -34421,7 +35804,7 @@
     },
     {
       "source": "src_features_explore_homelab_model_nodes",
-      "target": "src_features_explore_homelab_model_nodes_cardnodes",
+      "target": "src_features_explore_homelab_model_nodes_zonenodes",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -34432,7 +35815,7 @@
     },
     {
       "source": "src_features_explore_homelab_model_nodes",
-      "target": "src_features_explore_homelab_model_nodes_zonenodes",
+      "target": "src_features_explore_homelab_model_nodes_vmcount",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -34443,7 +35826,7 @@
     },
     {
       "source": "src_features_explore_homelab_model_nodes",
-      "target": "src_features_explore_homelab_model_nodes_vmcount",
+      "target": "src_features_explore_homelab_model_nodes_networkclientscount",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -34454,24 +35837,13 @@
     },
     {
       "source": "src_features_explore_homelab_model_nodes",
-      "target": "src_features_explore_homelab_model_nodes_networkclientscount",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/features/explore-homelab/model/nodes.ts",
-      "source_location": "L94",
-      "weight": 1.0
-    },
-    {
-      "source": "src_features_explore_homelab_model_nodes",
       "target": "src_features_explore_homelab_model_nodes_statusbynode",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/explore-homelab/model/nodes.ts",
-      "source_location": "L95",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -36476,5 +37848,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a3c3b852db6317a6e62811c52fc021c260496b1b"
+  "built_at_commit": "5075495f2ce8b40cca71ff56c3e05a2b36e7562a"
 }

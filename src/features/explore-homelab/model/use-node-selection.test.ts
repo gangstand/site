@@ -12,4 +12,13 @@ describe("Homelab selection", () => {
     expect(nextSelection(node, { type: "toggle-node", nodeId: "docker" })).toBeNull();
     expect(nextSelection(connection, { type: "clear" })).toBeNull();
   });
+
+  it("toggles the proxy zone like any other node", () => {
+    const proxy = nextSelection(null, { type: "toggle-node", nodeId: "proxy" });
+    expect(proxy).toEqual({ type: "node", nodeId: "proxy" });
+    expect(nextSelection(proxy, { type: "toggle-node", nodeId: "proxy" })).toBeNull();
+
+    const connection = nextSelection(null, { type: "select-connection", connection: { id: "vpn-docker", to: "docker" } });
+    expect(nextSelection(connection, { type: "toggle-node", nodeId: "proxy" })).toEqual({ type: "node", nodeId: "proxy" });
+  });
 });

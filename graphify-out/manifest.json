@@ -36,8 +36,8 @@
     "semantic_hash": "d20afa0da9aa6a41f34c59f541a3a03c"
   },
   "next-env.d.ts": {
-    "mtime": 1789382538.4530933,
-    "seen": 1789382621.5716207,
+    "mtime": 1789387952.3647451,
+    "seen": 1789387986.6154065,
     "ast_hash": "8195d2c60ce847a459ae9d308d6a5724",
     "semantic_hash": ""
   },
@@ -1134,21 +1134,21 @@
     "semantic_hash": ""
   },
   "src/features/explore-homelab/model/connections.ts": {
-    "mtime": 1789380242.622541,
-    "seen": 1789380744.8137436,
-    "ast_hash": "6af7caf7a183d0468b1c408727482650",
+    "mtime": 1789387922.463922,
+    "seen": 1789387986.6154382,
+    "ast_hash": "0997cbc4f026cf141aede9fa620e1de1",
     "semantic_hash": ""
   },
   "src/features/explore-homelab/model/layout.ts": {
-    "mtime": 1789380242.6235409,
-    "seen": 1789380744.8137448,
-    "ast_hash": "f6811a986f1669ef2729eb007fa9df65",
+    "mtime": 1789387924.0179129,
+    "seen": 1789387986.6154392,
+    "ast_hash": "1695d81da03a64f2ebacab0f6a2f2570",
     "semantic_hash": ""
   },
   "src/features/explore-homelab/model/nodes.ts": {
-    "mtime": 1789380242.6235409,
-    "seen": 1789380744.813746,
-    "ast_hash": "643468f25c288132918cfa8afd109794",
+    "mtime": 1789387906.3730187,
+    "seen": 1789387986.6154406,
+    "ast_hash": "51e7a0dcf54da8c7469c87e5d34a9d15",
     "semantic_hash": ""
   },
   "src/features/explore-homelab/model/router.ts": {
@@ -1164,9 +1164,9 @@
     "semantic_hash": ""
   },
   "src/features/explore-homelab/model/use-node-selection.test.ts": {
-    "mtime": 1789380242.6251965,
-    "seen": 1789380744.813749,
-    "ast_hash": "02bf15b4523ec1a8efff6d899b4ad8bc",
+    "mtime": 1789387455.1972957,
+    "seen": 1789387494.9181025,
+    "ast_hash": "2c969574b50d00cef55a92df0e1c5cf6",
     "semantic_hash": ""
   },
   "src/features/explore-homelab/model/use-node-selection.ts": {
@@ -1194,9 +1194,9 @@
     "semantic_hash": ""
   },
   "src/features/explore-homelab/ui/homelab-canvas.tsx": {
-    "mtime": 1789380502.5508044,
-    "seen": 1789380744.8137536,
-    "ast_hash": "b02d6dc6afbe974bb9e62f2e928e3dd5",
+    "mtime": 1789387425.0465686,
+    "seen": 1789387494.9181287,
+    "ast_hash": "2b1dc16cd97a698095b48c8ae554aa9f",
     "semantic_hash": ""
   },
   "src/features/explore-homelab/ui/hypervisor-section.tsx": {
@@ -1212,9 +1212,9 @@
     "semantic_hash": ""
   },
   "src/features/explore-homelab/ui/node-zone.tsx": {
-    "mtime": 1789380242.6755407,
-    "seen": 1789380744.8137567,
-    "ast_hash": "a62624c0289d39db1bf562675b739a70",
+    "mtime": 1789387420.031615,
+    "seen": 1789387494.918137,
+    "ast_hash": "27a7bd77887f77b367fec4a379e7b953",
     "semantic_hash": ""
   },
   "src/features/explore-homelab/ui/site-indicator.tsx": {
@@ -1607,34 +1607,88 @@
     "ast_hash": "2cefe578226b50a405d00321904c1fda",
     "semantic_hash": ""
   },
-  "openspec/changes/remove-homelab-pages/.openspec.yaml": {
+  "openspec/changes/archive/2026-09-14-remove-homelab-pages/.openspec.yaml": {
     "mtime": 1789382135.1439154,
-    "seen": 1789382621.571892,
+    "seen": 1789387494.9184563,
     "ast_hash": "331f99705d6292ffe772f964ade7dcb1",
     "semantic_hash": ""
   },
-  "openspec/changes/remove-homelab-pages/design.md": {
+  "openspec/changes/archive/2026-09-14-remove-homelab-pages/design.md": {
     "mtime": 1789382236.3807151,
-    "seen": 1789382621.5718927,
+    "seen": 1789387494.9184573,
     "ast_hash": "4089ae62f6271ea92e18a39124b4d253",
     "semantic_hash": ""
   },
-  "openspec/changes/remove-homelab-pages/proposal.md": {
+  "openspec/changes/archive/2026-09-14-remove-homelab-pages/proposal.md": {
     "mtime": 1789382179.224829,
-    "seen": 1789382621.5718932,
+    "seen": 1789387494.9184587,
     "ast_hash": "b154a56a0d6567ff7e5b39fdf39cb8e5",
     "semantic_hash": ""
   },
-  "openspec/changes/remove-homelab-pages/specs/homelab-map/spec.md": {
+  "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md": {
     "mtime": 1789382202.926782,
-    "seen": 1789382621.5718937,
+    "seen": 1789387494.91846,
     "ast_hash": "842ea41524e9a328784e11cef28f5332",
     "semantic_hash": ""
   },
-  "openspec/changes/remove-homelab-pages/tasks.md": {
-    "mtime": 1789382615.1779308,
-    "seen": 1789382621.5718946,
-    "ast_hash": "cf8bf3043c1eac00f8fb5c0e393f945e",
+  "openspec/changes/archive/2026-09-14-remove-homelab-pages/tasks.md": {
+    "mtime": 1789382625.5979087,
+    "seen": 1789387494.918461,
+    "ast_hash": "647cb3a659304a536a25b64787e3db1f",
+    "semantic_hash": ""
+  },
+  "openspec/specs/homelab-map/spec.md": {
+    "mtime": 1789387590.8831682,
+    "seen": 1789387986.6156716,
+    "ast_hash": "5bc4b3f2e6e18f09d4bf157f8777e149",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/.openspec.yaml": {
+    "mtime": 1789387216.055747,
+    "seen": 1789387986.615646,
+    "ast_hash": "331f99705d6292ffe772f964ade7dcb1",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/proposal.md": {
+    "mtime": 1789387243.1404324,
+    "seen": 1789387986.615647,
+    "ast_hash": "265ea3de380ddb226e9f880b64289fcd",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/specs/homelab-map/spec.md": {
+    "mtime": 1789387265.8641765,
+    "seen": 1789387986.6156478,
+    "ast_hash": "a7ef77e66edebc20718c370f501c6650",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-14-make-proxy-zone-selectable/tasks.md": {
+    "mtime": 1789387490.062991,
+    "seen": 1789387986.6156485,
+    "ast_hash": "b75c9e6d4ae838ab031c0747693ab08c",
+    "semantic_hash": ""
+  },
+  "openspec/changes/remove-rabbitmq-ui-ingress/.openspec.yaml": {
+    "mtime": 1789387740.923078,
+    "seen": 1789387986.6156669,
+    "ast_hash": "331f99705d6292ffe772f964ade7dcb1",
+    "semantic_hash": ""
+  },
+  "openspec/changes/remove-rabbitmq-ui-ingress/proposal.md": {
+    "mtime": 1789387772.4978657,
+    "seen": 1789387986.6156678,
+    "ast_hash": "bc9e6caced8c4cd1ad82062533068f0b",
+    "semantic_hash": ""
+  },
+  "openspec/changes/remove-rabbitmq-ui-ingress/specs/homelab-map/spec.md": {
+    "mtime": 1789387790.3217483,
+    "seen": 1789387986.6156685,
+    "ast_hash": "05827d36e0905211aad223a2ec91b590",
+    "semantic_hash": ""
+  },
+  "openspec/changes/remove-rabbitmq-ui-ingress/tasks.md": {
+    "mtime": 1789387973.8496199,
+    "seen": 1789387986.6156693,
+    "ast_hash": "39163149cfc521209f837005fdcdae05",
     "semantic_hash": ""
   }
 }

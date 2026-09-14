@@ -1,17 +1,17 @@
 # Graph Report - site  (2026-09-14)
 
 ## Corpus Check
-- 186 files · ~136,833 words
+- 227 files · ~192,163 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 12 file(s) not represented in the graph (top: (none) 7, .css 5)
+- Unclassified: 13 file(s) not represented in the graph (top: (none) 8, .css 5)
 
 ## Summary
-- 1113 nodes · 1388 edges · 104 communities (72 shown, 9 thin omitted)
+- 1477 nodes · 1705 edges · 147 communities (101 shown, 14 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a3c3b852`
+- Built from commit: `5075495f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -76,27 +76,61 @@
 - block-dangerous-git.sh
 - implement-spec/SKILL.md
 - extraction-spec.md
+- Agent skills
 - gangstand.tech
 - State management: TanStack Query (React Query)
 - api-routes/homelab-status/index.ts
-- next
-- connections.ts
+- Next.js
+- layout.ts
 - api/homelab-status/index.ts
-- Decisions
+- Feature-Sliced Design (FSD) v2.1
 - How to keep entities clean
 - Decisions
 - Asset Handling
-- tech-logo/index.tsx
-- homelab-canvas.tsx
 - node-zone.tsx
+- homelab-canvas.tsx
+- What You Must Do When Invoked
 - 2026-09-14-refactor/tasks.md
-- migrate-frontend-to-fsd/tasks.md
-- layout.ts
+- Layer Structure Reference
+- Migration Guide
 - Growth Walkthrough
 - 2026-09-14-refactor/proposal.md
-- migrate-frontend-to-fsd/proposal.md
-- use-node-selection.ts
+- Cross-Import Resolution Patterns
+- Requirement: Live reachability of the mapped sites
 - connections-layer.tsx
+- copy-email.tsx
+- Authentication
+- State management: TanStack Query (React Query)
+- useTranslation
+- Decisions
+- layout.tsx
+- How to keep entities clean
+- .claude/skills/openspec-explore/SKILL.md
+- react
+- explore.md
+- Asset Handling
+- Requirement: Live reachability of the mapped sites
+- graphify reference: extra exports and benchmark
+- 2026-09-14-migrate-frontend-to-fsd/tasks.md
+- Growth Walkthrough
+- Issue tracker: GitHub
+- 2026-09-14-migrate-frontend-to-fsd/proposal.md
+- Requirement: Selectable zones on the map
+- graphify reference: query, path, explain
+- Domain Docs
+- 2026-09-14-remove-homelab-pages/proposal.md
+- graphify reference: add a URL and watch a folder
+- graphify reference: commit hook and native CLAUDE.md integration
+- graphify reference: incremental update and cluster-only
+- make-proxy-zone-selectable/proposal.md
+- graphify reference: GitHub clone and cross-repo merge
+- graphify reference: transcribe video and audio
+- .claude/CLAUDE.md
+- .claude/skills/graphify/references/extraction-spec.md
+- agents/triage-labels.md
+- 2026-09-14-remove-homelab-pages/design.md
+- make-proxy-zone-selectable/tasks.md
+- 2026-09-14-remove-homelab-pages/tasks.md
 
 ## God Nodes (most connected - your core abstractions)
 1. `useTranslation()` - 24 edges
@@ -104,28 +138,28 @@
 3. `compilerOptions` - 16 edges
 4. `Lang` - 12 edges
 5. `Layer Structure Reference` - 12 edges
-6. `What You Must Do When Invoked` - 12 edges
-7. `template.sh script` - 11 edges
-8. `Feature-Sliced Design (FSD) v2.1` - 11 edges
-9. `NodeId` - 10 edges
-10. `Cross-Import Resolution Patterns` - 10 edges
+6. `Layer Structure Reference` - 12 edges
+7. `What You Must Do When Invoked` - 12 edges
+8. `What You Must Do When Invoked` - 12 edges
+9. `template.sh script` - 11 edges
+10. `Feature-Sliced Design (FSD) v2.1` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `GET()` --calls--> `getHomelabStatus()`  [EXTRACTED]
-  app/api/homelab/status/route.ts → src/_app/api-routes/homelab-status/index.ts
 - `getPreferences()` --calls--> `parseLang()`  [EXTRACTED]
   app/layout.tsx → src/shared/lib/language/locale.ts
+- `GET()` --calls--> `getHomelabStatus()`  [EXTRACTED]
+  app/api/homelab/status/route.ts → src/_app/api-routes/homelab-status/index.ts
+- `LanguageContextValue` --references--> `Lang`  [EXTRACTED]
+  src/shared/lib/language/language-context.tsx → src/shared/lib/language/locale.ts
+- `ProjectImage` --references--> `Lang`  [EXTRACTED]
+  src/_pages/home/model/project.ts → src/shared/lib/language/locale.ts
 - `ProjectDefinition` --references--> `Lang`  [EXTRACTED]
   src/_pages/home/model/project.ts → src/shared/lib/language/locale.ts
-- `ConnectionsLayerProps` --references--> `NodeId`  [EXTRACTED]
-  src/features/explore-homelab/ui/connections-layer.tsx → src/features/explore-homelab/model/nodes.ts
-- `HomelabCanvas()` --calls--> `useNodeSelection()`  [EXTRACTED]
-  src/features/explore-homelab/ui/homelab-canvas.tsx → src/features/explore-homelab/model/use-node-selection.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (104 total, 9 thin omitted)
+## Communities (147 total, 14 thin omitted)
 
 ### Community 0 - "Next.js"
 Cohesion: 0.07
@@ -136,12 +170,12 @@ Cohesion: 0.07
 Nodes (29): 10. Conditional references, 1. Core philosophy & layer overview, 2. Decision framework, 3. Quick placement table, 4-1. Import only from lower layers, 4-2. Public API: every slice exports through index.ts, 4-3. No cross-imports between slices on the same layer, 4-4. Domain-based file naming (no desegmentation) (+21 more)
 
 ### Community 2 - "language/index.ts"
-Cohesion: 0.05
-Nodes (57): generateMetadata(), getPreferences(), RootLayout(), react, AppProviders(), CopyEmail(), copyEmail(), CopyEmailProps (+49 more)
+Cohesion: 0.28
+Nodes (11): setCookie(), LanguageContext, LanguageContextValue, LanguageProvider(), toggleLanguage(), DEFAULT_LANG, LANG_COOKIE, LANGUAGES (+3 more)
 
 ### Community 3 - "package.json"
-Cohesion: 0.06
-Nodes (34): dependencies, geist, next, react, react-dom, simple-icons, devDependencies, steiger (+26 more)
+Cohesion: 0.04
+Nodes (38): dynamic, dynamic, nextConfig, dependencies, geist, next, react, react-dom (+30 more)
 
 ### Community 5 - "canvas-viewport.tsx"
 Cohesion: 0.17
@@ -268,8 +302,8 @@ Cohesion: 0.22
 Nodes (8): graphify reference: extra exports and benchmark, Step 6b - Wiki (only if --wiki flag), Step 7 - Neo4j export (only if --neo4j or --neo4j-push flag), Step 7a - FalkorDB export (only if --falkordb or --falkordb-push flag), Step 7b - SVG export (only if --svg flag), Step 7c - GraphML export (only if --graphml flag), Step 7d - MCP server (only if --mcp flag), Step 8 - Token reduction benchmark (only if total_words > 5000)
 
 ### Community 38 - "nodes.ts"
-Cohesion: 0.14
-Nodes (14): scene, geometry, CardNode, ConnectionDeclaration, ConnectionKind, DisplayKind, EntityDeclaration, EntityIds (+6 more)
+Cohesion: 0.10
+Nodes (17): hypervisor, CardNode, ConnectionDeclaration, ConnectionKind, DisplayKind, EntityDeclaration, EntityIds, HomelabConnection (+9 more)
 
 ### Community 39 - "Process"
 Cohesion: 0.25
@@ -331,6 +365,10 @@ Nodes (3): For git commit hook, For native CLAUDE.md integration, graphify refer
 Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
+### Community 72 - "Agent skills"
+Cohesion: 0.33
+Nodes (5): Agent skills, Domain docs, graphify, Issue tracker, Triage labels
+
 ### Community 83 - "gangstand.tech"
 Cohesion: 0.50
 Nodes (3): Architecture, Checks, gangstand.tech
@@ -340,24 +378,24 @@ Cohesion: 0.12
 Nodes (16): Business-entity slice in entities, Code generation, Custom API client, Infinite scroll, Query factory pattern, QueryProvider in the app layer, Reading mutation state with useMutationState, Registering slices in app (+8 more)
 
 ### Community 85 - "api-routes/homelab-status/index.ts"
-Cohesion: 0.24
-Nodes (8): GET(), runtime, checkSite(), getHomelabStatus(), HOMELAB_PROBE_SITES, PROBE_CACHE_TTL_MS, HomelabStatusSnapshot, SiteStatus
+Cohesion: 0.21
+Nodes (9): GET(), runtime, vitest, checkSite(), getHomelabStatus(), HOMELAB_PROBE_SITES, PROBE_CACHE_TTL_MS, HomelabStatusSnapshot (+1 more)
 
-### Community 86 - "next"
-Cohesion: 0.14
-Nodes (6): metadata, dynamic, dynamic, nextConfig, next, HomelabPage()
+### Community 86 - "Next.js"
+Cohesion: 0.07
+Nodes (29): App Router, Astro, Database access, Directory structure, Directory structure, Directory structure, Directory structure, Directory structure (+21 more)
 
-### Community 87 - "connections.ts"
-Cohesion: 0.24
-Nodes (14): centerBottom(), centerLeft(), centerRight(), projectScene(), route(), Box, Point, HomelabConnection (+6 more)
+### Community 87 - "layout.ts"
+Cohesion: 0.13
+Nodes (25): centerBottom(), centerLeft(), centerRight(), projectScene(), route(), scene, Box, columns (+17 more)
 
 ### Community 88 - "api/homelab-status/index.ts"
 Cohesion: 0.23
 Nodes (10): useSiteStatus(), SiteIndicator, siteStatusLabel(), SITE_STATUS_LABELS, SITE_URL_LABELS, HOMELAB_SITE_IDS, HomelabSiteId, parseHomelabStatus() (+2 more)
 
-### Community 89 - "Decisions"
-Cohesion: 0.14
-Nodes (13): 1. Use `_app` and `_pages` for FSD layers, 2. Migrate route ownership before removing legacy layers, 3. Keep home-only composition in `_pages/home`, 4. Extract one focused `explore-homelab` feature, 5. Put the shared homelab transport contract in Shared API, 6. Enforce public APIs at established boundaries, 7. Preserve providers as Shared mechanisms composed by `_app`, 8. Add architecture checks after boundaries stabilize (+5 more)
+### Community 89 - "Feature-Sliced Design (FSD) v2.1"
+Cohesion: 0.07
+Nodes (29): 10. Conditional references, 1. Core philosophy & layer overview, 2. Decision framework, 3. Quick placement table, 4-1. Import only from lower layers, 4-2. Public API: every slice exports through index.ts, 4-3. No cross-imports between slices on the same layer, 4-4. Domain-based file naming (no desegmentation) (+21 more)
 
 ### Community 90 - "How to keep entities clean"
 Cohesion: 0.15
@@ -371,29 +409,29 @@ Nodes (12): 1. Use a canonical, declarative Homelab topology, 2. Treat routed co
 Cohesion: 0.18
 Nodes (10): Anti-patterns, Asset Handling, Decision tree, Global assets, Non-UI assets, Public folder, See also, Shared assets (+2 more)
 
-### Community 93 - "tech-logo/index.tsx"
-Cohesion: 0.20
-Nodes (8): hypervisor, vmCount, HypervisorSection, LogoDef, LOGOS, TechKey, TechLogo(), ZABBIX_LOGO
+### Community 93 - "node-zone.tsx"
+Cohesion: 0.50
+Nodes (7): LayoutNode, NodeId, ZoneNode, NodeCardProps, NodeZoneProps, HomelabStatus, TechLogo()
 
 ### Community 94 - "homelab-canvas.tsx"
-Cohesion: 0.29
-Nodes (8): layoutNodes, cardNodes, networkClientsCount, zoneNodes, View, VIEWS, Toolbar, ToolbarProps
+Cohesion: 0.16
+Nodes (15): getLayoutNode(), getZoneLayoutNode(), cardNodes, ConnectionId, networkClientsCount, HomelabSelection, nextSelection(), useNodeSelection() (+7 more)
 
-### Community 95 - "node-zone.tsx"
-Cohesion: 0.40
-Nodes (8): LayoutNode, NodeId, ZoneNode, NodeCard, NodeCardProps, NodeZone, NodeZoneProps, HomelabStatus
+### Community 95 - "What You Must Do When Invoked"
+Cohesion: 0.08
+Nodes (24): For /graphify add and --watch, For /graphify query, For the commit hook and native CLAUDE.md integration, For --update and --cluster-only, /graphify, Honesty Rules, Interpreter guard for subcommands, Part A - Structural extraction for code files (+16 more)
 
 ### Community 96 - "2026-09-14-refactor/tasks.md"
 Cohesion: 0.22
 Nodes (8): 1. Refactoring Safety Net, 2. Locale And Copy Boundaries, 3. Project Module Boundary, 4. Canonical Homelab Topology, 5. Homelab Status Boundary, 6. Scene And Routing Boundary, 7. Infinite Canvas Boundary, 8. Integration And Cleanup
 
-### Community 97 - "migrate-frontend-to-fsd/tasks.md"
-Cohesion: 0.22
-Nodes (8): 1. Establish Behavior Baseline, 2. Decouple Homelab Status Infrastructure, 3. Establish Route-Owned Pages, 4. Extract The Reusable Homelab Feature, 5. Consolidate Home-Only Responsibilities, 6. Normalize Public APIs, 7. Add Architecture Guardrails, 8. Final Regression Verification
+### Community 97 - "Layer Structure Reference"
+Cohesion: 0.09
+Nodes (22): Anti-patterns, App layer, Domain-based file naming, Entities layer, Example: grouping payment-related entities, Features layer, Features: use with caution, Group by what it is *for*, not by what it *is* (+14 more)
 
-### Community 98 - "layout.ts"
-Cohesion: 0.28
-Nodes (8): columns, dockerInnerColumns, entityIds, getLayoutNode(), getZoneLayoutNode(), layoutMetrics, layoutNodeById, HomelabCanvas()
+### Community 98 - "Migration Guide"
+Cohesion: 0.09
+Nodes (21): Before you start, Common pitfalls during migration, Migrating from FSD v1 to v2, Migration Guide, Optional steps, Part 1: FSD v2.0 → v2.1 (non-breaking), Part 2: custom architecture → FSD, Phasing out a small widgets layer (optional) (+13 more)
 
 ### Community 99 - "Growth Walkthrough"
 Cohesion: 0.29
@@ -403,37 +441,149 @@ Nodes (6): Growth Walkthrough, Snapshot 0: two pages, three layers, Snapshot 1: 
 Cohesion: 0.29
 Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, What Changes, Why
 
-### Community 101 - "migrate-frontend-to-fsd/proposal.md"
+### Community 101 - "Cross-Import Resolution Patterns"
+Cohesion: 0.10
+Nodes (19): Anti-patterns, Basic composition (React), Cross-Import Resolution Patterns, Decision flow for AI agents, Entities layer: prefer boundary merge over @x, Features and widgets: four strategies, How @x works (when boundary merge is genuinely impossible), Render props (React) (+11 more)
+
+### Community 102 - "Requirement: Live reachability of the mapped sites"
+Cohesion: 0.17
+Nodes (11): homelab-map Specification, Purpose, Requirement: Live reachability of the mapped sites, Requirement: Single entry point through the home page, Requirements, Scenario: Background tab, Scenario: No outbound link for the HomeLab entry, Scenario: Opening the map from the project list (+3 more)
+
+### Community 103 - "connections-layer.tsx"
+Cohesion: 0.36
+Nodes (7): HomelabConnectionRoute, HomelabNode, ConnectionsLayer, ConnectionsLayerProps, DARK_COLORS, LIGHT_COLORS, useTheme()
+
+### Community 104 - "copy-email.tsx"
+Cohesion: 0.16
+Nodes (13): CopyEmail(), copyEmail(), CopyEmailProps, CopyStatus, legacyCopy(), ContactDialogProps, Footer(), email (+5 more)
+
+### Community 105 - "Authentication"
+Cohesion: 0.11
+Nodes (18): API request handling, Auth data: `shared/auth/` or `shared/api/`, Auth UI: pages (single use) or features (multi-use), Authentication, Authentication, Types, and API Requests, Automatic logout, Basic pattern: API calls in the consuming slice, CRUD helpers in shared (+10 more)
+
+### Community 106 - "State management: TanStack Query (React Query)"
+Cohesion: 0.12
+Nodes (16): Business-entity slice in entities, Code generation, Custom API client, Infinite scroll, Query factory pattern, QueryProvider in the app layer, Reading mutation state with useMutationState, Registering slices in app (+8 more)
+
+### Community 107 - "useTranslation"
+Cohesion: 0.25
+Nodes (6): HomePage(), ContactDialog(), LanguageToggle(), Profile(), ThemeToggle(), useTranslation()
+
+### Community 108 - "Decisions"
+Cohesion: 0.14
+Nodes (13): 1. Use `_app` and `_pages` for FSD layers, 2. Migrate route ownership before removing legacy layers, 3. Keep home-only composition in `_pages/home`, 4. Extract one focused `explore-homelab` feature, 5. Put the shared homelab transport contract in Shared API, 6. Enforce public APIs at established boundaries, 7. Preserve providers as Shared mechanisms composed by `_app`, 8. Add architecture checks after boundaries stabilize (+5 more)
+
+### Community 109 - "layout.tsx"
+Cohesion: 0.19
+Nodes (13): generateMetadata(), getPreferences(), RootLayout(), AppProviders(), EducationEntry, Translation, translations, Lang (+5 more)
+
+### Community 110 - "How to keep entities clean"
+Cohesion: 0.15
+Nodes (12): 0. Consider having no entities layer, 1. Avoid preemptive slicing, 2. Avoid unnecessary entities, 3. Exclude CRUD operations from entities, 4. Store authentication data in shared, 5. Minimize cross-imports, Anti-patterns, Decision tree for AI agents (+4 more)
+
+### Community 111 - ".claude/skills/openspec-explore/SKILL.md"
+Cohesion: 0.17
+Nodes (11): Check for context, Ending Discovery, Guardrails, Handling Different Entry Points, OpenSpec Awareness, Planning a Change, The Stance, What You Don't Have To Do (+3 more)
+
+### Community 112 - "react"
+Cohesion: 0.16
+Nodes (13): react, ProjectImage, projectView, copy, PhotoCanvas(), DetailRenderer, detailRenderers, ProjectDetailDialog() (+5 more)
+
+### Community 113 - "explore.md"
+Cohesion: 0.18
+Nodes (10): Check for context, Ending Discovery, Guardrails, OpenSpec Awareness, Planning a Change, The Stance, What You Don't Have To Do, What You Might Do (+2 more)
+
+### Community 114 - "Asset Handling"
+Cohesion: 0.18
+Nodes (10): Anti-patterns, Asset Handling, Decision tree, Global assets, Non-UI assets, Public folder, See also, Shared assets (+2 more)
+
+### Community 115 - "Requirement: Live reachability of the mapped sites"
+Cohesion: 0.18
+Nodes (10): ADDED Requirements, Purpose, Requirement: Live reachability of the mapped sites, Requirement: Single entry point through the home page, Scenario: Background tab, Scenario: No outbound link for the HomeLab entry, Scenario: Opening the map from the project list, Scenario: Requesting the retired homelab URL (+2 more)
+
+### Community 116 - "graphify reference: extra exports and benchmark"
+Cohesion: 0.22
+Nodes (8): graphify reference: extra exports and benchmark, Step 6b - Wiki (only if --wiki flag), Step 7 - Neo4j export (only if --neo4j or --neo4j-push flag), Step 7a - FalkorDB export (only if --falkordb or --falkordb-push flag), Step 7b - SVG export (only if --svg flag), Step 7c - GraphML export (only if --graphml flag), Step 7d - MCP server (only if --mcp flag), Step 8 - Token reduction benchmark (only if total_words > 5000)
+
+### Community 117 - "2026-09-14-migrate-frontend-to-fsd/tasks.md"
+Cohesion: 0.22
+Nodes (8): 1. Establish Behavior Baseline, 2. Decouple Homelab Status Infrastructure, 3. Establish Route-Owned Pages, 4. Extract The Reusable Homelab Feature, 5. Consolidate Home-Only Responsibilities, 6. Normalize Public APIs, 7. Add Architecture Guardrails, 8. Final Regression Verification
+
+### Community 118 - "Growth Walkthrough"
+Cohesion: 0.29
+Nodes (6): Growth Walkthrough, Snapshot 0: two pages, three layers, Snapshot 1: a third page reuses product data, no layer appears, Snapshot 2: a rule diverges, `entities/product` appears, Snapshot 3: an action is reused, `features/add-to-cart` appears, What the walkthrough shows
+
+### Community 119 - "Issue tracker: GitHub"
+Cohesion: 0.29
+Nodes (6): Conventions, Issue tracker: GitHub, Pull requests as a triage surface, Wayfinding operations, When a skill says "fetch the relevant ticket", When a skill says "publish to the issue tracker"
+
+### Community 120 - "2026-09-14-migrate-frontend-to-fsd/proposal.md"
 Cohesion: 0.29
 Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, What Changes, Why
 
-### Community 102 - "use-node-selection.ts"
-Cohesion: 0.38
-Nodes (5): vitest, ConnectionId, HomelabSelection, nextSelection(), useNodeSelection()
+### Community 121 - "Requirement: Selectable zones on the map"
+Cohesion: 0.18
+Nodes (10): ADDED Requirements, Requirement: Selectable zones on the map, Requirement: Zone hit areas describe the zone they select, Scenario: Activating a card that sits inside a zone, Scenario: Clearing the selection, Scenario: Deselecting by activating again, Scenario: Reading a virtual machine zone's hit area, Scenario: Reading the proxy host zone's hit area (+2 more)
 
-### Community 103 - "connections-layer.tsx"
-Cohesion: 0.38
-Nodes (6): HomelabConnectionRoute, HomelabNode, ConnectionsLayer, ConnectionsLayerProps, DARK_COLORS, LIGHT_COLORS
+### Community 122 - "graphify reference: query, path, explain"
+Cohesion: 0.33
+Nodes (5): For /graphify explain, For /graphify path, graphify reference: query, path, explain, Step 0 — Constrained query expansion (REQUIRED before traversal), Step 1 — Traversal
+
+### Community 123 - "Domain Docs"
+Cohesion: 0.33
+Nodes (5): Before exploring, read these, Domain Docs, File structure, Flag ADR conflicts, Use the glossary's vocabulary
+
+### Community 124 - "2026-09-14-remove-homelab-pages/proposal.md"
+Cohesion: 0.29
+Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, What Changes, Why
+
+### Community 125 - "graphify reference: add a URL and watch a folder"
+Cohesion: 0.50
+Nodes (3): For /graphify add, For --watch, graphify reference: add a URL and watch a folder
+
+### Community 126 - "graphify reference: commit hook and native CLAUDE.md integration"
+Cohesion: 0.50
+Nodes (3): For git commit hook, For native CLAUDE.md integration, graphify reference: commit hook and native CLAUDE.md integration
+
+### Community 127 - "graphify reference: incremental update and cluster-only"
+Cohesion: 0.50
+Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
+
+### Community 128 - "make-proxy-zone-selectable/proposal.md"
+Cohesion: 0.29
+Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, What Changes, Why
+
+### Community 144 - "2026-09-14-remove-homelab-pages/design.md"
+Cohesion: 0.33
+Nodes (5): Context, Decisions, Goals / Non-Goals, Migration Plan, Risks / Trade-offs
+
+### Community 145 - "make-proxy-zone-selectable/tasks.md"
+Cohesion: 0.40
+Nodes (4): 1. Make the zone hit area apply to every zone, 2. Carry the rename through the stylesheet, 3. Confirm nested cards still win the click, 4. Cover the behavior and validate
+
+### Community 146 - "2026-09-14-remove-homelab-pages/tasks.md"
+Cohesion: 0.50
+Nodes (3): 1. Remove the route and its page slice, 2. Retire the internal destination, 3. Verify the surviving behavior
 
 ## Knowledge Gaps
-- **631 isolated node(s):** `block-dangerous-git.sh script`, `$schema`, `plugin`, `runtime`, `metadata` (+626 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 705 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **892 isolated node(s):** `block-dangerous-git.sh script`, `$schema`, `plugin`, `runtime`, `dynamic` (+887 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 999 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **14 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `react` connect `language/index.ts` to `package.json`, `canvas-viewport.tsx`, `use-node-selection.ts`, `connections-layer.tsx`, `api/homelab-status/index.ts`, `tech-logo/index.tsx`, `homelab-canvas.tsx`, `node-zone.tsx`?**
-  _High betweenness centrality (0.033) - this node is a cross-community bridge._
-- **Why does `next` connect `next` to `language/index.ts`, `package.json`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
+- **Why does `react` connect `react` to `language/index.ts`, `package.json`, `canvas-viewport.tsx`, `nodes.ts`, `connections-layer.tsx`, `copy-email.tsx`, `layout.tsx`, `api/homelab-status/index.ts`, `node-zone.tsx`, `homelab-canvas.tsx`?**
+  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `next` connect `package.json` to `layout.tsx`?**
+  _High betweenness centrality (0.005) - this node is a cross-community bridge._
+- **Why does `useTranslation()` connect `useTranslation` to `copy-email.tsx`, `language/index.ts`, `react`, `homelab-canvas.tsx`?**
+  _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **What connects `block-dangerous-git.sh script`, `$schema`, `plugin` to the rest of the system?**
-  _631 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _892 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Next.js` be split into smaller, more focused modules?**
   _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
 - **Should `Feature-Sliced Design (FSD) v2.1` be split into smaller, more focused modules?**
   _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
-- **Should `language/index.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.05337078651685393 - nodes in this community are weakly interconnected._
 - **Should `package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.05555555555555555 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.044444444444444446 - nodes in this community are weakly interconnected._

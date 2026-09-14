@@ -25,10 +25,6 @@ function route(connection: HomelabConnection): Point[] {
       const start = centerRight(from), x = to.x + to.w / 2 + 24;
       return [{ x: geometry.proxy.x, y: start.y }, { x: -75, y: start.y }, { x: -75, y: metrics.trafficBusY }, { x, y: metrics.trafficBusY }, { x, y: to.y + to.h }];
     }
-    case "edge-wireguard-right": {
-      const start = centerRight(from), y = to.y + to.h / 2;
-      return [{ x: geometry.proxy.x, y: start.y }, { x: -75, y: start.y }, { x: -75, y: metrics.trafficBusY }, { x: metrics.trafficRightX, y: metrics.trafficBusY }, { x: metrics.trafficRightX, y }, { x: to.x + to.w, y }];
-    }
     case "proxy-down": {
       const start = centerBottom(from), end = centerBottom(to), y = from.y + from.h + 20;
       return [start, { x: start.x, y }, { x: end.x, y }, end];

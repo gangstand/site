@@ -51,10 +51,6 @@ exports[`Homelab scene > preserves every routed connection path 1`] = `
     "id": "wg-zabbix",
   },
   {
-    "d": "M 0 277 L -75 277 L -75 668 L 1780 668 L 1780 324 L 1730 324",
-    "id": "wg-rabbitmq",
-  },
-  {
     "d": "M 525 324 L 525 344 L 1005 344 L 1005 324",
     "id": "p2",
   },

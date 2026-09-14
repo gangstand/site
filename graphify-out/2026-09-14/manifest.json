@@ -5,12 +5,6 @@
     "ast_hash": "d2086ff3cf76e56809423120fcf932f3",
     "semantic_hash": ""
   },
-  "app/homelab/page.tsx": {
-    "mtime": 1789380138.470815,
-    "seen": 1789380744.8136892,
-    "ast_hash": "b8a75bd34944243d2d82dcf73ed7a9bc",
-    "semantic_hash": ""
-  },
   "app/layout.tsx": {
     "mtime": 1789380701.2938814,
     "seen": 1789380744.8136914,
@@ -42,9 +36,9 @@
     "semantic_hash": "d20afa0da9aa6a41f34c59f541a3a03c"
   },
   "next-env.d.ts": {
-    "mtime": 1789377919.0202882,
-    "seen": 1789380744.813701,
-    "ast_hash": "8195d2c60ce847a459ae9d308d6a5724",
+    "mtime": 1789382713.231337,
+    "seen": 1789387494.9180264,
+    "ast_hash": "aa94238a90e7d04b7a47ecc3145ba6a0",
     "semantic_hash": ""
   },
   "next.config.ts": {
@@ -204,8 +198,8 @@
     "semantic_hash": ""
   },
   "skills-lock.json": {
-    "mtime": 1789378650.5440137,
-    "seen": 1789380744.8137083,
+    "mtime": 1789381776.9005692,
+    "seen": 1789382621.5716262,
     "ast_hash": "f8019101d4d03cda5701ad67d4dcae84",
     "semantic_hash": ""
   },
@@ -786,38 +780,38 @@
     "semantic_hash": ""
   },
   ".opencode/commands/opsx-apply.md": {
-    "mtime": 1789373842.5991993,
-    "seen": 1789375735.9435253,
+    "mtime": 1789381753.9156072,
+    "seen": 1789382621.5718536,
     "ast_hash": "bcf1f5836a6eca8a15074022807142b5",
     "semantic_hash": ""
   },
   ".opencode/commands/opsx-archive.md": {
-    "mtime": 1789373842.5991993,
-    "seen": 1789375735.9435265,
+    "mtime": 1789381753.9166071,
+    "seen": 1789382621.5718546,
     "ast_hash": "17c421daa6c8ce31d1e6a515231a7a14",
     "semantic_hash": ""
   },
   ".opencode/commands/opsx-explore.md": {
-    "mtime": 1789373842.5991993,
-    "seen": 1789375735.9435275,
+    "mtime": 1789381753.9156072,
+    "seen": 1789382621.5718555,
     "ast_hash": "1e5a93878febc2fe1be6a19bed14e341",
     "semantic_hash": ""
   },
   ".opencode/commands/opsx-propose.md": {
-    "mtime": 1789373842.6001992,
-    "seen": 1789375735.9435282,
+    "mtime": 1789381753.9166071,
+    "seen": 1789382621.5718565,
     "ast_hash": "9ef4d63aa334ddc07a978d66222e4eae",
     "semantic_hash": ""
   },
   ".opencode/commands/opsx-sync.md": {
-    "mtime": 1789373842.5991993,
-    "seen": 1789375735.9435291,
+    "mtime": 1789381753.9166071,
+    "seen": 1789382621.5718625,
     "ast_hash": "a5299ae9948dbdc48dbc73761a042974",
     "semantic_hash": ""
   },
   ".opencode/commands/opsx-update.md": {
-    "mtime": 1789373842.5991993,
-    "seen": 1789375735.9435303,
+    "mtime": 1789381753.9166071,
+    "seen": 1789382621.5718637,
     "ast_hash": "7bba385698c112f2502ad1740bf26ff1",
     "semantic_hash": ""
   },
@@ -876,38 +870,38 @@
     "semantic_hash": ""
   },
   ".opencode/skills/openspec-apply-change/SKILL.md": {
-    "mtime": 1789373842.5951993,
-    "seen": 1789375735.9435396,
+    "mtime": 1789381753.9116073,
+    "seen": 1789382621.5718746,
     "ast_hash": "f353afb725e0249ac2a5a6014345d638",
     "semantic_hash": ""
   },
   ".opencode/skills/openspec-archive-change/SKILL.md": {
-    "mtime": 1789373842.5971992,
-    "seen": 1789375735.9435408,
+    "mtime": 1789381753.9126072,
+    "seen": 1789382621.5718753,
     "ast_hash": "aab45651552d7f97400ab5e30765fe6a",
     "semantic_hash": ""
   },
   ".opencode/skills/openspec-explore/SKILL.md": {
-    "mtime": 1789373842.5951993,
-    "seen": 1789375735.9435415,
+    "mtime": 1789381753.9116073,
+    "seen": 1789382621.5718765,
     "ast_hash": "9aacb329d874b9c379ae090bb7a7c74f",
     "semantic_hash": ""
   },
   ".opencode/skills/openspec-propose/SKILL.md": {
-    "mtime": 1789373842.5971992,
-    "seen": 1789375735.9435425,
+    "mtime": 1789381753.9136074,
+    "seen": 1789382621.5718775,
     "ast_hash": "96285aadb1eda2b692e4b9270850e15f",
     "semantic_hash": ""
   },
   ".opencode/skills/openspec-sync-specs/SKILL.md": {
-    "mtime": 1789373842.5961993,
-    "seen": 1789375735.9435434,
+    "mtime": 1789381753.9126072,
+    "seen": 1789382621.5718784,
     "ast_hash": "d1d1bf64b4b383dfbc75d3b51262ec26",
     "semantic_hash": ""
   },
   ".opencode/skills/openspec-update-change/SKILL.md": {
-    "mtime": 1789373842.5961993,
-    "seen": 1789375735.9435446,
+    "mtime": 1789381753.9116073,
+    "seen": 1789382621.5718791,
     "ast_hash": "18726865839386d07eaff026d280b2fc",
     "semantic_hash": ""
   },
@@ -918,9 +912,9 @@
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1789160644.836033,
-    "seen": 1789375735.9435465,
-    "ast_hash": "5c27369b226fcf2be8a6cfe52224e767",
+    "mtime": 1789381934.5662942,
+    "seen": 1789382621.571881,
+    "ast_hash": "2a69f1a7f45b7b80336173678be21705",
     "semantic_hash": ""
   },
   "README.md": {
@@ -1032,9 +1026,9 @@
     "semantic_hash": ""
   },
   "src/_pages/home/config/homelab.ts": {
-    "mtime": 1789380337.018281,
-    "seen": 1789380744.813719,
-    "ast_hash": "2cecaf5945a226fd6e987d8191cdb8fd",
+    "mtime": 1789382441.8862953,
+    "seen": 1789382621.5716333,
+    "ast_hash": "cc0fb5dd51617a1ac840b3a204cf94bd",
     "semantic_hash": ""
   },
   "src/_pages/home/config/projects.ts": {
@@ -1068,15 +1062,15 @@
     "semantic_hash": ""
   },
   "src/_pages/home/model/project.test.ts": {
-    "mtime": 1789380337.016281,
-    "seen": 1789380744.8137248,
-    "ast_hash": "98489986ba6ddb93ca88aa8eea3903e6",
+    "mtime": 1789382474.5252273,
+    "seen": 1789382621.5716412,
+    "ast_hash": "1a87cc71f473e1d4fb14a452d6bad170",
     "semantic_hash": ""
   },
   "src/_pages/home/model/project.ts": {
-    "mtime": 1789380337.015281,
-    "seen": 1789380744.8137257,
-    "ast_hash": "119b7a63a0b90978e32a02278df0a59c",
+    "mtime": 1789382426.162328,
+    "seen": 1789382621.5716424,
+    "ast_hash": "6be6e9a02e456d1064e8b3990babd7e2",
     "semantic_hash": ""
   },
   "src/_pages/home/ui/contact-dialog.tsx": {
@@ -1110,9 +1104,9 @@
     "semantic_hash": ""
   },
   "src/_pages/home/ui/project-detail-dialog.tsx": {
-    "mtime": 1789380337.0832808,
-    "seen": 1789380744.813732,
-    "ast_hash": "ec82de3d0ad692ccebc31827c05cd23b",
+    "mtime": 1789382463.9442494,
+    "seen": 1789382621.57165,
+    "ast_hash": "ba3f141078f1f51c7b40d113600478aa",
     "semantic_hash": ""
   },
   "src/_pages/home/ui/project-dialog.tsx": {
@@ -1131,18 +1125,6 @@
     "mtime": 1789380407.5530808,
     "seen": 1789380744.8137352,
     "ast_hash": "d86cedfff45afc5b3b2c11ae22ae7388",
-    "semantic_hash": ""
-  },
-  "src/_pages/homelab/index.ts": {
-    "mtime": 1789380708.9688997,
-    "seen": 1789380744.8137362,
-    "ast_hash": "3786ed80e2e9164f8f00283eaa505ab4",
-    "semantic_hash": ""
-  },
-  "src/_pages/homelab/ui/homelab-page.tsx": {
-    "mtime": 1789380701.2918816,
-    "seen": 1789380744.8137372,
-    "ast_hash": "a68a063daef24cef49cf4887526bd1ab",
     "semantic_hash": ""
   },
   "src/features/explore-homelab/index.ts": {
@@ -1182,9 +1164,9 @@
     "semantic_hash": ""
   },
   "src/features/explore-homelab/model/use-node-selection.test.ts": {
-    "mtime": 1789380242.6251965,
-    "seen": 1789380744.813749,
-    "ast_hash": "02bf15b4523ec1a8efff6d899b4ad8bc",
+    "mtime": 1789387455.1972957,
+    "seen": 1789387494.9181025,
+    "ast_hash": "2c969574b50d00cef55a92df0e1c5cf6",
     "semantic_hash": ""
   },
   "src/features/explore-homelab/model/use-node-selection.ts": {
@@ -1212,9 +1194,9 @@
     "semantic_hash": ""
   },
   "src/features/explore-homelab/ui/homelab-canvas.tsx": {
-    "mtime": 1789380502.5508044,
-    "seen": 1789380744.8137536,
-    "ast_hash": "b02d6dc6afbe974bb9e62f2e928e3dd5",
+    "mtime": 1789387425.0465686,
+    "seen": 1789387494.9181287,
+    "ast_hash": "2b1dc16cd97a698095b48c8ae554aa9f",
     "semantic_hash": ""
   },
   "src/features/explore-homelab/ui/hypervisor-section.tsx": {
@@ -1230,9 +1212,9 @@
     "semantic_hash": ""
   },
   "src/features/explore-homelab/ui/node-zone.tsx": {
-    "mtime": 1789380242.6755407,
-    "seen": 1789380744.8137567,
-    "ast_hash": "a62624c0289d39db1bf562675b739a70",
+    "mtime": 1789387420.031615,
+    "seen": 1789387494.918137,
+    "ast_hash": "27a7bd77887f77b367fec4a379e7b953",
     "semantic_hash": ""
   },
   "src/features/explore-homelab/ui/site-indicator.tsx": {
@@ -1385,28 +1367,304 @@
     "ast_hash": "5506fa50078830c35d5e77d29b243372",
     "semantic_hash": ""
   },
-  "openspec/changes/migrate-frontend-to-fsd/.openspec.yaml": {
+  ".claude/settings.json": {
+    "mtime": 1789381732.5374217,
+    "seen": 1789382621.5716026,
+    "ast_hash": "dbe039a15c5c2eb60e34dccc1af0cbb5",
+    "semantic_hash": ""
+  },
+  ".claude/CLAUDE.md": {
+    "mtime": 1789381732.5367663,
+    "seen": 1789382621.5718293,
+    "ast_hash": "9b31786b637be3c13978bec4c2330752",
+    "semantic_hash": ""
+  },
+  ".claude/commands/opsx/apply.md": {
+    "mtime": 1789381753.9102507,
+    "seen": 1789382621.57183,
+    "ast_hash": "02ef0a1fd105228ca82d57a97a62e418",
+    "semantic_hash": ""
+  },
+  ".claude/commands/opsx/archive.md": {
+    "mtime": 1789381753.9108212,
+    "seen": 1789382621.5718307,
+    "ast_hash": "f453ee64528afc02e430240cc27e7cde",
+    "semantic_hash": ""
+  },
+  ".claude/commands/opsx/explore.md": {
+    "mtime": 1789381753.9096072,
+    "seen": 1789382621.5718312,
+    "ast_hash": "d93fc6e265fee32afbf418faf69233fb",
+    "semantic_hash": ""
+  },
+  ".claude/commands/opsx/propose.md": {
+    "mtime": 1789381753.9110248,
+    "seen": 1789382621.5718317,
+    "ast_hash": "f58a9f9980b6819188d62f08fb240e5c",
+    "semantic_hash": ""
+  },
+  ".claude/commands/opsx/sync.md": {
+    "mtime": 1789381753.9106288,
+    "seen": 1789382621.5718327,
+    "ast_hash": "429c9fbedcc6fe83c36fb1bbc34c96e0",
+    "semantic_hash": ""
+  },
+  ".claude/commands/opsx/update.md": {
+    "mtime": 1789381753.910419,
+    "seen": 1789382621.5718331,
+    "ast_hash": "0e4881513eaa9f753165b34020247e4b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/feature-sliced-design/SKILL.md": {
+    "mtime": 1789381776.8894844,
+    "seen": 1789382621.5718336,
+    "ast_hash": "8a764701d3c06acdb1a5497464b15886",
+    "semantic_hash": ""
+  },
+  ".claude/skills/feature-sliced-design/references/asset-handling.md": {
+    "mtime": 1789381776.889699,
+    "seen": 1789382621.5718343,
+    "ast_hash": "7256bb928a283fd027559a22ea855875",
+    "semantic_hash": ""
+  },
+  ".claude/skills/feature-sliced-design/references/auth-and-api.md": {
+    "mtime": 1789381776.8897312,
+    "seen": 1789382621.5718348,
+    "ast_hash": "fd7b17920e42bdf1b73f595838b583d2",
+    "semantic_hash": ""
+  },
+  ".claude/skills/feature-sliced-design/references/cross-import-patterns.md": {
+    "mtime": 1789381776.8897574,
+    "seen": 1789382621.5718353,
+    "ast_hash": "725bcd9dc76cc127d54d9303c8451b34",
+    "semantic_hash": ""
+  },
+  ".claude/skills/feature-sliced-design/references/excessive-entities.md": {
+    "mtime": 1789381776.8897574,
+    "seen": 1789382621.571836,
+    "ast_hash": "5e55ce14af10d5d1208fb881e47ac37d",
+    "semantic_hash": ""
+  },
+  ".claude/skills/feature-sliced-design/references/framework-integration.md": {
+    "mtime": 1789381776.8897574,
+    "seen": 1789382621.5718365,
+    "ast_hash": "d32ce2974cdec0564e5e4a0f53064e2b",
+    "semantic_hash": ""
+  },
+  ".claude/skills/feature-sliced-design/references/growth-walkthrough.md": {
+    "mtime": 1789381776.8898432,
+    "seen": 1789382621.5718372,
+    "ast_hash": "bc9026afaa034842291c8008e4ccf4a0",
+    "semantic_hash": ""
+  },
+  ".claude/skills/feature-sliced-design/references/layer-structure.md": {
+    "mtime": 1789381776.8898432,
+    "seen": 1789382621.571838,
+    "ast_hash": "f10c137e01097b59a729ea2b3c2e622e",
+    "semantic_hash": ""
+  },
+  ".claude/skills/feature-sliced-design/references/migration-guide.md": {
+    "mtime": 1789381776.889868,
+    "seen": 1789382621.5718384,
+    "ast_hash": "bb1f15c8b5558522a03925dd59f91c60",
+    "semantic_hash": ""
+  },
+  ".claude/skills/feature-sliced-design/references/state-management.md": {
+    "mtime": 1789381776.889868,
+    "seen": 1789382621.571839,
+    "ast_hash": "98925ee2ec01757bfceff6cefc0477bf",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/SKILL.md": {
+    "mtime": 1789381732.5364919,
+    "seen": 1789382621.5718398,
+    "ast_hash": "1656a8a8e4a05bbe69f32cd15de81e87",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/add-watch.md": {
+    "mtime": 1789371968.1889262,
+    "seen": 1789382621.5718403,
+    "ast_hash": "d59d027fe449f06aa03905a01184e779",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/exports.md": {
+    "mtime": 1789371968.1889262,
+    "seen": 1789382621.571841,
+    "ast_hash": "9da2a2152e60a22f07f05fed5158f287",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/extraction-spec.md": {
+    "mtime": 1789371968.1889262,
+    "seen": 1789382621.5718417,
+    "ast_hash": "42fef56a01698118f7fd722acdadea34",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/github-and-merge.md": {
+    "mtime": 1789371968.1889262,
+    "seen": 1789382621.5718427,
+    "ast_hash": "cde13df085e4c492aeb7ba298a996d0d",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/hooks.md": {
+    "mtime": 1789371968.1889262,
+    "seen": 1789382621.5718431,
+    "ast_hash": "3f545db6ce646650bb9de588f5512a27",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/query.md": {
+    "mtime": 1789371968.1889262,
+    "seen": 1789382621.5718439,
+    "ast_hash": "3c46f8ad006874260614ed8657d02307",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/transcribe.md": {
+    "mtime": 1789371968.1889262,
+    "seen": 1789382621.5718443,
+    "ast_hash": "67b6a5fa6c0974e18f60db9f8932fbd8",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/update.md": {
+    "mtime": 1789371968.1889262,
+    "seen": 1789382621.5718448,
+    "ast_hash": "9378bd03d56baaf78bd738ab3848f142",
+    "semantic_hash": ""
+  },
+  ".claude/skills/openspec-apply-change/SKILL.md": {
+    "mtime": 1789381753.9076073,
+    "seen": 1789382621.571848,
+    "ast_hash": "0d0301d2b5b7d30863abbe4c1d62dba7",
+    "semantic_hash": ""
+  },
+  ".claude/skills/openspec-archive-change/SKILL.md": {
+    "mtime": 1789381753.909119,
+    "seen": 1789382621.5718489,
+    "ast_hash": "4fdc7ca09976becabe13b23f6b71704d",
+    "semantic_hash": ""
+  },
+  ".claude/skills/openspec-explore/SKILL.md": {
+    "mtime": 1789381753.9076073,
+    "seen": 1789382621.57185,
+    "ast_hash": "e1e81404b5467bbb2f8d9f35271b7ea1",
+    "semantic_hash": ""
+  },
+  ".claude/skills/openspec-propose/SKILL.md": {
+    "mtime": 1789381753.909388,
+    "seen": 1789382621.5718508,
+    "ast_hash": "8134998d5006910db154def07acdc2df",
+    "semantic_hash": ""
+  },
+  ".claude/skills/openspec-sync-specs/SKILL.md": {
+    "mtime": 1789381753.908782,
+    "seen": 1789382621.5718517,
+    "ast_hash": "3bf492b8da06dd33e6d31b64111b71ff",
+    "semantic_hash": ""
+  },
+  ".claude/skills/openspec-update-change/SKILL.md": {
+    "mtime": 1789381753.9085777,
+    "seen": 1789382621.5718522,
+    "ast_hash": "58139477f2504bc32b6b2e1707b76b23",
+    "semantic_hash": ""
+  },
+  "docs/agents/domain.md": {
+    "mtime": 1789381917.4620688,
+    "seen": 1789382621.5718832,
+    "ast_hash": "5c554b97de22d1765176bc82093ca190",
+    "semantic_hash": ""
+  },
+  "docs/agents/issue-tracker.md": {
+    "mtime": 1789381927.9299836,
+    "seen": 1789382621.5718837,
+    "ast_hash": "b83a11c852f4a0616d78d81a38520ba6",
+    "semantic_hash": ""
+  },
+  "docs/agents/triage-labels.md": {
+    "mtime": 1789381917.4612024,
+    "seen": 1789382621.5718846,
+    "ast_hash": "22add54cb98451c55b20e6b7992d4a85",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-14-migrate-frontend-to-fsd/.openspec.yaml": {
     "mtime": 1789379416.4570057,
-    "seen": 1789380744.813977,
+    "seen": 1789382621.571885,
     "ast_hash": "aad0314d92269e7a95f57714976258c8",
     "semantic_hash": ""
   },
-  "openspec/changes/migrate-frontend-to-fsd/design.md": {
+  "openspec/changes/archive/2026-09-14-migrate-frontend-to-fsd/design.md": {
     "mtime": 1789379551.9589272,
-    "seen": 1789380744.813978,
+    "seen": 1789382621.5718858,
     "ast_hash": "34ed8fab0f79a5b8ee0be62b03a31ee0",
     "semantic_hash": ""
   },
-  "openspec/changes/migrate-frontend-to-fsd/proposal.md": {
+  "openspec/changes/archive/2026-09-14-migrate-frontend-to-fsd/proposal.md": {
     "mtime": 1789379416.4580057,
-    "seen": 1789380744.8139787,
+    "seen": 1789382621.5718863,
     "ast_hash": "f6032f4ee4eff07a79c118aba40d4b3b",
     "semantic_hash": ""
   },
-  "openspec/changes/migrate-frontend-to-fsd/tasks.md": {
-    "mtime": 1789380737.0649624,
-    "seen": 1789380744.8139794,
-    "ast_hash": "faadb559cb3fb52624d718b1e2263d35",
+  "openspec/changes/archive/2026-09-14-migrate-frontend-to-fsd/tasks.md": {
+    "mtime": 1789381019.2502737,
+    "seen": 1789382621.571887,
+    "ast_hash": "2cefe578226b50a405d00321904c1fda",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-14-remove-homelab-pages/.openspec.yaml": {
+    "mtime": 1789382135.1439154,
+    "seen": 1789387494.9184563,
+    "ast_hash": "331f99705d6292ffe772f964ade7dcb1",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-14-remove-homelab-pages/design.md": {
+    "mtime": 1789382236.3807151,
+    "seen": 1789387494.9184573,
+    "ast_hash": "4089ae62f6271ea92e18a39124b4d253",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-14-remove-homelab-pages/proposal.md": {
+    "mtime": 1789382179.224829,
+    "seen": 1789387494.9184587,
+    "ast_hash": "b154a56a0d6567ff7e5b39fdf39cb8e5",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-14-remove-homelab-pages/specs/homelab-map/spec.md": {
+    "mtime": 1789382202.926782,
+    "seen": 1789387494.91846,
+    "ast_hash": "842ea41524e9a328784e11cef28f5332",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-14-remove-homelab-pages/tasks.md": {
+    "mtime": 1789382625.5979087,
+    "seen": 1789387494.918461,
+    "ast_hash": "647cb3a659304a536a25b64787e3db1f",
+    "semantic_hash": ""
+  },
+  "openspec/changes/make-proxy-zone-selectable/.openspec.yaml": {
+    "mtime": 1789387216.055747,
+    "seen": 1789387494.9184623,
+    "ast_hash": "331f99705d6292ffe772f964ade7dcb1",
+    "semantic_hash": ""
+  },
+  "openspec/changes/make-proxy-zone-selectable/proposal.md": {
+    "mtime": 1789387243.1404324,
+    "seen": 1789387494.9184635,
+    "ast_hash": "265ea3de380ddb226e9f880b64289fcd",
+    "semantic_hash": ""
+  },
+  "openspec/changes/make-proxy-zone-selectable/specs/homelab-map/spec.md": {
+    "mtime": 1789387265.8641765,
+    "seen": 1789387494.9184642,
+    "ast_hash": "a7ef77e66edebc20718c370f501c6650",
+    "semantic_hash": ""
+  },
+  "openspec/changes/make-proxy-zone-selectable/tasks.md": {
+    "mtime": 1789387490.062991,
+    "seen": 1789387494.9184651,
+    "ast_hash": "b75c9e6d4ae838ab031c0747693ab08c",
+    "semantic_hash": ""
+  },
+  "openspec/specs/homelab-map/spec.md": {
+    "mtime": 1789382805.4907355,
+    "seen": 1789387494.9184678,
+    "ast_hash": "f84d2dd8dc765a3316028ba72a780205",
     "semantic_hash": ""
   }
 }

@@ -80,7 +80,7 @@ export function HomelabCanvas({ embedded = false }: { embedded?: boolean } = {})
             key={zone.id}
             zone={getZoneLayoutNode(zone.id)}
             isDestination={selectedRoute?.to === zone.id}
-            selectedVmId={selectedNode}
+            selectedZoneId={selectedNode}
             statuses={statuses}
             networkClientsCount={networkClientsCount}
             onSelectNode={toggleNode}
