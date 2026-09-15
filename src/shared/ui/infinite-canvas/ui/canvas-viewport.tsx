@@ -36,12 +36,15 @@ export interface CanvasViewportProps {
   fullscreenTargetRef?: Ref<HTMLDivElement>;
   /** Use this instead of canvas data attributes when animations depend on panning or detail state. */
   onInteractionChange?: (state: CanvasInteractionState) => void;
+  /** Called with the region the camera can see, in canvas coordinates, widened so content can
+   *  be prepared before it arrives on screen. Fires from the camera's own frame loop. */
+  onVisibleRectChange?: (rect: CanvasBounds) => void;
   canvasRef?: Ref<CanvasHandle>;
 }
 
-export function CanvasViewport({ children, bounds, labels, onClearSelection, fitOnMount = false, ariaLabel, className, toolbar, overlay, fullscreenTargetRef, onInteractionChange, canvasRef }: CanvasViewportProps) {
+export function CanvasViewport({ children, bounds, labels, onClearSelection, fitOnMount = false, ariaLabel, className, toolbar, overlay, fullscreenTargetRef, onInteractionChange, onVisibleRectChange, canvasRef }: CanvasViewportProps) {
   const frameRef = useRef<HTMLDivElement>(null);
-  const { viewportRef, transform, isPanning, isInteracting, isDetailView, ready, moved, fitView, focusRect, zoomButton, panBy, onPointerDown, onPointerMove, endPointer } = useCanvasTransform(bounds, fitOnMount);
+  const { viewportRef, worldRef, scale, isPanning, isInteracting, isDetailView, ready, moved, fitView, focusRect, zoomButton, panBy, onPointerDown, onPointerMove, endPointer } = useCanvasTransform(bounds, fitOnMount, onVisibleRectChange);
   const zoomIn = useCallback(() => zoomButton(1.2), [zoomButton]);
   const zoomOut = useCallback(() => zoomButton(1 / 1.2), [zoomButton]);
   const { isFullscreen, toggleFullscreen } = useFullscreen(() => frameRef.current);
@@ -94,16 +97,15 @@ export function CanvasViewport({ children, bounds, labels, onClearSelection, fit
           if (!(e.target as Element).closest("button, a, [role='button']")) onClearSelection?.();
         }}
       >
-        <div
-          className={styles.world}
-          style={{ opacity: ready ? 1 : 0, transform: `translate(${transform.x}px, ${transform.y}px) scale(${transform.scale})` }}
-        >
+        {/* No inline camera: the frame loop in `useCanvasTransform` owns this element's
+            transform and opacity, so a React render can never stamp a stale camera over it. */}
+        <div ref={worldRef} className={styles.world}>
           {children}
         </div>
         {overlay}
       </div>
       <FooterControls
-        scale={transform.scale}
+        scale={scale}
         ready={ready}
         onZoomOut={zoomOut}
         onZoomIn={zoomIn}

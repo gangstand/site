@@ -2,7 +2,9 @@
 /* Composite the bounded viewport, not the enormous world: rapid zoom otherwise
    leaves missing raster tiles and damages adjacent dialog pixels in Yandex. */
 .viewport{position:absolute;inset:0;overflow:hidden;touch-action:none;user-select:none;contain:strict;isolation:isolate;transform:translateZ(0);background:var(--background)}
-.world{position:absolute;left:0;top:0;transform-origin:0 0}
+/* Hidden until the camera's frame loop writes the first real transform and un-hides it,
+   so the canvas is never painted at the placeholder camera. */
+.world{position:absolute;left:0;top:0;transform-origin:0 0;opacity:0}
 .footer{position:absolute;bottom:0;left:0;right:0;z-index:10;pointer-events:none;display:flex;align-items:center;justify-content:flex-end;padding:15px 32px 23px;gap:15px}
 .tools{display:flex;align-items:center;gap:4px;padding:5px;border:1px solid #3b3b42;border-radius:10px;background:var(--background);pointer-events:auto}
 .tools button{background:transparent;border:0;color:#dedde5;min-width:32px;height:32px;border-radius:6px;cursor:pointer;font-size:19px}

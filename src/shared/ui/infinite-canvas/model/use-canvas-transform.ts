@@ -7,6 +7,10 @@ import { centerRectAt, computeFocusScale, toViewportPoint, type ViewportFrame } 
 const FOCUS_ANIMATION_MS = 280;
 /** How far a pointer travels before the gesture counts as a drag rather than a click. */
 const DRAG_THRESHOLD = 5;
+/** How often the moving camera hands its scale to React, so the readout follows without rendering per frame. */
+const SCALE_PUBLISH_MS = 100;
+/** How far past the viewport edge content is reported as visible, as a share of the viewport. */
+const VISIBLE_MARGIN = 0.5;
 
 export interface CanvasBounds { x: number; y: number; w: number; h: number }
 const MIN_SCALE = 0.08;
@@ -31,14 +35,21 @@ interface CameraAnimation {
   startedAt: number;
 }
 
-export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: contentHeight }: CanvasBounds, fitOnMount = false) {
+export function useCanvasTransform(
+  { x: minX, y: minY, w: contentWidth, h: contentHeight }: CanvasBounds,
+  fitOnMount = false,
+  onVisibleRectChange?: (rect: CanvasBounds) => void,
+) {
   const computeFitScale = useCallback((width: number, height: number) => {
     const padding = 24;
     return Math.min(Math.max(1, width - padding * 2) / contentWidth, Math.max(1, height - padding * 2) / contentHeight, 1);
   }, [contentWidth, contentHeight]);
   const viewportRef = useRef<HTMLDivElement>(null);
+  const worldRef = useRef<HTMLDivElement>(null);
   const transformRef = useRef<Transform>({ x: 0, y: 0, scale: 1 });
-  const [transform, setTransform] = useState<Transform>({ x: 0, y: 0, scale: 1 });
+  const [scale, setScale] = useState(1);
+  const publishedScale = useRef(1);
+  const publishedAt = useRef(0);
   const viewportSize = useRef({ width: 0, height: 0 });
   const pointers = useRef(new Map<number, { x: number; y: number }>());
   const panState = useRef<{ x: number; y: number } | null>(null);
@@ -46,6 +57,8 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
   const dragging = useRef(false);
   const [isPanning, setIsPanning] = useState(false);
   const [isWheeling, setIsWheeling] = useState(false);
+  const wheeling = useRef(false);
+  const [isAnimating, setIsAnimating] = useState(false);
   const [ready, setReady] = useState(false);
   const readyRef = useRef(false);
   const readyApplied = useRef(false);
@@ -54,10 +67,38 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
   const start = useRef({ x: 0, y: 0 });
   const fitScaleRef = useRef(1);
   const frameRef = useRef<number | null>(null);
+  const visibleListener = useRef(onVisibleRectChange);
+  visibleListener.current = onVisibleRectChange;
+  const reportedCamera = useRef<Transform | null>(null);
+
+  /** Hands the current scale to React — throttled while the camera moves, at once when it rests. */
+  const publishScale = useCallback((next: number, force: boolean) => {
+    const now = performance.now();
+    if (!force && now - publishedAt.current < SCALE_PUBLISH_MS) return;
+    publishedAt.current = now;
+    if (publishedScale.current === next) return;
+    publishedScale.current = next;
+    setScale(next);
+  }, []);
+
+  /** Reports the region the camera can see, in canvas coordinates, widened so content is
+   *  prepared before it arrives on screen. */
+  const reportVisibleRect = useCallback((t: Transform) => {
+    const listener = visibleListener.current;
+    const { width, height } = viewportSize.current;
+    if (!listener || width <= 0 || height <= 0) return;
+    const last = reportedCamera.current;
+    if (last && last.x === t.x && last.y === t.y && last.scale === t.scale) return;
+    reportedCamera.current = { ...t };
+    const w = width / t.scale;
+    const h = height / t.scale;
+    listener({ x: -t.x / t.scale - w * VISIBLE_MARGIN, y: -t.y / t.scale - h * VISIBLE_MARGIN, w: w * (1 + VISIBLE_MARGIN * 2), h: h * (1 + VISIBLE_MARGIN * 2) });
+  }, []);
 
   // One frame loop owns the camera. Gestures and buttons write `transformRef` and ask for a
-  // frame; the focus animation advances inside that same frame. Nothing else calls setTransform,
-  // so the rendered camera never lags behind the coordinates the next gesture reads.
+  // frame; the focus animation advances inside that same frame; the frame writes the element
+  // directly. React never sees the per-frame camera, so a render can never stamp a stale one
+  // over it and the rendered camera never lags the coordinates the next gesture reads.
   const scheduleFrame = useCallback(() => {
     if (frameRef.current !== null) return;
     const runFrame = () => {
@@ -71,17 +112,29 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
           y: current.from.y + (current.to.y - current.from.y) * eased,
           scale: current.from.scale + (current.to.scale - current.from.scale) * eased,
         };
-        if (progress >= 1) animation.current = null;
+        if (progress >= 1) {
+          animation.current = null;
+          setIsAnimating(false);
+        }
       }
-      setTransform(transformRef.current);
-      if (readyRef.current && !readyApplied.current) {
-        readyApplied.current = true;
-        setReady(true);
+      const t = transformRef.current;
+      const world = worldRef.current;
+      if (world) {
+        world.style.transform = `translate(${t.x}px, ${t.y}px) scale(${t.scale})`;
+        // Un-hidden in the same write as the first camera, so nothing is ever painted at the
+        // placeholder transform. `ready` only follows for the controls, and may land later.
+        if (readyRef.current && !readyApplied.current) {
+          readyApplied.current = true;
+          world.style.opacity = "1";
+          setReady(true);
+        }
       }
+      reportVisibleRect(t);
+      publishScale(t.scale, !(dragging.current || wheeling.current || animation.current !== null));
       if (animation.current !== null) frameRef.current = requestAnimationFrame(runFrame);
     };
     frameRef.current = requestAnimationFrame(runFrame);
-  }, []);
+  }, [publishScale, reportVisibleRect]);
 
   const commitTransform = useCallback((next: Transform) => {
     transformRef.current = next;
@@ -89,7 +142,9 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
   }, [scheduleFrame]);
 
   const stopAnimating = useCallback(() => {
+    if (animation.current === null) return;
     animation.current = null;
+    setIsAnimating(false);
   }, []);
 
   useEffect(() => () => {
@@ -151,6 +206,7 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
       return;
     }
     animation.current = { from: transformRef.current, to, startedAt: performance.now() };
+    setIsAnimating(true);
     scheduleFrame();
   }, [clampScale, commitTransform, readViewportSize, scheduleFrame, stopAnimating]);
 
@@ -173,8 +229,8 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
         commitTransform({ x: width / 2 - worldX * scale, y: height / 2 - worldY * scale, scale });
       }
       previousSize = { width, height };
-      // Flagged rather than set directly, so the first camera and `ready` land in the same
-      // render and nothing is ever painted at the placeholder transform.
+      // Flagged rather than set directly, so the first camera and the un-hiding land in the
+      // same frame and nothing is ever painted at the placeholder transform.
       readyRef.current = true;
     });
     if (viewportRef.current) observer.observe(viewportRef.current);
@@ -197,9 +253,14 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
     const onWheel = (e: WheelEvent) => {
       e.preventDefault();
       stopAnimating();
+      wheeling.current = true;
       setIsWheeling(true);
       clearTimeout(wheelTimer);
-      wheelTimer = setTimeout(() => setIsWheeling(false), 150);
+      wheelTimer = setTimeout(() => {
+        wheeling.current = false;
+        setIsWheeling(false);
+        publishScale(transformRef.current.scale, true);
+      }, 150);
       const frame = readViewportFrame();
       if (!frame) return;
       const unit = e.deltaMode === WheelEvent.DOM_DELTA_LINE ? 16 : e.deltaMode === WheelEvent.DOM_DELTA_PAGE ? frame.height : 1;
@@ -217,7 +278,7 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
       el.removeEventListener("wheel", onWheel);
       clearTimeout(wheelTimer);
     };
-  }, [zoomAround, commitTransform, readViewportFrame, stopAnimating]);
+  }, [zoomAround, commitTransform, publishScale, readViewportFrame, stopAnimating]);
 
   const onPointerDown = useCallback((e: React.PointerEvent) => {
     if (e.button !== 0) return;
@@ -299,6 +360,7 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
       pinchState.current = null;
       dragging.current = false;
       setIsPanning(false);
+      publishScale(transformRef.current.scale, true);
     } else if (pointers.current.size === 1) {
       const [p] = Array.from(pointers.current.values());
       panState.current = { x: p.x, y: p.y };
@@ -306,7 +368,7 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
       // The remaining pointer carries on the same gesture; don't re-arm the threshold.
       dragging.current = true;
     }
-  }, []);
+  }, [publishScale]);
 
   const zoomButton = useCallback(
     (factor: number) => {
@@ -326,10 +388,11 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
 
   return {
     viewportRef,
-    transform,
+    worldRef,
+    scale,
     isPanning,
-    isInteracting: isPanning || isWheeling,
-    isDetailView: transform.scale > Math.min(1.25, fitScaleRef.current * 1.75),
+    isInteracting: isPanning || isWheeling || isAnimating,
+    isDetailView: scale > Math.min(1.25, fitScaleRef.current * 1.75),
     ready,
     moved,
     fitView,
