@@ -3,6 +3,20 @@ import { clampZoomScale } from "./use-canvas-transform";
 import { computeFocusScale, computeFocusTransform } from "./focus-geometry";
 
 describe("computeFocusTransform", () => {
+  it("allows the full SwapRat grid to fit a mobile viewport below 8%", () => {
+    const grid = { x: 0, y: 0, w: 10080, h: 7080 };
+    const fit = computeFocusTransform(grid, 366, 338);
+    const scale = clampZoomScale(fit.scale, fit.scale);
+
+    expect(scale).toBeLessThan(0.08);
+    expect(fit.x).toBeGreaterThanOrEqual(24);
+    expect(fit.y).toBeGreaterThanOrEqual(24);
+    expect(fit.x + grid.w * scale).toBeLessThanOrEqual(366 - 24);
+    expect(fit.y + grid.h * scale).toBeLessThanOrEqual(338 - 24);
+    expect(clampZoomScale(0, fit.scale)).toBe(fit.scale);
+    expect(clampZoomScale(0, 0.5)).toBe(0.08);
+  });
+
   it("centres a 1920x1080 rectangle in a 900x600 viewport at the fit-to-tile scale", () => {
     const result = computeFocusTransform({ x: 0, y: 0, w: 1920, h: 1080 }, 900, 600);
     expect(result.scale).toBeCloseTo(0.44375, 5);

@@ -14,7 +14,7 @@ const DEFAULT_SCALE = 0.8;
 /** Clamps `scale` to the canvas's zoom range for a given fit-to-content scale. */
 export function clampZoomScale(scale: number, fitScale: number): number {
   const maxScale = Math.max(fitScale * MAX_ZOOM_MULTIPLIER, DEFAULT_SCALE);
-  return Math.min(maxScale, Math.max(MIN_SCALE, scale));
+  return Math.min(maxScale, Math.max(Math.min(MIN_SCALE, fitScale), scale));
 }
 
 interface Transform {
@@ -26,7 +26,7 @@ interface Transform {
 export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: contentHeight }: CanvasBounds, fitOnMount = false) {
   const computeFitScale = useCallback((width: number, height: number) => {
     const padding = 24;
-    return Math.max(MIN_SCALE, Math.min((width - padding * 2) / contentWidth, (height - padding * 2) / contentHeight, 1));
+    return Math.min(Math.max(1, width - padding * 2) / contentWidth, Math.max(1, height - padding * 2) / contentHeight, 1);
   }, [contentWidth, contentHeight]);
   const viewportRef = useRef<HTMLDivElement>(null);
   const transformRef = useRef<Transform>({ x: 0, y: 0, scale: 1 });
@@ -37,19 +37,17 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
   const [isPanning, setIsPanning] = useState(false);
   const [isWheeling, setIsWheeling] = useState(false);
   const [ready, setReady] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false);
-  const animationTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const animationFrame = useRef<number | null>(null);
   const moved = useRef(false);
   const start = useRef({ x: 0, y: 0 });
   const fitScaleRef = useRef(1);
   const frameRef = useRef<number | null>(null);
 
   const stopAnimating = useCallback(() => {
-    if (animationTimer.current !== null) {
-      clearTimeout(animationTimer.current);
-      animationTimer.current = null;
+    if (animationFrame.current !== null) {
+      cancelAnimationFrame(animationFrame.current);
+      animationFrame.current = null;
     }
-    setIsAnimating(false);
   }, []);
 
   const updateTransform = useCallback((next: Transform) => {
@@ -73,7 +71,7 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
   useEffect(() => () => {
     if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
     frameRef.current = null;
-    if (animationTimer.current !== null) clearTimeout(animationTimer.current);
+    if (animationFrame.current !== null) cancelAnimationFrame(animationFrame.current);
   }, []);
 
   const clampScale = useCallback((scale: number) => clampZoomScale(scale, fitScaleRef.current), []);
@@ -85,38 +83,50 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
   }, [contentWidth, contentHeight, minX, minY]);
 
   const fitView = useCallback(() => {
+    stopAnimating();
     const el = viewportRef.current;
     if (!el) return;
-    const rect = el.getBoundingClientRect();
+    const rect = { width: el.clientWidth, height: el.clientHeight };
     fitScaleRef.current = computeFitScale(rect.width, rect.height);
     const next = centerAt(rect.width, rect.height, clampScale(fitScaleRef.current));
     updateTransform(next);
-  }, [centerAt, clampScale, updateTransform, computeFitScale]);
+  }, [centerAt, clampScale, updateTransform, computeFitScale, stopAnimating]);
 
   const focusRect = useCallback((rect: CanvasBounds) => {
+    stopAnimating();
     const el = viewportRef.current;
     if (!el) return;
-    const { width, height } = el.getBoundingClientRect();
+    // Layout dimensions do not include the dialog's entrance scale transform.
+    const { clientWidth: width, clientHeight: height } = el;
     const scale = clampScale(computeFocusScale(rect, width, height));
     const next = { ...centerRectAt(rect, width, height, scale), scale };
-    setTransformImmediate(next);
-    if (animationTimer.current !== null) clearTimeout(animationTimer.current);
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setIsAnimating(false);
+      setTransformImmediate(next);
     } else {
-      setIsAnimating(true);
-      animationTimer.current = setTimeout(() => {
-        animationTimer.current = null;
-        setIsAnimating(false);
-      }, FOCUS_ANIMATION_MS);
+      const from = transformRef.current;
+      const startedAt = performance.now();
+      // Keep the rendered camera and interaction coordinates on the same frame.
+      // A CSS transition leaves the ref at the destination and jumps on interruption.
+      const animate = (now: number) => {
+        const progress = Math.min(1, (now - startedAt) / FOCUS_ANIMATION_MS);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        setTransformImmediate({
+          x: from.x + (next.x - from.x) * eased,
+          y: from.y + (next.y - from.y) * eased,
+          scale: from.scale + (next.scale - from.scale) * eased,
+        });
+        animationFrame.current = progress < 1 ? requestAnimationFrame(animate) : null;
+      };
+      animationFrame.current = requestAnimationFrame(animate);
     }
-  }, [clampScale, setTransformImmediate]);
+  }, [clampScale, setTransformImmediate, stopAnimating]);
 
   useEffect(() => {
     let previousSize: { width: number; height: number } | undefined;
     const observer = new ResizeObserver(([entry]) => {
       const { width, height } = entry.contentRect;
       if (width <= 0 || height <= 0) return;
+      stopAnimating();
       fitScaleRef.current = computeFitScale(width, height);
       if (!previousSize) {
         const isMobile = window.matchMedia(MOBILE_QUERY).matches;
@@ -133,7 +143,7 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
     });
     if (viewportRef.current) observer.observe(viewportRef.current);
     return () => observer.disconnect();
-  }, [centerAt, clampScale, updateTransform, setTransformImmediate, fitOnMount, computeFitScale]);
+  }, [centerAt, clampScale, updateTransform, setTransformImmediate, fitOnMount, computeFitScale, stopAnimating]);
 
   const zoomAround = useCallback((clientX: number, clientY: number, scaleFactor: number) => {
     const el = viewportRef.current;
@@ -243,18 +253,20 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
 
   const zoomButton = useCallback(
     (factor: number) => {
+      stopAnimating();
       const el = viewportRef.current;
       if (!el) return;
       const rect = el.getBoundingClientRect();
       zoomAround(rect.left + rect.width / 2, rect.top + rect.height / 2, factor);
     },
-    [zoomAround],
+    [zoomAround, stopAnimating],
   );
 
   const panBy = useCallback((dx: number, dy: number) => {
+    stopAnimating();
     const t = { ...transformRef.current, x: transformRef.current.x + dx, y: transformRef.current.y + dy };
     updateTransform(t);
-  }, [updateTransform]);
+  }, [updateTransform, stopAnimating]);
 
   return {
     viewportRef,
@@ -263,8 +275,6 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
     isInteracting: isPanning || isWheeling,
     isDetailView: transform.scale > Math.min(1.25, fitScaleRef.current * 1.75),
     ready,
-    isAnimating,
-    stopAnimating,
     moved,
     fitView,
     focusRect,

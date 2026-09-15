@@ -41,7 +41,7 @@ export interface CanvasViewportProps {
 
 export function CanvasViewport({ children, bounds, labels, onClearSelection, fitOnMount = false, ariaLabel, className, toolbar, overlay, fullscreenTargetRef, onInteractionChange, canvasRef }: CanvasViewportProps) {
   const frameRef = useRef<HTMLDivElement>(null);
-  const { viewportRef, transform, isPanning, isInteracting, isDetailView, ready, isAnimating, stopAnimating, moved, fitView, focusRect, zoomButton, panBy, onPointerDown, onPointerMove, endPointer } = useCanvasTransform(bounds, fitOnMount);
+  const { viewportRef, transform, isPanning, isInteracting, isDetailView, ready, moved, fitView, focusRect, zoomButton, panBy, onPointerDown, onPointerMove, endPointer } = useCanvasTransform(bounds, fitOnMount);
   const zoomIn = useCallback(() => zoomButton(1.2), [zoomButton]);
   const zoomOut = useCallback(() => zoomButton(1 / 1.2), [zoomButton]);
   const { isFullscreen, toggleFullscreen } = useFullscreen(() => frameRef.current);
@@ -95,11 +95,8 @@ export function CanvasViewport({ children, bounds, labels, onClearSelection, fit
         }}
       >
         <div
-          className={`${styles.world} ${isAnimating ? styles.animating : ""}`}
+          className={styles.world}
           style={{ opacity: ready ? 1 : 0, transform: `translate(${transform.x}px, ${transform.y}px) scale(${transform.scale})` }}
-          onTransitionEnd={(e) => {
-            if (e.target === e.currentTarget) stopAnimating();
-          }}
         >
           {children}
         </div>
