@@ -11,7 +11,7 @@
 
 ## 3. Cross-browser and reduced-motion verification
 
-- [ ] 3.1 Verify the fix on at least one Chromium-based and one WebKit-based browser, per `design.md`'s noted risk that compositor behavior is engine-specific
+- [x] 3.1 Verify the fix on at least one Chromium-based and one WebKit-based browser, per `design.md`'s noted risk that compositor behavior is engine-specific
 - [x] 3.2 Verify a visitor with `prefers-reduced-motion: reduce` still gets an immediate, unanimated jump to the tile with no artifact (the "Activating a tile with reduced motion asked for" scenario is unaffected)
 - [x] 3.3 Verify starting a pan or wheel-zoom mid-animation still stops the animation and hands control to the gesture with no lag, per the "Panning while the canvas is animating" scenario
 
