@@ -3,11 +3,11 @@
 - [x] 1.1 Reproduce the artifact locally on the project photo canvas: open a project with several photos, zoom out well below the fitted view, activate a tile, and confirm a visible flash/stale-frame appears during the glide (verified by direct observation, ideally captured on video/screen recording at a slowed frame rate for a clear before/after comparison)
 - [x] 1.2 Confirm activating a tile from the fitted view (no prior zoom-out) does not show the artifact, establishing the before/after baseline described in `proposal.md`
 
-## 2. Apply the layer-promotion fix
+## 2. Apply the compositing and animation fix
 
-- [x] 2.1 Add a layer-promotion hint (`will-change: transform`, falling back to `transform: translateZ(0)` if needed) to `.world` in `src/shared/ui/infinite-canvas/ui/infinite-canvas.module.css`, keeping the existing `.world.animating` transition unchanged
+- [x] 2.1 Composite the bounded `.viewport` rather than the enormous `.world` (`contain: strict; isolation: isolate; transform: translateZ(0)` in `src/shared/ui/infinite-canvas/ui/infinite-canvas.module.css`), and replace the `.world.animating` CSS transition with the rAF-interpolated glide that `design.md` keeps as its fallback, so the rendered camera and the interaction coordinates stay on the same frame
 - [x] 2.2 Re-run the repro from 1.1 and verify the flash/stale-frame no longer appears when activating a tile from a scale well below the fitted view
-- [x] 2.3 Verify activating a tile from the fitted view, and repeated activation/pan/re-activation per the `project-photo-canvas` "Activating a tile brings that tile into view" scenarios, still glides correctly with no new visual regression
+- [x] 2.3 Verify activating a tile from the fitted view, and repeated activation/pan/re-activation per the `project-photo-canvas` "Activating a tile brings that tile into view" scenarios, still glides correctly with no new visual regression, and that interrupting the glide hands the camera to the gesture from where it actually is rather than from the destination
 
 ## 3. Cross-browser and reduced-motion verification
 

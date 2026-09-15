@@ -30,6 +30,8 @@ Alternatives considered:
 - *Drive the transition with `requestAnimationFrame`-interpolated scale steps instead of a CSS transition* (the codebase already has an rAF-based `updateTransform` path used for pan/zoom): rejected as first approach — more invasive, changes how every camera movement is scheduled, and doesn't by itself fix compositor raster churn (the same large scale delta happens either way; only the promoted-layer fix addresses that). Keep as a fallback if the layer-promotion fix doesn't fully resolve the artifact.
 - *Clamp how far below fit scale the canvas can zoom*: rejected — changes user-facing zoom behavior (a real capability) to paper over a rendering bug, and the spec doesn't ask for a zoom-range change.
 
+**Outcome: the fallback was taken.** Promoting `.world` did not clear the artifact — compositing the bounded `.viewport` instead did (`contain: strict; isolation: isolate; transform: translateZ(0)`), because the damage came from rasterising the enormous world layer, not from promoting it. The `.world.animating` CSS transition was replaced by the rAF-interpolated glide listed as an alternative below, for a second reason found during implementation: a CSS transition leaves `transformRef` at the destination while the element is still travelling, so interrupting the glide jumped the camera.
+
 ## Risks / Trade-offs
 
 - [The compositing hypothesis is wrong or only partially explains the artifact] → Verify by reproducing the exact repro (zoom out well below fit, activate a tile, observe) before and after the fix; if the artifact persists, fall back to the rAF-interpolated transition alternative above rather than layering on more CSS hints speculatively.
