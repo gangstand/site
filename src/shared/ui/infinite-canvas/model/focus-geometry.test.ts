@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { clampZoomScale } from "./use-canvas-transform";
-import { computeFocusScale, computeFocusTransform } from "./focus-geometry";
+import { computeFocusScale, computeFocusTransform, toViewportPoint } from "./focus-geometry";
 
 describe("computeFocusTransform", () => {
   it("allows the full SwapRat grid to fit a mobile viewport below 8%", () => {
@@ -52,5 +52,26 @@ describe("computeFocusTransform", () => {
     const clamped = clampZoomScale(rawScale, fitScale);
     expect(clamped).toBe(ceiling);
     expect(clamped).toBeLessThan(rawScale);
+  });
+});
+
+describe("toViewportPoint", () => {
+  it("maps a client point to layout coordinates when the viewport is not visually scaled", () => {
+    const point = toViewportPoint(340, 260, { left: 100, top: 60, scaleX: 1, scaleY: 1 });
+    expect(point).toEqual({ x: 240, y: 200 });
+  });
+
+  it("undoes an ancestor's entrance scale so the zoom anchor stays on the same world point", () => {
+    // A dialog mid-entrance renders its 900x600 viewport at 90%: the box starts 10px further in
+    // and every client pixel covers 0.9 layout pixels.
+    const frame = { left: 55, top: 35, scaleX: 0.9, scaleY: 0.9 };
+    const point = toViewportPoint(55 + 450 * 0.9, 35 + 300 * 0.9, frame);
+    expect(point.x).toBeCloseTo(450, 10);
+    expect(point.y).toBeCloseTo(300, 10);
+  });
+
+  it("handles a viewport scaled differently on each axis", () => {
+    const point = toViewportPoint(100, 100, { left: 0, top: 0, scaleX: 2, scaleY: 0.5 });
+    expect(point).toEqual({ x: 50, y: 200 });
   });
 });

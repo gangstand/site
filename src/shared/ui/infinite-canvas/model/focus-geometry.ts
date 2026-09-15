@@ -2,6 +2,19 @@ import type { CanvasBounds } from "./use-canvas-transform";
 
 const PADDING = 24;
 
+/** A viewport's client-space origin and the visual scale an ancestor transform applies to it. */
+export interface ViewportFrame {
+  left: number;
+  top: number;
+  scaleX: number;
+  scaleY: number;
+}
+
+/** Maps a client point into the viewport's layout coordinates, undoing any ancestor visual scale. */
+export function toViewportPoint(clientX: number, clientY: number, frame: ViewportFrame): { x: number; y: number } {
+  return { x: (clientX - frame.left) / frame.scaleX, y: (clientY - frame.top) / frame.scaleY };
+}
+
 export interface FocusTransform {
   x: number;
   y: number;
