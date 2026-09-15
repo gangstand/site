@@ -36,9 +36,9 @@
     "semantic_hash": "d20afa0da9aa6a41f34c59f541a3a03c"
   },
   "next-env.d.ts": {
-    "mtime": 1789389202.7298431,
-    "seen": 1789394937.1469376,
-    "ast_hash": "aa94238a90e7d04b7a47ecc3145ba6a0",
+    "mtime": 1789471280.3066792,
+    "seen": 1789471287.597403,
+    "ast_hash": "8195d2c60ce847a459ae9d308d6a5724",
     "semantic_hash": ""
   },
   "next.config.ts": {
@@ -120,9 +120,9 @@
     "semantic_hash": "50b3efb58a31bb35edd6356ab741f23b"
   },
   "src/shared/ui/infinite-canvas/index.ts": {
-    "mtime": 1789375724.8242395,
-    "seen": 1789375735.9433753,
-    "ast_hash": "08b0b7104b22476eb5605740b22861f9",
+    "mtime": 1789470649.8802164,
+    "seen": 1789471287.597463,
+    "ast_hash": "43e23e1af95ba0b688a1585e5bf025a4",
     "semantic_hash": ""
   },
   "src/shared/ui/infinite-canvas/model/copy.ts": {
@@ -132,10 +132,10 @@
     "semantic_hash": ""
   },
   "src/shared/ui/infinite-canvas/model/use-canvas-transform.ts": {
-    "mtime": 1789332705.6866589,
-    "seen": 1789372671.0855901,
-    "ast_hash": "050c4671ca899cd11a9da1cf7dd5c54c",
-    "semantic_hash": "050c4671ca899cd11a9da1cf7dd5c54c"
+    "mtime": 1789470611.2352753,
+    "seen": 1789471287.5974672,
+    "ast_hash": "5f5188702428c8c77c761f67a44532f8",
+    "semantic_hash": ""
   },
   "src/shared/ui/infinite-canvas/model/use-fullscreen.ts": {
     "mtime": 1789328076.3669407,
@@ -144,9 +144,9 @@
     "semantic_hash": "3e88e4e1fa0b1be0d06b41aba0561d14"
   },
   "src/shared/ui/infinite-canvas/ui/canvas-viewport.tsx": {
-    "mtime": 1789375724.8242395,
-    "seen": 1789375735.94338,
-    "ast_hash": "3f95fa412535e7adb7f8b4a9b9fbdb3e",
+    "mtime": 1789470646.5282214,
+    "seen": 1789471287.5974693,
+    "ast_hash": "af5eaedabdde1fb7def56f6fa29526b7",
     "semantic_hash": ""
   },
   "src/shared/ui/infinite-canvas/ui/footer-controls.tsx": {
@@ -1026,9 +1026,9 @@
     "semantic_hash": ""
   },
   "src/_pages/home/config/homelab.ts": {
-    "mtime": 1789394001.8644714,
-    "seen": 1789394937.1469445,
-    "ast_hash": "48e42053e9c5f9e7982f65b516ad0198",
+    "mtime": 1789476711.9786353,
+    "seen": 1789476825.8395517,
+    "ast_hash": "672d9c5b1267b886c3eb0dee2b6a8bd6",
     "semantic_hash": ""
   },
   "src/_pages/home/config/projects.ts": {
@@ -1044,9 +1044,9 @@
     "semantic_hash": ""
   },
   "src/_pages/home/config/swaprat.ts": {
-    "mtime": 1789390117.513891,
-    "seen": 1789394937.1469467,
-    "ast_hash": "beb3b142f2f8d2cd7744dcb71d2b55cc",
+    "mtime": 1789468055.239049,
+    "seen": 1789468113.0267048,
+    "ast_hash": "b10862b8aa6dbb0132e267b296e78586",
     "semantic_hash": ""
   },
   "src/_pages/home/config/teamtasker.ts": {
@@ -1092,9 +1092,9 @@
     "semantic_hash": ""
   },
   "src/_pages/home/ui/photo-canvas.tsx": {
-    "mtime": 1789380337.0342808,
-    "seen": 1789380744.81373,
-    "ast_hash": "c60aa661d7764a3fbc18b129f18c2df5",
+    "mtime": 1789470675.119179,
+    "seen": 1789471287.597424,
+    "ast_hash": "be4393c74344abb7837a22ae1b42421b",
     "semantic_hash": ""
   },
   "src/_pages/home/ui/profile.tsx": {
@@ -1667,36 +1667,6 @@
     "ast_hash": "b75c9e6d4ae838ab031c0747693ab08c",
     "semantic_hash": ""
   },
-  "openspec/changes/add-homelab-thumbnail/.openspec.yaml": {
-    "mtime": 1789388847.7679899,
-    "seen": 1789394937.1471047,
-    "ast_hash": "331f99705d6292ffe772f964ade7dcb1",
-    "semantic_hash": ""
-  },
-  "openspec/changes/add-homelab-thumbnail/design.md": {
-    "mtime": 1789394376.6126401,
-    "seen": 1789394937.1471057,
-    "ast_hash": "6f7d2ee5876e32e133ad171ad39fa23c",
-    "semantic_hash": ""
-  },
-  "openspec/changes/add-homelab-thumbnail/proposal.md": {
-    "mtime": 1789394421.5965402,
-    "seen": 1789394937.1471066,
-    "ast_hash": "3aeaeabb2d706a1aa5f053111724a364",
-    "semantic_hash": ""
-  },
-  "openspec/changes/add-homelab-thumbnail/specs/project-showcase/spec.md": {
-    "mtime": 1789394502.6983602,
-    "seen": 1789394937.1471071,
-    "ast_hash": "264f634d542c684daa1b17c2b8940dc8",
-    "semantic_hash": ""
-  },
-  "openspec/changes/add-homelab-thumbnail/tasks.md": {
-    "mtime": 1789394890.7294996,
-    "seen": 1789394937.1471076,
-    "ast_hash": "54324cd40fe018d8503f74a0eeac1b58",
-    "semantic_hash": ""
-  },
   "openspec/changes/archive/2026-09-14-remove-rabbitmq-ui-ingress/.openspec.yaml": {
     "mtime": 1789387740.923078,
     "seen": 1789394937.147121,
@@ -1722,9 +1692,363 @@
     "semantic_hash": ""
   },
   "public/projects/homelab/thumbnail.webp": {
-    "mtime": 1789393936.8381772,
-    "seen": 1789394937.1471286,
-    "ast_hash": "4d06443fbfee0d7b30d284338183b432",
+    "mtime": 1789476717.5212584,
+    "seen": 1789476825.8397946,
+    "ast_hash": "69d8782b5d661e84b92e70153060dec9",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-14-add-homelab-thumbnail/.openspec.yaml": {
+    "mtime": 1789388847.7679899,
+    "seen": 1789410648.357452,
+    "ast_hash": "331f99705d6292ffe772f964ade7dcb1",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-14-add-homelab-thumbnail/design.md": {
+    "mtime": 1789394376.6126401,
+    "seen": 1789410648.357453,
+    "ast_hash": "6f7d2ee5876e32e133ad171ad39fa23c",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-14-add-homelab-thumbnail/proposal.md": {
+    "mtime": 1789394421.5965402,
+    "seen": 1789410648.3574538,
+    "ast_hash": "3aeaeabb2d706a1aa5f053111724a364",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-14-add-homelab-thumbnail/specs/project-showcase/spec.md": {
+    "mtime": 1789394502.6983602,
+    "seen": 1789410648.3574545,
+    "ast_hash": "264f634d542c684daa1b17c2b8940dc8",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-14-add-homelab-thumbnail/tasks.md": {
+    "mtime": 1789394995.8118122,
+    "seen": 1789410648.357455,
+    "ast_hash": "10a67d8c2f106d7acd51a625a1c7c8d9",
+    "semantic_hash": ""
+  },
+  "openspec/specs/project-showcase/spec.md": {
+    "mtime": 1789395135.9867365,
+    "seen": 1789410648.357478,
+    "ast_hash": "7b0ec2641c1538abab951cbdd7ed8f5e",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/dashboard.webp": {
+    "mtime": 1789466893.897638,
+    "seen": 1789468113.0271018,
+    "ast_hash": "2c3cec8023e0e237908fb9b140b362f7",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/discounts-categories.webp": {
+    "mtime": 1789467464.055672,
+    "seen": 1789468113.027112,
+    "ast_hash": "6965fbf0f80cd699e149f27ae13a1456",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/discounts-clients.webp": {
+    "mtime": 1789467515.6676962,
+    "seen": 1789468113.027114,
+    "ast_hash": "1f3b2199ff70f54180a743dc62aec942",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/login.webp": {
+    "mtime": 1789464890.2661757,
+    "seen": 1789468113.027127,
+    "ast_hash": "07284ab141d81a1fa0de6bf8d3e88371",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/pnl.webp": {
+    "mtime": 1789466995.5926003,
+    "seen": 1789468113.0271285,
+    "ast_hash": "a2de572e12c016ba3d879ff25490b96e",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/stock-dynamics.webp": {
+    "mtime": 1789467600.320741,
+    "seen": 1789468113.0271335,
+    "ast_hash": "f3a809dd763812e1895b29b6718801d8",
+    "semantic_hash": ""
+  },
+  "src/_pages/home/model/column-layout.test.ts": {
+    "mtime": 1789458221.666541,
+    "seen": 1789462738.250968,
+    "ast_hash": "51f2b46a0a4c12d151b842cbe8159d9e",
+    "semantic_hash": ""
+  },
+  "src/_pages/home/model/column-layout.ts": {
+    "mtime": 1789458211.4152923,
+    "seen": 1789462738.2509716,
+    "ast_hash": "937b86fe16940338fac12bb86b1dbd7c",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/heatmap-orders.webp": {
+    "mtime": 1789467422.091654,
+    "seen": 1789468113.027124,
+    "ast_hash": "09f8eb119ce77c4a5c9838a11a7e3042",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/audit-incidents.webp": {
+    "mtime": 1789466939.9476178,
+    "seen": 1789468113.0270987,
+    "ast_hash": "74d6776625cb52c22efdb0c7a70d2648",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/cabinet.webp": {
+    "mtime": 1789468051.325046,
+    "seen": 1789468113.0270996,
+    "ast_hash": "08a130fa6a528a6f8f925a7e9ec6b33f",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/dds.webp": {
+    "mtime": 1789467136.523586,
+    "seen": 1789468113.027103,
+    "ast_hash": "5ac6a7319152415a6144b306483fd7f1",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/dishes-abc.webp": {
+    "mtime": 1789467321.049618,
+    "seen": 1789468113.0271158,
+    "ast_hash": "1fc4108d2f7fc363e333969f5c709ef8",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/dishes-bcg.webp": {
+    "mtime": 1789467343.7666252,
+    "seen": 1789468113.0271175,
+    "ast_hash": "99a13e87a050bea61e79cc1a5573a8e4",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/dishes-combo.webp": {
+    "mtime": 1789467298.1956115,
+    "seen": 1789468113.027119,
+    "ast_hash": "bc98d79a67b0d53f074487af2d9ca877",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/dishes-general.webp": {
+    "mtime": 1789467193.3365905,
+    "seen": 1789468113.02712,
+    "ast_hash": "90a541d6b0dc2047f3620dd25d6a4d4d",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/dishes-pairs.webp": {
+    "mtime": 1789467245.892599,
+    "seen": 1789468113.0271213,
+    "ast_hash": "8c406ddc64cd339262f071dcad0316d0",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/dishes-pavesik.webp": {
+    "mtime": 1789467364.000632,
+    "seen": 1789468113.0271227,
+    "ast_hash": "ef013d19efc3298cb6e7900b130f1226",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/heatmap-revenue.webp": {
+    "mtime": 1789467397.6566443,
+    "seen": 1789468113.027125,
+    "ast_hash": "e35fdacbc81fd1b35fe5618b04109aa9",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/shift-calc.webp": {
+    "mtime": 1789468029.3030293,
+    "seen": 1789468113.0271297,
+    "ast_hash": "b1aa8065234227d5af37095a7adc0523",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/shift-settings.webp": {
+    "mtime": 1789467994.3100028,
+    "seen": 1789468113.0271308,
+    "ast_hash": "97888415768112214508a5c530824341",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/stock-balances.webp": {
+    "mtime": 1789467566.7967227,
+    "seen": 1789468113.0271323,
+    "ast_hash": "05d7a1043e5c20d91965545c5b450a43",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/stock-inventory.webp": {
+    "mtime": 1789467862.007907,
+    "seen": 1789468113.0271344,
+    "ast_hash": "e7c33ca3044892d99c827076b30c4bc6",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/stock-invoices.webp": {
+    "mtime": 1789467641.4117644,
+    "seen": 1789468113.0271358,
+    "ast_hash": "b6ef42e414ffce23a36ae7d9dba28c8f",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/stock-prices.webp": {
+    "mtime": 1789467680.964788,
+    "seen": 1789468113.0271368,
+    "ast_hash": "a9d85838cd3205f12e360ceb525cd37f",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/stock-writeoffs.webp": {
+    "mtime": 1789467745.2908282,
+    "seen": 1789468113.0271378,
+    "ast_hash": "3dcded1dace8c59a09acc1b5f56f18a8",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/waiter-analysis.webp": {
+    "mtime": 1789467967.5099828,
+    "seen": 1789468113.0271404,
+    "ast_hash": "5d150f73b3874a48fb3697e8ec88eaae",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/waiter-dish.webp": {
+    "mtime": 1789467942.6269646,
+    "seen": 1789468113.0271413,
+    "ast_hash": "b1e25e62ca9406fbdb29e2f842a4d9d9",
+    "semantic_hash": ""
+  },
+  "public/projects/swaprat/waiter-order.webp": {
+    "mtime": 1789467909.7739408,
+    "seen": 1789468113.0271428,
+    "ast_hash": "97797cce0e1c3fcab28c789db02ac7b6",
+    "semantic_hash": ""
+  },
+  "src/shared/ui/infinite-canvas/model/focus-geometry.test.ts": {
+    "mtime": 1789470584.772317,
+    "seen": 1789471287.5974648,
+    "ast_hash": "feba112bfeab8fe0d189ad69c59bbbe9",
+    "semantic_hash": ""
+  },
+  "src/shared/ui/infinite-canvas/model/focus-geometry.ts": {
+    "mtime": 1789470515.9024308,
+    "seen": 1789471287.5974662,
+    "ast_hash": "b267cbe59c121f2e026fb78132fc55dd",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-15-recapture-swaprat-canvas/.openspec.yaml": {
+    "mtime": 1789411267.7282252,
+    "seen": 1789471287.5976276,
+    "ast_hash": "331f99705d6292ffe772f964ade7dcb1",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-15-recapture-swaprat-canvas/CAPTURE_NOTES.md": {
+    "mtime": 1789462662.159115,
+    "seen": 1789471287.5976286,
+    "ast_hash": "1b8f92461a4de00543bf2751e1a95858",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-15-recapture-swaprat-canvas/design.md": {
+    "mtime": 1789462376.6989422,
+    "seen": 1789471287.5976295,
+    "ast_hash": "b05dc07dc329b4cf4b59fa751084f59c",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-15-recapture-swaprat-canvas/proposal.md": {
+    "mtime": 1789462271.9757164,
+    "seen": 1789471287.59763,
+    "ast_hash": "d7ee5cddcba578a4a0793a3ec8bfb302",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-15-recapture-swaprat-canvas/specs/project-photo-canvas/spec.md": {
+    "mtime": 1789462398.689654,
+    "seen": 1789471287.5976307,
+    "ast_hash": "50bc1ba958fd653756e7653a67acaa09",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-15-recapture-swaprat-canvas/tasks.md": {
+    "mtime": 1789462747.3728082,
+    "seen": 1789471287.5976312,
+    "ast_hash": "776ecb969fc74c5f0ea2aa0a5c486b1f",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-15-refill-swaprat-canvas/.openspec.yaml": {
+    "mtime": 1789466352.5988173,
+    "seen": 1789471287.597632,
+    "ast_hash": "43f52acba0f8659b47c2d08d73575822",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-15-refill-swaprat-canvas/CAPTURE_NOTES.md": {
+    "mtime": 1789468104.5440872,
+    "seen": 1789471287.5976324,
+    "ast_hash": "eeae8e3fde73fb9bac7170d650c46bcd",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-15-refill-swaprat-canvas/design.md": {
+    "mtime": 1789466414.288473,
+    "seen": 1789471287.5976331,
+    "ast_hash": "e76f4a1eb8a6e19658a26476b186bf9b",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-15-refill-swaprat-canvas/proposal.md": {
+    "mtime": 1789466345.5317378,
+    "seen": 1789471287.5976338,
+    "ast_hash": "ec60f5e20f516f39a136379ec41b6cbe",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-15-refill-swaprat-canvas/tasks.md": {
+    "mtime": 1789468116.1110961,
+    "seen": 1789471287.5976343,
+    "ast_hash": "22796ef00f65a86b89d0835340047339",
+    "semantic_hash": ""
+  },
+  "openspec/specs/project-photo-canvas/spec.md": {
+    "mtime": 1789471586.847488,
+    "seen": 1789474370.4978108,
+    "ast_hash": "a639fdf0e784f97a05373325e277ce9c",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-15-focus-photo-on-click/.openspec.yaml": {
+    "mtime": 1789470071.5204313,
+    "seen": 1789474370.497737,
+    "ast_hash": "82c2a3fac04d2e62e8fa8291088cf725",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-15-focus-photo-on-click/design.md": {
+    "mtime": 1789470246.7639685,
+    "seen": 1789474370.4977388,
+    "ast_hash": "08a53e4b0b6d29022a701f47c190b26c",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-15-focus-photo-on-click/proposal.md": {
+    "mtime": 1789470108.1593251,
+    "seen": 1789474370.4977403,
+    "ast_hash": "65ce899e4e2ce2975fed48e9896e6011",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-15-focus-photo-on-click/specs/project-photo-canvas/spec.md": {
+    "mtime": 1789470155.9611945,
+    "seen": 1789474370.4977424,
+    "ast_hash": "b07cfcff116ec375f4c411baf24df0de",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-09-15-focus-photo-on-click/tasks.md": {
+    "mtime": 1789471292.2462618,
+    "seen": 1789474370.4977438,
+    "ast_hash": "0b6313549384f7896da64dfc0821fcf5",
+    "semantic_hash": ""
+  },
+  "openspec/changes/rewrite-homelab-thumbnail-copy/.openspec.yaml": {
+    "mtime": 1789472143.8512604,
+    "seen": 1789474370.4977808,
+    "ast_hash": "82c2a3fac04d2e62e8fa8291088cf725",
+    "semantic_hash": ""
+  },
+  "openspec/changes/rewrite-homelab-thumbnail-copy/design.md": {
+    "mtime": 1789472297.4673927,
+    "seen": 1789474370.497782,
+    "ast_hash": "8385030e9e080c14ebea89179f189560",
+    "semantic_hash": ""
+  },
+  "openspec/changes/rewrite-homelab-thumbnail-copy/proposal.md": {
+    "mtime": 1789472193.6563056,
+    "seen": 1789474370.4977927,
+    "ast_hash": "a3e39273bd11a0bcbc14cede2034403b",
+    "semantic_hash": ""
+  },
+  "openspec/changes/rewrite-homelab-thumbnail-copy/specs/project-showcase/spec.md": {
+    "mtime": 1789472218.7363276,
+    "seen": 1789474370.4977942,
+    "ast_hash": "6c5c1130109abf41a53094766a3b3d27",
+    "semantic_hash": ""
+  },
+  "openspec/changes/rewrite-homelab-thumbnail-copy/tasks.md": {
+    "mtime": 1789476741.2206438,
+    "seen": 1789476825.8397858,
+    "ast_hash": "ee880129b32a79855c4fdfdaa9250846",
     "semantic_hash": ""
   }
 }

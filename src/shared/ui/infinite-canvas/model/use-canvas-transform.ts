@@ -2,11 +2,20 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { MOBILE_QUERY } from "@/shared/lib/media-query";
+import { centerRectAt, computeFocusScale } from "./focus-geometry";
+
+const FOCUS_ANIMATION_MS = 280;
 
 export interface CanvasBounds { x: number; y: number; w: number; h: number }
 const MIN_SCALE = 0.08;
 const MAX_ZOOM_MULTIPLIER = 3;
 const DEFAULT_SCALE = 0.8;
+
+/** Clamps `scale` to the canvas's zoom range for a given fit-to-content scale. */
+export function clampZoomScale(scale: number, fitScale: number): number {
+  const maxScale = Math.max(fitScale * MAX_ZOOM_MULTIPLIER, DEFAULT_SCALE);
+  return Math.min(maxScale, Math.max(MIN_SCALE, scale));
+}
 
 interface Transform {
   x: number;
@@ -28,10 +37,20 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
   const [isPanning, setIsPanning] = useState(false);
   const [isWheeling, setIsWheeling] = useState(false);
   const [ready, setReady] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const animationTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const moved = useRef(false);
   const start = useRef({ x: 0, y: 0 });
   const fitScaleRef = useRef(1);
   const frameRef = useRef<number | null>(null);
+
+  const stopAnimating = useCallback(() => {
+    if (animationTimer.current !== null) {
+      clearTimeout(animationTimer.current);
+      animationTimer.current = null;
+    }
+    setIsAnimating(false);
+  }, []);
 
   const updateTransform = useCallback((next: Transform) => {
     transformRef.current = next;
@@ -54,12 +73,10 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
   useEffect(() => () => {
     if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
     frameRef.current = null;
+    if (animationTimer.current !== null) clearTimeout(animationTimer.current);
   }, []);
 
-  const clampScale = useCallback((scale: number) => {
-    const maxScale = Math.max(fitScaleRef.current * MAX_ZOOM_MULTIPLIER, DEFAULT_SCALE);
-    return Math.min(maxScale, Math.max(MIN_SCALE, scale));
-  }, []);
+  const clampScale = useCallback((scale: number) => clampZoomScale(scale, fitScaleRef.current), []);
 
   const centerAt = useCallback((width: number, height: number, scale: number) => {
     const x = (width - contentWidth * scale) / 2 - minX * scale;
@@ -75,6 +92,25 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
     const next = centerAt(rect.width, rect.height, clampScale(fitScaleRef.current));
     updateTransform(next);
   }, [centerAt, clampScale, updateTransform, computeFitScale]);
+
+  const focusRect = useCallback((rect: CanvasBounds) => {
+    const el = viewportRef.current;
+    if (!el) return;
+    const { width, height } = el.getBoundingClientRect();
+    const scale = clampScale(computeFocusScale(rect, width, height));
+    const next = { ...centerRectAt(rect, width, height, scale), scale };
+    setTransformImmediate(next);
+    if (animationTimer.current !== null) clearTimeout(animationTimer.current);
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setIsAnimating(false);
+    } else {
+      setIsAnimating(true);
+      animationTimer.current = setTimeout(() => {
+        animationTimer.current = null;
+        setIsAnimating(false);
+      }, FOCUS_ANIMATION_MS);
+    }
+  }, [clampScale, setTransformImmediate]);
 
   useEffect(() => {
     let previousSize: { width: number; height: number } | undefined;
@@ -119,6 +155,7 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
     let wheelTimer: ReturnType<typeof setTimeout> | undefined;
     const onWheel = (e: WheelEvent) => {
       e.preventDefault();
+      stopAnimating();
       setIsWheeling(true);
       clearTimeout(wheelTimer);
       wheelTimer = setTimeout(() => setIsWheeling(false), 150);
@@ -137,10 +174,11 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
       el.removeEventListener("wheel", onWheel);
       clearTimeout(wheelTimer);
     };
-  }, [zoomAround, updateTransform]);
+  }, [zoomAround, updateTransform, stopAnimating]);
 
   const onPointerDown = useCallback((e: React.PointerEvent) => {
     if (e.button !== 0) return;
+    stopAnimating();
     if (pointers.current.size === 0) moved.current = false;
     start.current = { x: e.clientX, y: e.clientY };
     const target = (e.target as Element).closest("button, [role='button']") ?? e.currentTarget;
@@ -157,7 +195,7 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
       pinchState.current = { dist, mid };
       panState.current = null;
     }
-  }, []);
+  }, [stopAnimating]);
 
   const onPointerMove = useCallback(
     (e: React.PointerEvent) => {
@@ -225,8 +263,11 @@ export function useCanvasTransform({ x: minX, y: minY, w: contentWidth, h: conte
     isInteracting: isPanning || isWheeling,
     isDetailView: transform.scale > Math.min(1.25, fitScaleRef.current * 1.75),
     ready,
+    isAnimating,
+    stopAnimating,
     moved,
     fitView,
+    focusRect,
     zoomButton,
     panBy,
     onPointerDown,

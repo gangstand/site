@@ -1,24 +1,24 @@
-# Graph Report - site  (2026-09-14)
+# Graph Report - site  (2026-09-15)
 
 ## Corpus Check
-- 234 files · ~198,861 words
+- 257 files · ~299,999 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 13 file(s) not represented in the graph (top: (none) 8, .css 5)
 
 ## Summary
-- 1551 nodes · 1772 edges · 154 communities (108 shown, 14 thin omitted)
+- 1794 nodes · 2017 edges · 174 communities (126 shown, 16 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b1187e01`
+- Built from commit: `c105d4d2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - Next.js
 - Feature-Sliced Design (FSD) v2.1
-- language/index.ts
+- copy-email.tsx
 - package.json
 - canvas-viewport.tsx
 - Layer Structure Reference
@@ -98,15 +98,15 @@
 - Cross-Import Resolution Patterns
 - Requirement: Selectable zones on the map
 - connections-layer.tsx
-- copy-email.tsx
+- Requirement: Activating a tile brings that tile into view
 - Authentication
 - State management: TanStack Query (React Query)
-- useTranslation
+- Requirements
 - Decisions
-- layout.tsx
+- ADDED Requirements
 - How to keep entities clean
 - .claude/skills/openspec-explore/SKILL.md
-- react
+- Decisions
 - explore.md
 - Asset Handling
 - Requirement: Live reachability of the mapped sites
@@ -122,7 +122,7 @@
 - graphify reference: add a URL and watch a folder
 - graphify reference: commit hook and native CLAUDE.md integration
 - graphify reference: incremental update and cluster-only
-- ADDED Requirements
+- Requirements
 - graphify reference: GitHub clone and cross-repo merge
 - graphify reference: transcribe video and audio
 - .claude/CLAUDE.md
@@ -131,17 +131,37 @@
 - 2026-09-14-remove-homelab-pages/design.md
 - 2026-09-14-make-proxy-zone-selectable/proposal.md
 - 2026-09-14-remove-homelab-pages/tasks.md
-- add-homelab-thumbnail/design.md
-- add-homelab-thumbnail/proposal.md
+- ADDED Requirements
+- 2026-09-14-add-homelab-thumbnail/design.md
 - 2026-09-14-make-proxy-zone-selectable/tasks.md
 - 2026-09-14-remove-rabbitmq-ui-ingress/proposal.md
 - Requirement: Edge ingress is drawn only to publicly reachable zones
-- add-homelab-thumbnail/tasks.md
+- 2026-09-15-recapture-swaprat-canvas/tasks.md
 - 2026-09-14-remove-rabbitmq-ui-ingress/tasks.md
+- 2026-09-14-add-homelab-thumbnail/proposal.md
+- Decisions
+- 2026-09-14-add-homelab-thumbnail/tasks.md
+- language/index.ts
+- 2026-09-15-refill-swaprat-canvas/tasks.md
+- 2026-09-15-recapture-swaprat-canvas/proposal.md
+- 2026-09-15-refill-swaprat-canvas/proposal.md
+- layout.tsx
+- useTranslation
+- 2026-09-15-recapture-swaprat-canvas/CAPTURE_NOTES.md
+- 2026-09-15-refill-swaprat-canvas/CAPTURE_NOTES.md
+- react
+- Decisions
+- Decisions
+- Requirement: The HomeLab thumbnail depicts its own infrastructure map
+- rewrite-homelab-thumbnail-copy/tasks.md
+- 2026-09-15-focus-photo-on-click/proposal.md
+- rewrite-homelab-thumbnail-copy/proposal.md
+- 2026-09-15-focus-photo-on-click/tasks.md
+- column-layout.ts
 
 ## God Nodes (most connected - your core abstractions)
 1. `useTranslation()` - 24 edges
-2. `react` - 22 edges
+2. `react` - 23 edges
 3. `compilerOptions` - 16 edges
 4. `Lang` - 12 edges
 5. `Layer Structure Reference` - 12 edges
@@ -156,17 +176,17 @@
   app/layout.tsx → src/shared/lib/language/locale.ts
 - `GET()` --calls--> `getHomelabStatus()`  [EXTRACTED]
   app/api/homelab/status/route.ts → src/_app/api-routes/homelab-status/index.ts
-- `LanguageContextValue` --references--> `Lang`  [EXTRACTED]
-  src/shared/lib/language/language-context.tsx → src/shared/lib/language/locale.ts
 - `ProjectImage` --references--> `Lang`  [EXTRACTED]
   src/_pages/home/model/project.ts → src/shared/lib/language/locale.ts
 - `ProjectDefinition` --references--> `Lang`  [EXTRACTED]
   src/_pages/home/model/project.ts → src/shared/lib/language/locale.ts
+- `PhotoCanvas()` --calls--> `useTranslation()`  [EXTRACTED]
+  src/_pages/home/ui/photo-canvas.tsx → src/shared/lib/language/language-context.tsx
 
 ## Import Cycles
 - None detected.
 
-## Communities (154 total, 14 thin omitted)
+## Communities (174 total, 16 thin omitted)
 
 ### Community 0 - "Next.js"
 Cohesion: 0.07
@@ -176,17 +196,17 @@ Nodes (29): App Router, Astro, Database access, Directory structure, Directory s
 Cohesion: 0.07
 Nodes (29): 10. Conditional references, 1. Core philosophy & layer overview, 2. Decision framework, 3. Quick placement table, 4-1. Import only from lower layers, 4-2. Public API: every slice exports through index.ts, 4-3. No cross-imports between slices on the same layer, 4-4. Domain-based file naming (no desegmentation) (+21 more)
 
-### Community 2 - "language/index.ts"
-Cohesion: 0.28
-Nodes (11): setCookie(), LanguageContext, LanguageContextValue, LanguageProvider(), toggleLanguage(), DEFAULT_LANG, LANG_COOKIE, LANGUAGES (+3 more)
+### Community 2 - "copy-email.tsx"
+Cohesion: 0.16
+Nodes (13): CopyEmail(), copyEmail(), CopyEmailProps, CopyStatus, legacyCopy(), ContactDialogProps, Footer(), email (+5 more)
 
 ### Community 3 - "package.json"
 Cohesion: 0.04
 Nodes (38): dynamic, dynamic, nextConfig, dependencies, geist, next, react, react-dom (+30 more)
 
 ### Community 5 - "canvas-viewport.tsx"
-Cohesion: 0.17
-Nodes (16): MOBILE_QUERY, CanvasControlLabels, canvasCopy, CanvasLabels, CanvasBounds, Transform, useCanvasTransform(), FullscreenDocument (+8 more)
+Cohesion: 0.11
+Nodes (25): ProjectImage, copy, PhotoCanvas(), MOBILE_QUERY, CanvasControlLabels, canvasCopy, CanvasLabels, centerRectAt() (+17 more)
 
 ### Community 6 - "Layer Structure Reference"
 Cohesion: 0.09
@@ -329,8 +349,8 @@ Cohesion: 0.29
 Nodes (6): 1. Scope the procedure, 2. Map each stage's journey, 3. Author the wizard, 4. Verify and hand off, Process, Wizard
 
 ### Community 43 - "project.ts"
-Cohesion: 0.22
-Nodes (10): esaul, homelab, projects, swapdog, swaprat, teamtasker, ProjectDefinition, ProjectDestination (+2 more)
+Cohesion: 0.18
+Nodes (12): esaul, homelab, projects, swapdog, positions, shots, swaprat, teamtasker (+4 more)
 
 ### Community 44 - "writing-beats/SKILL.md"
 Cohesion: 0.33
@@ -460,9 +480,9 @@ Nodes (25): homelab-map Specification, Purpose, Requirement: Edge ingress is dra
 Cohesion: 0.36
 Nodes (7): HomelabConnectionRoute, HomelabNode, ConnectionsLayer, ConnectionsLayerProps, DARK_COLORS, LIGHT_COLORS, useTheme()
 
-### Community 104 - "copy-email.tsx"
-Cohesion: 0.16
-Nodes (13): CopyEmail(), copyEmail(), CopyEmailProps, CopyStatus, legacyCopy(), ContactDialogProps, Footer(), email (+5 more)
+### Community 104 - "Requirement: Activating a tile brings that tile into view"
+Cohesion: 0.08
+Nodes (24): ADDED Requirements, MODIFIED Requirements, Requirement: A tile is activatable by pointer and by keyboard, Requirement: A tile is legible at full zoom and described in the visitor's language, Requirement: Activating a tile brings that tile into view, Requirement: Dragging across a tile pans the canvas instead of activating it, Requirement: The move to a tile is animated unless reduced motion is asked for, Scenario: A tile larger than the canvas's zoom ceiling allows (+16 more)
 
 ### Community 105 - "Authentication"
 Cohesion: 0.11
@@ -472,17 +492,17 @@ Nodes (18): API request handling, Auth data: `shared/auth/` or `shared/api/`, Au
 Cohesion: 0.12
 Nodes (16): Business-entity slice in entities, Code generation, Custom API client, Infinite scroll, Query factory pattern, QueryProvider in the app layer, Reading mutation state with useMutationState, Registering slices in app (+8 more)
 
-### Community 107 - "useTranslation"
-Cohesion: 0.25
-Nodes (6): HomePage(), ContactDialog(), LanguageToggle(), Profile(), ThemeToggle(), useTranslation()
+### Community 107 - "Requirements"
+Cohesion: 0.05
+Nodes (38): project-photo-canvas Specification, Purpose, Requirement: A tile catches a screen doing its job, Requirement: A tile is activatable by pointer and by keyboard, Requirement: A tile is captured at the project's shared fixed size, Requirement: A tile is legible at full zoom and described in the visitor's language, Requirement: Activating a tile brings that tile into view, Requirement: Dragging across a tile pans the canvas instead of activating it (+30 more)
 
 ### Community 108 - "Decisions"
 Cohesion: 0.14
 Nodes (13): 1. Use `_app` and `_pages` for FSD layers, 2. Migrate route ownership before removing legacy layers, 3. Keep home-only composition in `_pages/home`, 4. Extract one focused `explore-homelab` feature, 5. Put the shared homelab transport contract in Shared API, 6. Enforce public APIs at established boundaries, 7. Preserve providers as Shared mechanisms composed by `_app`, 8. Add architecture checks after boundaries stabilize (+5 more)
 
-### Community 109 - "layout.tsx"
-Cohesion: 0.19
-Nodes (13): generateMetadata(), getPreferences(), RootLayout(), AppProviders(), EducationEntry, Translation, translations, Lang (+5 more)
+### Community 109 - "ADDED Requirements"
+Cohesion: 0.11
+Nodes (18): ADDED Requirements, Purpose, Requirement: A tile catches a screen doing its job, Requirement: A tile is captured at the project's shared fixed size, Requirement: A tile is legible at full zoom and described in the visitor's language, Requirement: The canvas covers what the product's navigation reaches, Requirement: Tiles are placed from their shared size without overlap or dead space, Scenario: A master–detail screen (+10 more)
 
 ### Community 110 - "How to keep entities clean"
 Cohesion: 0.15
@@ -492,9 +512,9 @@ Nodes (12): 0. Consider having no entities layer, 1. Avoid preemptive slicing, 2
 Cohesion: 0.17
 Nodes (11): Check for context, Ending Discovery, Guardrails, Handling Different Entry Points, OpenSpec Awareness, Planning a Change, The Stance, What You Don't Have To Do (+3 more)
 
-### Community 112 - "react"
-Cohesion: 0.16
-Nodes (13): react, ProjectImage, projectView, copy, PhotoCanvas(), DetailRenderer, detailRenderers, ProjectDetailDialog() (+5 more)
+### Community 112 - "Decisions"
+Cohesion: 0.12
+Nodes (15): Cap a raw capture at 3000 CSS px of height, and treat an oversized capture as fatal to its page, Capture at 1920 CSS px wide with DPR 1, Capture by viewport emulation in two passes, not `fullPage`, Context, Crop or pad every capture to a fixed 1920×1080 tile, Decisions, Goals / Non-Goals, Lay tiles out in a uniform grid (+7 more)
 
 ### Community 113 - "explore.md"
 Cohesion: 0.18
@@ -556,9 +576,9 @@ Nodes (3): For git commit hook, For native CLAUDE.md integration, graphify refer
 Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
-### Community 128 - "ADDED Requirements"
+### Community 128 - "Requirements"
 Cohesion: 0.12
-Nodes (15): ADDED Requirements, Purpose, Requirement: A thumbnail's declared size matches the image it serves, Requirement: Every project entry is represented by a thumbnail image, Requirement: The HomeLab thumbnail depicts its own infrastructure map, Requirement: The thumbnail is decorative and the entry carries the name, Scenario: A project without an image asset, Scenario: Announcing an open project (+7 more)
+Nodes (16): project-showcase Specification, Purpose, Requirement: A thumbnail's declared size matches the image it serves, Requirement: Every project entry is represented by a thumbnail image, Requirement: The HomeLab thumbnail depicts its own infrastructure map, Requirement: The thumbnail is decorative and the entry carries the name, Requirements, Scenario: A project without an image asset (+8 more)
 
 ### Community 144 - "2026-09-14-remove-homelab-pages/design.md"
 Cohesion: 0.33
@@ -572,13 +592,13 @@ Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, What C
 Cohesion: 0.50
 Nodes (3): 1. Remove the route and its page slice, 2. Retire the internal destination, 3. Verify the surviving behavior
 
-### Community 147 - "add-homelab-thumbnail/design.md"
+### Community 147 - "ADDED Requirements"
+Cohesion: 0.12
+Nodes (15): ADDED Requirements, Purpose, Requirement: A thumbnail's declared size matches the image it serves, Requirement: Every project entry is represented by a thumbnail image, Requirement: The HomeLab thumbnail depicts its own infrastructure map, Requirement: The thumbnail is decorative and the entry carries the name, Scenario: A project without an image asset, Scenario: Announcing an open project (+7 more)
+
+### Community 148 - "2026-09-14-add-homelab-thumbnail/design.md"
 Cohesion: 0.17
 Nodes (11): Accept frozen status indicators, Capture the map through the dialog, not through a temporary route, Compose the hero in a throwaway bake sheet, not in the app and not in a design tool, Context, Decisions, Drop the `placeholder` variant rather than leave it unconstructed, Goals / Non-Goals, Migration Plan (+3 more)
-
-### Community 148 - "add-homelab-thumbnail/proposal.md"
-Cohesion: 0.29
-Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, What Changes, Why
 
 ### Community 149 - "2026-09-14-make-proxy-zone-selectable/tasks.md"
 Cohesion: 0.40
@@ -592,33 +612,105 @@ Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, What C
 Cohesion: 0.29
 Nodes (6): ADDED Requirements, Requirement: Edge ingress is drawn only to publicly reachable zones, Scenario: Private-service zone has no HTTP ingress, Scenario: Publicly reachable zone keeps its HTTP ingress, Scenario: Selecting a private-service zone, Scenario: Selecting the edge reverse proxy
 
-### Community 152 - "add-homelab-thumbnail/tasks.md"
-Cohesion: 0.33
-Nodes (5): 1. Capture the map still, 2. Compose and encode the thumbnail, 3. Wire the asset into the project list, 4. Remove the now-unconstructed placeholder variant, 5. Verify the change as a whole
+### Community 152 - "2026-09-15-recapture-swaprat-canvas/tasks.md"
+Cohesion: 0.15
+Nodes (12): 10. Wire up, 11. Verify in the running app, 12. Close out, 1. Capture rig, 2. Capture — entry, dashboard, audit, 3. Capture — Финансы, 4. Capture — Анализ блюд, all six tabs, 5. Capture — Тепловая карта и скидки (+4 more)
 
 ### Community 153 - "2026-09-14-remove-rabbitmq-ui-ingress/tasks.md"
 Cohesion: 0.40
 Nodes (4): 1. Remove the connection, 2. Retire the dead routing path, 3. Update tests and verify behavior, 4. Keep project artifacts current
 
+### Community 154 - "2026-09-14-add-homelab-thumbnail/proposal.md"
+Cohesion: 0.29
+Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, What Changes, Why
+
+### Community 155 - "Decisions"
+Cohesion: 0.18
+Nodes (10): Blur before every capture, Capture natively at 1920×1080, one screen at a time, straight into `public/`, Context, Decisions, Goals / Non-Goals, Keep the pinned period and the wedged-page rule, Migration Plan, One assertion per screen, chosen to be tab-specific (+2 more)
+
+### Community 156 - "2026-09-14-add-homelab-thumbnail/tasks.md"
+Cohesion: 0.33
+Nodes (5): 1. Capture the map still, 2. Compose and encode the thumbnail, 3. Wire the asset into the project list, 4. Remove the now-unconstructed placeholder variant, 5. Verify the change as a whole
+
+### Community 157 - "language/index.ts"
+Cohesion: 0.22
+Nodes (14): EducationEntry, Translation, translations, LanguageContext, LanguageContextValue, LanguageProvider(), toggleLanguage(), DEFAULT_LANG (+6 more)
+
+### Community 158 - "2026-09-15-refill-swaprat-canvas/tasks.md"
+Cohesion: 0.22
+Nodes (8): 1. Capture loop setup, 2. Дашборд и аудит, 3. Финансы, 4. Анализ блюд, six tabs, 5. Тепловая карта и скидки, 6. Склад и закупки, 7. Персонал и кабинет, 8. Close out
+
+### Community 159 - "2026-09-15-recapture-swaprat-canvas/proposal.md"
+Cohesion: 0.29
+Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, What Changes, Why
+
+### Community 160 - "2026-09-15-refill-swaprat-canvas/proposal.md"
+Cohesion: 0.29
+Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, What Changes, Why
+
+### Community 161 - "layout.tsx"
+Cohesion: 0.25
+Nodes (10): generateMetadata(), getPreferences(), RootLayout(), AppProviders(), setCookie(), ThemeContext, ThemeContextValue, ThemeMode (+2 more)
+
+### Community 162 - "useTranslation"
+Cohesion: 0.25
+Nodes (6): HomePage(), ContactDialog(), LanguageToggle(), Profile(), ThemeToggle(), useTranslation()
+
+### Community 165 - "react"
+Cohesion: 0.21
+Nodes (10): react, projectView, DetailRenderer, detailRenderers, ProjectDetailDialog(), ProjectDialog(), ProjectDialogProps, Projects() (+2 more)
+
+### Community 166 - "Decisions"
+Cohesion: 0.18
+Nodes (10): An imperative handle on `CanvasViewport`, not a declarative `focus` prop, Animation by CSS transition on `.world`, toggled by the hook, Context, Decisions, Goals / Non-Goals, Layer placement, Migration Plan, Risks / Trade-offs (+2 more)
+
+### Community 167 - "Decisions"
+Cohesion: 0.18
+Nodes (10): Author the headline in sentence case and let the sheet uppercase it, Context, Decisions, Goals / Non-Goals, Keep the fresh capture faithful to the recorded capture environment, Let the composed height follow the content, then reconcile the config, Migration Plan, Re-bake the whole sheet rather than patch the text band in place (+2 more)
+
+### Community 168 - "Requirement: The HomeLab thumbnail depicts its own infrastructure map"
+Cohesion: 0.25
+Nodes (7): MODIFIED Requirements, Requirement: The HomeLab thumbnail depicts its own infrastructure map, Scenario: Opening the entry after seeing its thumbnail, Scenario: Reading the thumbnail at the size the list renders it, Scenario: Reading the two lines of copy, Scenario: Recognising the project from the list, Scenario: Sitting in the stack beside the other entries
+
+### Community 169 - "rewrite-homelab-thumbnail-copy/tasks.md"
+Cohesion: 0.25
+Nodes (7): 0. Measured geometry, 1. Recover the bake sheet geometry from the committed asset, 2. Capture the map still, 3. Compose the new sheet, 4. Render and encode, 5. Reconcile the declared dimensions, 6. Verify the change as a whole
+
+### Community 170 - "2026-09-15-focus-photo-on-click/proposal.md"
+Cohesion: 0.29
+Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, What Changes, Why
+
+### Community 171 - "rewrite-homelab-thumbnail-copy/proposal.md"
+Cohesion: 0.29
+Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, What Changes, Why
+
+### Community 172 - "2026-09-15-focus-photo-on-click/tasks.md"
+Cohesion: 0.33
+Nodes (5): 1. Focus geometry in the shared canvas model, 2. Animated camera move, 3. Canvas handle exposed to consumers, 4. Activatable tiles on the photo canvas, 5. Regression checks across the change
+
+### Community 173 - "column-layout.ts"
+Cohesion: 0.40
+Nodes (3): ColumnLayoutPosition, ColumnLayoutTile, packColumns()
+
 ## Knowledge Gaps
-- **946 isolated node(s):** `block-dangerous-git.sh script`, `$schema`, `plugin`, `runtime`, `dynamic` (+941 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1054 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **14 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **1117 isolated node(s):** `block-dangerous-git.sh script`, `$schema`, `plugin`, `runtime`, `dynamic` (+1112 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1231 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **16 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `react` connect `react` to `language/index.ts`, `package.json`, `canvas-viewport.tsx`, `nodes.ts`, `connections-layer.tsx`, `copy-email.tsx`, `layout.tsx`, `api/homelab-status/index.ts`, `node-zone.tsx`, `homelab-canvas.tsx`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
+- **Why does `react` connect `react` to `layout.tsx`, `copy-email.tsx`, `package.json`, `canvas-viewport.tsx`, `nodes.ts`, `connections-layer.tsx`, `language/index.ts`, `api/homelab-status/index.ts`, `node-zone.tsx`, `homelab-canvas.tsx`?**
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
 - **Why does `next` connect `package.json` to `layout.tsx`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
+- **Why does `useTranslation()` connect `useTranslation` to `copy-email.tsx`, `canvas-viewport.tsx`, `react`, `language/index.ts`, `homelab-canvas.tsx`?**
+  _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **What connects `block-dangerous-git.sh script`, `$schema`, `plugin` to the rest of the system?**
-  _946 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1117 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Next.js` be split into smaller, more focused modules?**
   _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
 - **Should `Feature-Sliced Design (FSD) v2.1` be split into smaller, more focused modules?**
   _Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected._
 - **Should `package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.044444444444444446 - nodes in this community are weakly interconnected._
-- **Should `Layer Structure Reference` be split into smaller, more focused modules?**
-  _Cohesion score 0.08695652173913043 - nodes in this community are weakly interconnected._

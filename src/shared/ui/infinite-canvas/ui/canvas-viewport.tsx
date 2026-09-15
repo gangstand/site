@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, type ReactNode, type Ref } from "react";
+import { useCallback, useEffect, useImperativeHandle, useRef, type ReactNode, type Ref } from "react";
 import type { CanvasLabels } from "../model/copy";
 import { useCanvasTransform, type CanvasBounds } from "../model/use-canvas-transform";
 import { useFullscreen } from "../model/use-fullscreen";
@@ -17,6 +17,12 @@ export interface CanvasInteractionState {
   isDetailView: boolean;
 }
 
+/** Imperative entry points a canvas owner can use to move the camera. */
+export interface CanvasHandle {
+  focusRect(rect: CanvasBounds): void;
+  fitView(): void;
+}
+
 export interface CanvasViewportProps {
   children: ReactNode;
   bounds: CanvasBounds;
@@ -30,14 +36,17 @@ export interface CanvasViewportProps {
   fullscreenTargetRef?: Ref<HTMLDivElement>;
   /** Use this instead of canvas data attributes when animations depend on panning or detail state. */
   onInteractionChange?: (state: CanvasInteractionState) => void;
+  canvasRef?: Ref<CanvasHandle>;
 }
 
-export function CanvasViewport({ children, bounds, labels, onClearSelection, fitOnMount = false, ariaLabel, className, toolbar, overlay, fullscreenTargetRef, onInteractionChange }: CanvasViewportProps) {
+export function CanvasViewport({ children, bounds, labels, onClearSelection, fitOnMount = false, ariaLabel, className, toolbar, overlay, fullscreenTargetRef, onInteractionChange, canvasRef }: CanvasViewportProps) {
   const frameRef = useRef<HTMLDivElement>(null);
-  const { viewportRef, transform, isPanning, isInteracting, isDetailView, ready, moved, fitView, zoomButton, panBy, onPointerDown, onPointerMove, endPointer } = useCanvasTransform(bounds, fitOnMount);
+  const { viewportRef, transform, isPanning, isInteracting, isDetailView, ready, isAnimating, stopAnimating, moved, fitView, focusRect, zoomButton, panBy, onPointerDown, onPointerMove, endPointer } = useCanvasTransform(bounds, fitOnMount);
   const zoomIn = useCallback(() => zoomButton(1.2), [zoomButton]);
   const zoomOut = useCallback(() => zoomButton(1 / 1.2), [zoomButton]);
   const { isFullscreen, toggleFullscreen } = useFullscreen(() => frameRef.current);
+
+  useImperativeHandle(canvasRef, () => ({ focusRect, fitView }), [focusRect, fitView]);
 
   useEffect(() => {
     onInteractionChange?.({ isPanning, isInteracting, isDetailView });
@@ -85,7 +94,13 @@ export function CanvasViewport({ children, bounds, labels, onClearSelection, fit
           if (!(e.target as Element).closest("button, a, [role='button']")) onClearSelection?.();
         }}
       >
-        <div className={styles.world} style={{ opacity: ready ? 1 : 0, transform: `translate(${transform.x}px, ${transform.y}px) scale(${transform.scale})` }}>
+        <div
+          className={`${styles.world} ${isAnimating ? styles.animating : ""}`}
+          style={{ opacity: ready ? 1 : 0, transform: `translate(${transform.x}px, ${transform.y}px) scale(${transform.scale})` }}
+          onTransitionEnd={(e) => {
+            if (e.target === e.currentTarget) stopAnimating();
+          }}
+        >
           {children}
         </div>
         {overlay}
